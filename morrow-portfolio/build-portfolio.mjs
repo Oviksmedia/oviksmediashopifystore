@@ -1,25 +1,56 @@
 import fs from 'node:fs';
 import path from 'node:path';
 import {fileURLToPath} from 'node:url';
-const root=path.dirname(fileURLToPath(import.meta.url));
-const source=path.join(root,'../shopify-skincare/theme');
-let page=fs.readFileSync(path.join(source,'sections/morrow-case-study.liquid'),'utf8').split('{% schema %}')[0];
-page=page.replace(/\{\{ '([^']+)' \| asset_url \| stylesheet_tag \}\}/g,'<link rel="stylesheet" href="assets/$1">').replace(/\{\{ '([^']+)' \| asset_url \}\}/g,'assets/$1').replaceAll('{{ routes.root_url }}','https://oviks-portfolio-demo.myshopify.com/').replaceAll('{{ routes.collections_url }}','https://oviks-portfolio-demo.myshopify.com/collections');
-page=page.replaceAll('The theme remains an unpublished, password-protected preview. Reviewers need access to the preview to explore the complete experience.','This public case study opens without a password. The separate Shopify development-store demo requires a storefront password. The screenshots below let reviewers assess the design and shopping flow here.');
-page=page.replaceAll('Explore the storefront <span aria-hidden="true">↗</span>','See the storefront screens').replace('href="https://oviks-portfolio-demo.myshopify.com/">See the storefront screens','href="#screens">See the storefront screens');
-page=page.replaceAll('Explore Morrow <span aria-hidden="true">↗</span>','Open Shopify demo (password required)');
-page=page.replace('See the storefront screens</a>', 'See the storefront screens</a><p class="demo-access"><a href="https://oviks-portfolio-demo.myshopify.com/">Explore the live Shopify demo</a><br>Visitor password: <strong>suweid</strong></p>');
-page=page.replace('<a class="mrw-button" href="https://oviks-portfolio-demo.myshopify.com/">Open Shopify demo (password required)</a>', '<p class="demo-access">Shopify visitor password: <strong>suweid</strong><br>Select “Enter using password” on the store, then enter the password above.</p><a class="mrw-button" href="https://oviks-portfolio-demo.myshopify.com/">Open Shopify demo</a>');
-page=page.replaceAll(' ↗','');
-const screens=`<section class="mrw-case-screens" id="screens" aria-labelledby="screens-title"><p class="mrw-kicker">THE STOREFRONT / VERIFIED ON SHOPIFY</p><h2 id="screens-title">The design, in context.</h2><p>Actual storefront screenshots from the Shopify build. The products and prices are fictional portfolio content.</p><figure><img src="assets/final-homepage-shopify.jpg" alt="Morrow Shopify homepage with editorial typography, skincare campaign imagery and Behind the design link" width="944" height="668" loading="lazy"><figcaption>Homepage / brand direction and product discovery</figcaption></figure><details open><summary>Collection page</summary><img src="assets/shopify-v3-collection.jpg" alt="Morrow Shopify collection page presenting the cleanser, serum and cream" loading="lazy"></details><details><summary>Demo bag and quantity update</summary><img src="assets/shopify-v3-cart.jpg" alt="Morrow demo bag showing two cleansers and a 56 dollar line total after quantity update" loading="lazy"><p>Verified flow: add one cleanser at $28, update quantity to two at $56, then remove to return to an empty bag.</p></details></section>`;
-page=page.replace('<section class="mrw-case-disclosure"',screens+'<section class="mrw-case-disclosure"');
-for(const name of ['morrow-premium.css','morrow-case-study.css'])fs.copyFileSync(path.join(source,'assets',name),path.join(root,'dist/assets',name));
-const css=`html{scroll-behavior:smooth}body{margin:0;background:#f5f1e8;color:#293828;font:16px/1.7 Arial,sans-serif}.public-header{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:20px 6%;border-bottom:1px solid #cecebc}.public-header>a{font:24px Georgia,serif;color:inherit;text-decoration:none}.public-header nav{display:flex;gap:24px}.public-header nav a{font-size:14px;color:inherit;min-height:44px;display:flex;align-items:center}.mrw-case p:not(.mrw-kicker){font-size:16px}.mrw-kicker{font-size:12px}.mrw-case-meta span{font-size:12px}.mrw-case-meta p,.mrw-case-design-grid p,.mrw-case-proof-grid p{font-size:15px!important}.mrw-button,.mrw-text-link{font-size:14px}.mrw-case-campaign figcaption{font-size:13px}.mrw-case-screens{padding:70px 0;border-bottom:1px solid #cecebc}.mrw-case-screens img{max-width:100%;height:auto;display:block;border:1px solid #cecebc}.mrw-case-screens figure{margin:30px 0}.mrw-case-screens figcaption{font-size:14px;padding:14px 0}.mrw-case-screens details{border-top:1px solid #cecebc;padding:15px 0}.mrw-case-screens summary{cursor:pointer;padding:15px 0;font-size:18px}.mrw-case-screens details img{margin:20px 0}.public-footer{padding:30px 6%;background:#293828;color:#f5f1e8;display:flex;justify-content:space-between;gap:25px;font-size:14px}.public-footer a{color:inherit}a:focus-visible,summary:focus-visible{outline:3px solid #954c31;outline-offset:5px}.skip-link{position:absolute;top:-100px;left:20px;background:#293828;color:#fff;padding:15px;z-index:10}.skip-link:focus{top:10px}@media(max-width:750px){.public-header{align-items:start;flex-direction:column;gap:8px}.public-header nav{gap:18px}.mrw-case-hero{padding-top:40px}.public-footer{flex-direction:column}.mrw-case-screens{padding:45px 0}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}`;
-const compactHero=`.mrw-case-hero{padding:48px 0 40px;grid-template-columns:1.3fr 1fr;gap:24px 5%}.mrw-case-hero h1{font-size:clamp(48px,4.5vw,76px);line-height:1.08;max-width:none;text-wrap:initial}.mrw-case-opening{max-width:430px;padding-bottom:4px}.mrw-case-opening p{margin-bottom:22px}@media(max-width:750px){.mrw-case-hero{grid-template-columns:1fr;padding:32px 0;gap:22px}.mrw-case-hero h1{font-size:clamp(40px,8.5vw,56px);line-height:1.08}}`;
-fs.writeFileSync(path.join(root,'dist/assets/public-portfolio.css'),css+compactHero+'.mrw-case-opening .demo-access{margin:18px 0 0;font-size:14px;line-height:1.6}.demo-access a{text-decoration:underline;text-underline-offset:4px}.demo-access strong{font-family:monospace;font-size:1.1em;letter-spacing:.03em}');
-const favicon='data:image/svg+xml,'+encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="6" fill="#293828"/><text x="16" y="24" text-anchor="middle" font-family="Georgia" font-size="27" fill="#f5f1e8">m</text></svg>');
-const html=`<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Morrow — Shopify Design Portfolio | Oviks Media</title><meta name="description" content="A self-initiated, AI-assisted Shopify skincare design concept by Oviks Media. Explore the design direction, storefront screenshots and verified demo shopping flow."><link rel="icon" type="image/svg+xml" href="${favicon}"><link rel="stylesheet" href="assets/morrow-premium.css"><link rel="stylesheet" href="assets/morrow-case-study.css"><link rel="stylesheet" href="assets/public-portfolio.css"></head><body><a href="#main" class="skip-link">Skip to case study</a><header class="public-header"><a href="#main">Oviks Media / Morrow</a><nav aria-label="Portfolio navigation"><a href="#case-direction">Design direction</a><a href="#screens">Store screenshots</a></nav></header><main id="main">${page.replace(/<link[^>]+>/g,'')}</main><footer class="public-footer"><span>Oviks Media · Self-initiated Shopify portfolio project</span><a href="#main">Back to top</a></footer></body></html>`;
-fs.writeFileSync(path.join(root,'dist/index.html'),html);
-const missing=[...html.matchAll(/(?:src|href)="(assets\/[^\"]+)"/g)].map(m=>m[1]).filter(n=>!fs.existsSync(path.join(root,'dist',n)));
-if(missing.length||html.includes('{{')||html.includes('{%'))throw new Error('Invalid static references: '+missing.join(','));
-console.log('Public case study prepared; local assets and template rendering verified.');
+
+const root = path.dirname(fileURLToPath(import.meta.url));
+const theme = path.join(root, '../shopify-skincare/theme');
+const dist = path.join(root, 'dist');
+fs.mkdirSync(path.join(dist, 'assets'), {recursive: true});
+
+// Edit the authored sources, then regenerate the deployable dist folder.
+for (const file of fs.readdirSync(path.join(root, 'assets'))) {
+  if (file.endsWith('-preview.png')) continue; // Review evidence belongs in docs, not deploy assets.
+  fs.copyFileSync(path.join(root, 'assets', file), path.join(dist, 'assets', file));
+}
+for (const name of ['morrow-premium.css', 'morrow-case-study.css']) {
+  fs.copyFileSync(path.join(theme, 'assets', name), path.join(dist, 'assets', name));
+}
+const favicon = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#202722"/><text x="16" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#fff">O</text></svg>');
+const header = (active) => `<header class="portfolio-header"><a class="portfolio-wordmark" href="index.html" aria-label="Oviks Media portfolio home">OVIKS<span>MEDIA</span><span class="wordmark-dot" aria-hidden="true"></span></a><nav aria-label="Portfolio navigation"><a href="index.html#work"${active === 'index' ? ' aria-current="page"' : ''}>Selected work</a><a href="morrow.html"${active === 'morrow' ? ' aria-current="page"' : ''}>Morrow</a><a href="rift.html"${active === 'rift' ? ' aria-current="page"' : ''}>RIFT</a></nav></header>`;
+const footer = `<footer class="portfolio-footer"><div><a class="footer-name" href="index.html">Oviks Media</a><p>Graphic design &amp; Shopify storefronts.<br>Self-initiated concepts. AI-assisted production.</p></div><nav aria-label="Footer navigation"><a href="index.html#work">Selected work</a><a href="https://github.com/Oviksmedia/oviksmediashopifystore">Project source on GitHub ↗</a><a href="#main">Back to top ↑</a></nav><span>© 2026 Oviks Media</span></footer>`;
+function shell({name, title, description, content, styles = ''}) {
+  return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | Oviks Media</title><meta name="description" content="${description}"><link rel="icon" href="${favicon}"><link rel="stylesheet" href="assets/portfolio.css">${styles}</head><body class="portfolio-page page-${name}"><a class="skip-link" href="#main">Skip to content</a>${header(name)}<main id="main" tabindex="-1">${content}</main>${footer}</body></html>`;
+}
+let morrow = fs.readFileSync(path.join(theme, 'sections/morrow-case-study.liquid'), 'utf8').split('{% schema %}')[0];
+morrow = morrow.replace(/\{\{ '([^']+)' \| asset_url \| stylesheet_tag \}\}/g, '')
+  .replace(/\{\{ '([^']+)' \| asset_url \}\}/g, 'assets/$1')
+  .replaceAll('{{ routes.root_url }}', 'https://oviks-portfolio-demo.myshopify.com/')
+  .replaceAll('{{ routes.collections_url }}', 'https://oviks-portfolio-demo.myshopify.com/collections');
+morrow = morrow.replace('assets/morrow-campaign-v2.png', 'assets/morrow-campaign.webp')
+  .replace('assets/morrow-ritual-v2.png', 'assets/morrow-ritual.webp');
+const screens = `<section class="mrw-case-screens" id="screens" aria-labelledby="screens-title"><div class="screen-heading"><div><p class="mrw-kicker">THE SHOPIFY EXPERIENCE</p><h2 id="screens-title">Follow the <em>shopping journey.</em></h2></div><p>Browser captures of the existing Shopify demo on 3 October 2026. The typography refinements in this branch await a separate theme upload.</p></div><div class="screen-grid"><figure><a href="assets/morrow-shopify-collection.jpg" aria-label="Open full collection screenshot"><img src="assets/morrow-shopify-collection.jpg" alt="Morrow Shopify collection showing cleanser, serum and cream with illustrative prices" width="1440" height="1000" loading="lazy"></a><figcaption><span>01 / Discover</span>All three essentials, in one focused collection.</figcaption></figure><figure><a href="assets/morrow-shopify-product.jpg" aria-label="Open full product screenshot"><img src="assets/morrow-shopify-product.jpg" alt="Morrow cleanser product page with product image, price, size, quantity and add to demo bag button" width="1440" height="1000" loading="lazy"></a><figcaption><span>02 / Choose</span>Product details and a clear path to the bag.</figcaption></figure></div><details class="bag-evidence"><summary>03 / The demo bag — see the quantity update</summary><figure><img src="assets/morrow-shopify-bag.jpg" alt="Shopify demo bag containing two Daily Cleansers at a 56 dollar subtotal" width="1440" height="1000" loading="lazy"><figcaption>One cleanser: $28. Two cleansers: $56. Removing the item returns the bag to its empty state. Checked on 3 October 2026.</figcaption></figure></details><aside class="demo-callout"><div><h3>Explore the Shopify build.</h3><p>Visitor password: <strong>suweid</strong>. Enter it on the storefront password screen. Fictional products; no purchase or fulfillment.</p></div><a class="mrw-button" href="https://oviks-portfolio-demo.myshopify.com/">Open Shopify demo <span aria-hidden="true">↗</span></a></aside></section>`;
+morrow = morrow.replace('<section class="mrw-case-disclosure"', screens + '<section class="mrw-case-disclosure"');
+morrow = '<div class="case-breadcrumb"><a href="index.html#work">← Selected work</a><span>01 / Morrow</span></div>' + morrow;
+const pages = [
+  {name:'index', title:'Brand worlds. Working storefronts.', description:'Selected self-initiated graphic design and storefront projects by Oviks Media: Morrow skincare on Shopify and RIFT cycling apparel.', content:fs.readFileSync(path.join(root,'src/index.html'),'utf8')},
+  {name:'morrow', title:'Morrow — skincare identity & Shopify', description:'A self-initiated skincare identity and working Shopify storefront. Explore the brief, design decisions, product pages and demo bag.', content:morrow, styles:'<link rel="stylesheet" href="assets/morrow-premium.css"><link rel="stylesheet" href="assets/morrow-case-study.css">'},
+  {name:'rift', title:'RIFT — cycling identity & storefront concept', description:'A self-initiated cycling apparel concept: bold identity, campaign art direction and an interactive storefront prototype.', content:fs.readFileSync(path.join(root,'src/rift.html'),'utf8'), styles:'<link rel="stylesheet" href="assets/rift.css">'}
+];
+for (const page of pages) fs.writeFileSync(path.join(dist, page.name + '.html'), shell(page));
+fs.copyFileSync(path.join(root,'src/rift-demo.html'), path.join(dist,'rift-demo.html'));
+
+// Validate each generated page, local asset, page link and fragment.
+for (const filename of ['index.html','morrow.html','rift.html','rift-demo.html']) {
+  const html = fs.readFileSync(path.join(dist, filename), 'utf8');
+  if (html.includes('{{') || html.includes('{%')) throw new Error(`Unrendered Liquid in ${filename}`);
+  const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
+  if (ids.length !== new Set(ids).size) throw new Error(`Duplicate ids in ${filename}`);
+  for (const [, reference] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
+    if (/^(https?:|data:|mailto:)/.test(reference)) continue;
+    const [file, fragment] = reference.split('#');
+    const target = file ? path.resolve(dist, file) : path.join(dist, filename);
+    if (!fs.existsSync(target)) throw new Error(`${filename}: missing ${reference}`);
+    if (fragment && path.extname(target) === '.html' && !fs.readFileSync(target, 'utf8').includes(`id="${fragment}"`)) throw new Error(`${filename}: broken fragment ${reference}`);
+  }
+}
+console.log('Built and validated 4 portfolio pages, local assets, links and fragments.');

@@ -1,0 +1,108 @@
+{
+  "date": "2026-10-03",
+  "environment": "Local Chromium preview",
+  "layouts": [
+    {
+      "route": "index.html",
+      "width": 320,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "index.html",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "index.html",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "index.html",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "morrow.html",
+      "width": 320,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "morrow.html",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "morrow.html",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "morrow.html",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift.html",
+      "width": 320,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift.html",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift.html",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift.html",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift-demo.html",
+      "width": 320,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift-demo.html",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift-demo.html",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "rift-demo.html",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    }
+  ],
+  "resources": "all local links and assets return HTTP 200",
+  "bag": "empty, size validation, add, update, persistence, maximum, remove, corrupt storage",
+  "keyboard": "skip link, dialog focus containment, Escape",
+  "reducedMotion": "checked",
+  "errors": [],
+  "limits": "No real-device, Netlify deployment or Shopify theme-upload verification."
+}

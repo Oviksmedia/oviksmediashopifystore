@@ -1,0 +1,155 @@
+{
+  "date": "2026-10-03",
+  "environment": "Existing public Shopify demo, isolated visitor session",
+  "checks": [
+    {
+      "route": "/",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/collections/the-daily-edit",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/products/the-daily-cleanser",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/collections/the-daily-edit",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/products/the-daily-cleanser",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/collections/the-daily-edit",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/products/the-daily-cleanser",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/collections/the-daily-edit",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/products/the-daily-cleanser",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/products/the-daily-serum",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/products/the-daily-cream",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/collections/the-daily-edit",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/products/the-daily-cleanser",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/cart",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/cart",
+      "width": 390,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/cart",
+      "width": 768,
+      "images": "loaded",
+      "overflow": false
+    },
+    {
+      "route": "/cart",
+      "width": 1440,
+      "images": "loaded",
+      "overflow": false
+    }
+  ],
+  "bag": "Add cleanser $28, update 2 at $56, remove to empty",
+  "password": "accepted",
+  "existingDefects": [
+    {
+      "route": "/",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/collections/the-daily-edit",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/products/the-daily-cleanser",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    },
+    {
+      "route": "/cart",
+      "width": 320,
+      "images": "loaded",
+      "overflow": true
+    }
+  ],
+  "limits": "No checkout, fulfillment, real-device or theme-upload validation."
+}
