@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "morrow-collection",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

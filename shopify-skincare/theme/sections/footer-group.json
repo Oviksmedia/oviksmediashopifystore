@@ -1,0 +1,13 @@
+{
+  "type": "footer",
+  "name": "Morrow footer",
+  "sections": {
+    "morrow_footer": {
+      "type": "morrow-footer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "morrow_footer"
+  ]
+}

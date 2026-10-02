@@ -1,0 +1,7 @@
+{{ 'morrow-premium.css' | asset_url | stylesheet_tag }}
+{{ 'morrow-shopping.css' | asset_url | stylesheet_tag }}
+<div class="mrw-announcement">{{ section.settings.announcement | escape }}</div>
+<header class="mrw-header"><a class="mrw-wordmark" href="{{ routes.root_url }}" aria-label="Morrow home">morrow.</a><nav aria-label="Main navigation"><a href="{{ routes.collections_url }}/the-daily-edit">The daily edit</a><a href="{{ routes.root_url }}#mrw-ritual">The ritual</a><a href="{{ routes.root_url }}#mrw-philosophy">Our philosophy</a></nav><a class="mrw-header-shop" href="{{ routes.collections_url }}/the-daily-edit">Explore Morrow <span aria-hidden="true">↗</span></a><a class="mrw-bag-link" href="{{ routes.cart_url }}" aria-label="Demo bag, {{ cart.item_count }} items">Bag ({{ cart.item_count }})</a><details class="mrw-mobile-menu"><summary>Menu</summary><nav aria-label="Mobile navigation"><a href="{{ routes.collections_url }}/the-daily-edit">The daily edit</a><a href="{{ routes.root_url }}#mrw-ritual">The ritual</a><a href="{{ routes.root_url }}#mrw-philosophy">Our philosophy</a></nav></details></header>
+{% schema %}
+{"name":"Morrow header","settings":[{"type":"text","id":"announcement","label":"Announcement","default":"A considered beginning. Welcome to Morrow — a skincare design concept."}],"enabled_on":{"groups":["header"]},"presets":[{"name":"Morrow header"}]}
+{% endschema %}

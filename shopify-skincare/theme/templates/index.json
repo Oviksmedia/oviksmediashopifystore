@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "morrow_home": {
+      "type": "morrow-premium",
+      "settings": {
+        "heading": "A softer start to every day.",
+        "intro": "Everyday skincare, thoughtfully imagined. A small collection. A quieter moment. A ritual that feels like you.",
+        "collection": "the-daily-edit"
+      },
+      "blocks": {
+        "concept_0": {
+          "type": "concept",
+          "settings": {
+            "step": "01 / CLEANSE",
+            "title": "The Daily Cleanser",
+            "category": "CLEANSER",
+            "size": "150 ML",
+            "description": "An imagined daily cleanser in frosted olive glass. A fresh beginning for the Morrow ritual."
+          }
+        },
+        "concept_1": {
+          "type": "concept",
+          "settings": {
+            "step": "02 / SERUM",
+            "title": "The Daily Serum",
+            "category": "SERUM",
+            "size": "30 ML",
+            "description": "An imagined serum in ivory glass, with a precise dropper and a quiet place in your everyday routine."
+          }
+        },
+        "concept_2": {
+          "type": "concept",
+          "settings": {
+            "step": "03 / MOISTURIZE",
+            "title": "The Daily Cream",
+            "category": "MOISTURIZER",
+            "size": "50 ML",
+            "description": "An imagined moisturizer in a tactile ivory jar. The finishing touch to the three-step Morrow concept."
+          }
+        }
+      },
+      "block_order": [
+        "concept_0",
+        "concept_1",
+        "concept_2"
+      ]
+    }
+  },
+  "order": [
+    "morrow_home"
+  ]
+}

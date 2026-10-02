@@ -1,0 +1,9 @@
+{{ 'morrow-premium.css' | asset_url | stylesheet_tag }}
+<div class="mrw mrw-commerce"><header class="mrw-collection-intro"><p class="mrw-kicker">A LITTLE SPACE FOR YOUR DAILY RITUAL.</p><h1>Your demo bag.</h1></header>
+{% if cart.empty? %}<div class="mrw-empty-cart"><p>Your bag is waiting for a little Morrow.</p><a class="mrw-button" href="{{ routes.collections_url }}/the-daily-edit">Explore the daily edit ↗</a></div>{% else %}
+<form action="{{ routes.cart_url }}" method="post" class="mrw-cart-form">
+<div>{% for item in cart.items %}<article class="mrw-cart-row"><a href="{{ item.url }}" class="mrw-cart-image">{% if item.image %}{{ item.image | image_url: width: 350 | image_tag: widths: '150, 250, 350', sizes: '130px', loading: 'lazy' }}{% endif %}</a><div><h2><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h2><p>{{ item.variant.title | escape }}</p><a class="mrw-text-link" href="{{ item.url_to_remove }}">Remove <span class="visually-hidden">{{ item.product.title | escape }}</span></a></div><div class="mrw-cart-quantity"><label for="quantity-{{ section.id }}-{{ forloop.index }}">Quantity</label><input id="quantity-{{ section.id }}-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0" step="1" required><p>{{ item.final_line_price | money }}</p></div></article>{% endfor %}<button class="mrw-button" name="update" type="submit">Update bag ↗</button></div>
+<aside class="mrw-cart-summary"><p class="mrw-kicker">YOUR RITUAL, CONSIDERED.</p><div><span>Demo subtotal</span><strong>{{ cart.total_price | money_with_currency }}</strong></div><p>Portfolio demonstration only. These are fictional products with illustrative prices. Checkout and fulfillment are not offered through this demo.</p><a class="mrw-text-link" href="{{ routes.collections_url }}/the-daily-edit">Continue exploring ↗</a></aside></form>{% endif %}</div>
+{% schema %}
+{"name":"Morrow demo cart","settings":[]}
+{% endschema %}

@@ -1,0 +1,63 @@
+{{ 'morrow.css' | asset_url | stylesheet_tag }}
+<div class="morrow">
+  <section class="morrow-hero" aria-labelledby="morrow-title-{{ section.id }}">
+    <div class="morrow-hero-copy">
+      <p class="morrow-eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      <h1 id="morrow-title-{{ section.id }}">{{ section.settings.heading | escape }}</h1>
+      <p class="morrow-intro">{{ section.settings.intro | escape }}</p>
+      <a class="morrow-button" href="#morrow-shop-{{ section.id }}">Explore the essentials <span aria-hidden="true">↗</span></a>
+      <p class="morrow-caption">A considered beginning. A daily ritual.</p>
+    </div>
+    <div class="morrow-hero-art">
+      {% if section.settings.hero_image != blank %}
+        {{ section.settings.hero_image | image_url: width: 1600 | image_tag: widths: '600, 1000, 1600', sizes: '(min-width: 800px) 55vw, 100vw', loading: 'eager', fetchpriority: 'high' }}
+      {% else %}
+        <img src="{{ 'morrow-packaging.svg' | asset_url }}" alt="Original Morrow concept packaging: olive cleanser bottle, cream serum bottle and moisturizer jar" width="1000" height="1100" fetchpriority="high">
+      {% endif %}
+      <span class="morrow-art-label">{{ section.settings.brand_name | escape }} / THE DAILY EDIT</span>
+    </div>
+  </section>
+  <div class="morrow-strip"><span>Less noise.</span><span>More intention.</span><span>Your everyday essentials.</span></div>
+  <section class="morrow-shop" id="morrow-shop-{{ section.id }}" aria-labelledby="morrow-shop-title-{{ section.id }}">
+    <div class="morrow-section-heading"><div><p class="morrow-eyebrow">THE DAILY EDIT</p><h2 id="morrow-shop-title-{{ section.id }}">A little, well chosen.</h2></div><a href="{{ routes.all_products_collection_url }}">Explore all products <span aria-hidden="true">↗</span></a></div>
+    {% assign featured = section.settings.collection %}
+    {% if featured != blank and featured.products.size > 0 %}
+      <div class="morrow-grid">
+        {% for item in featured.products limit: 3 %}
+          <a class="morrow-product" href="{{ item.url }}">
+            <div class="morrow-product-media">
+              {% if item.featured_image != blank %}
+                {{ item.featured_image | image_url: width: 800 | image_tag: widths: '320, 500, 800', sizes: '(min-width: 800px) 30vw, 100vw', loading: 'lazy' }}
+              {% else %}
+                {{ 'product-1' | placeholder_svg_tag: 'morrow-placeholder' }}
+              {% endif %}
+            </div>
+            <div class="morrow-product-info"><h3>{{ item.title | escape }}</h3><span>{{ item.price | money }}</span></div>
+            {% unless item.available %}<span>Sold out</span>{% endunless %}
+          </a>
+        {% endfor %}
+      </div>
+    {% else %}
+      <div class="morrow-empty"><p>Our daily edit is taking shape.</p><p>This portfolio concept is in development. Demo products will appear here shortly.</p></div>
+    {% endif %}
+  </section>
+  <section class="morrow-story" aria-labelledby="morrow-story-title-{{ section.id }}"><p class="morrow-eyebrow">THE MORROW PHILOSOPHY</p><h2 id="morrow-story-title-{{ section.id }}">Make room<br>for your ritual.</h2><div><p>{{ section.settings.story | escape }}</p><a href="#morrow-faq-{{ section.id }}">Meet the concept <span aria-hidden="true">↗</span></a></div></section>
+  <section class="morrow-ritual" aria-labelledby="morrow-ritual-title-{{ section.id }}"><p class="morrow-eyebrow">THREE MOMENTS. ONE ROUTINE.</p><h2 id="morrow-ritual-title-{{ section.id }}">Keep it beautifully simple.</h2><div class="morrow-grid"><article><span>01 / CLEANSE</span><h3>A fresh start.</h3><p>Begin with a cleanser. A quiet moment to reset.</p></article><article><span>02 / SERUM</span><h3>Your daily pause.</h3><p>A serum step, thoughtfully placed between cleansing and moisturizing.</p></article><article><span>03 / MOISTURIZE</span><h3>The finishing touch.</h3><p>Complete the ritual with a moisturizer, then make the day your own.</p></article></div></section>
+  <section class="morrow-faq" id="morrow-faq-{{ section.id }}" aria-labelledby="morrow-faq-title-{{ section.id }}"><h2 id="morrow-faq-title-{{ section.id }}">A few things to know.</h2><div><details><summary>What is Morrow?</summary><p>Morrow is a fictional skincare brand created as a self-initiated Shopify design project by Oviks Media. Packaging and product concepts are illustrative.</p></details><details><summary>Can I purchase these products?</summary><p>This is a portfolio demonstration, not an operating skincare business. No real products are fulfilled.</p></details><details><summary>What does this project demonstrate?</summary><p>Brand direction, original packaging illustration, responsive storefront design and Shopify theme customization. Product and cart demonstrations will be checked before portfolio handoff.</p></details></div></section>
+  <p class="morrow-demo">{{ section.settings.brand_name | escape }} — a self-initiated portfolio concept by Oviks Media.</p>
+</div>
+{% schema %}
+{
+  "name": "Morrow homepage",
+  "settings": [
+    {"type":"text","id":"brand_name","label":"Brand name","default":"Morrow"},
+    {"type":"text","id":"eyebrow","label":"Intro label","default":"MORROW / EVERYDAY SKINCARE"},
+    {"type":"text","id":"heading","label":"Main heading","default":"A softer start to every day."},
+    {"type":"textarea","id":"intro","label":"Introduction","default":"A small collection. A slower moment. Skincare imagined around the beauty of a daily ritual."},
+    {"type":"image_picker","id":"hero_image","label":"Hero image"},
+    {"type":"collection","id":"collection","label":"Featured collection"},
+    {"type":"textarea","id":"story","label":"Brand story","default":"We imagined Morrow around one idea: everyday care should feel considered, without becoming complicated. A restrained collection, tactile packaging and a little space to breathe."}
+  ],
+  "presets": [{"name":"Morrow homepage"}]
+}
+{% endschema %}

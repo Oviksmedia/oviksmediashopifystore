@@ -1,0 +1,7 @@
+{{ 'morrow-premium.css' | asset_url | stylesheet_tag }}
+<div class="mrw mrw-commerce"><header class="mrw-collection-intro"><p class="mrw-kicker">THREE ESSENTIALS. ONE CONSIDERED ROUTINE.</p><h1>{{ collection.title | escape }}</h1><div>{{ collection.description }}</div></header>
+{% paginate collection.products by 12 %}<div class="mrw-products">{% for item in collection.products %}<article class="mrw-product"><a href="{{ item.url }}"><div class="mrw-product-image">{% if item.featured_image %}{{ item.featured_image | image_url: width: 900 | image_tag: widths: '350, 600, 900', sizes: '(min-width: 751px) 30vw, 100vw', loading: 'lazy' }}{% else %}{{ 'product-1' | placeholder_svg_tag }}{% endif %}</div><p class="mrw-product-type">{{ item.variants.first.title | escape }} / CONCEPT PRODUCT</p><div class="mrw-product-line"><h2>{{ item.title | escape }}</h2><span>{{ item.price | money }}</span></div><span class="mrw-product-action">Discover the product ↗</span></a></article>{% else %}<p>This collection is being prepared. Please return soon.</p>{% endfor %}</div>{% if paginate.pages > 1 %}<nav aria-label="Collection pages">{{ paginate | default_pagination }}</nav>{% endif %}{% endpaginate %}
+<p class="mrw-demo-note">Fictional skincare concepts. Illustrative prices. Portfolio demonstration only.</p></div>
+{% schema %}
+{"name":"Morrow collection","settings":[]}
+{% endschema %}

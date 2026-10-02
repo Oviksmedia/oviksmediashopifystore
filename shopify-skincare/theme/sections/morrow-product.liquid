@@ -1,0 +1,23 @@
+{{ 'morrow-premium.css' | asset_url | stylesheet_tag }}
+{% assign current_variant = product.selected_or_first_available_variant %}
+<div class="mrw mrw-commerce">
+  <a class="mrw-text-link" href="{{ routes.collections_url }}/the-daily-edit">← The daily edit</a>
+  <section class="mrw-product-page" aria-labelledby="product-title-{{ section.id }}">
+    <div class="mrw-product-gallery">{% for image in product.images %}{{ image | image_url: width: 1400 | image_tag: widths: '450, 750, 1100, 1400', sizes: '(min-width: 751px) 50vw, 100vw', loading: 'eager' }}{% endfor %}</div>
+    <div class="mrw-product-copy"><p class="mrw-kicker">MORROW / THE DAILY RITUAL</p><h1 id="product-title-{{ section.id }}">{{ product.title | escape }}</h1><p class="mrw-price">{{ current_variant.price | money_with_currency }}</p>
+      <div class="mrw-description">{{ product.description }}</div>
+      {% form 'product', product %}
+        {{ form.errors | default_errors }}
+        <label for="variant-{{ section.id }}">Size</label><select id="variant-{{ section.id }}" name="id">{% for variant in product.variants %}<option value="{{ variant.id }}" {% if variant == current_variant %}selected{% endif %} {% unless variant.available %}disabled{% endunless %}>{{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} — Sold out{% endunless %}</option>{% endfor %}</select>
+        <label for="quantity-{{ section.id }}">Quantity</label><input id="quantity-{{ section.id }}" type="number" name="quantity" min="1" step="1" value="1" required>
+        <input type="hidden" name="return_to" value="{{ routes.cart_url }}">
+        <button class="mrw-button" type="submit" {% unless product.available %}disabled{% endunless %}>{% if product.available %}Add to demo bag{% else %}Sold out{% endif %}<span aria-hidden="true">↗</span></button>
+      {% endform %}
+      <p class="mrw-demo-note">Explore the shopping experience. This portfolio store does not sell or ship real products.</p>
+      <details class="mrw-product-detail"><summary>The design details <span aria-hidden="true">+</span></summary><p>A self-initiated brand exploration: quiet color, tactile packaging, editorial typography, and a three-product routine. Product imagery is AI-generated.</p></details>
+    </div>
+  </section>
+</div>
+{% schema %}
+{"name":"Morrow product","settings":[]}
+{% endschema %}

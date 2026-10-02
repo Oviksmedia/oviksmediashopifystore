@@ -1,0 +1,137 @@
+{
+  "collection": {
+    "id": "gid://shopify/Collection/558881046845",
+    "title": "The Daily Edit",
+    "handle": "the-daily-edit",
+    "descriptionHtml": "<p>Three essentials. One considered routine. A fictional Morrow portfolio collection, with illustrative prices and no real fulfillment.</p>",
+    "imageUrl": null,
+    "imageAltText": null,
+    "sortOrder": "MANUAL",
+    "collectionType": "manual",
+    "productsCount": 3,
+    "products": [
+      {
+        "title": "The Daily Cleanser",
+        "variantTitle": "150 ml",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-cleanser.png?v=1790913564",
+        "price": "28.00",
+        "currencyCode": "USD",
+        "status": "ACTIVE"
+      },
+      {
+        "title": "The Daily Serum",
+        "variantTitle": "30 ml",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-serum.png?v=1790913583",
+        "price": "48.00",
+        "currencyCode": "USD",
+        "status": "ACTIVE"
+      },
+      {
+        "title": "The Daily Cream",
+        "variantTitle": "50 ml",
+        "imageUrl": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-cream.png?v=1790913588",
+        "price": "38.00",
+        "currencyCode": "USD",
+        "status": "ACTIVE"
+      }
+    ],
+    "rules": null,
+    "updatedAt": "2026-10-02T04:00:25Z",
+    "currencyCode": "USD"
+  },
+  "products": [
+    {
+      "id": "gid://shopify/Product/15405173801277",
+      "title": "The Daily Cleanser",
+      "vendor": "Morrow",
+      "status": "ACTIVE",
+      "productType": "Skincare concept",
+      "descriptionHtml": "<p>An imagined first step. Frosted olive glass, considered proportions, and a quiet place on your shelf.</p><p>150 ml concept packaging.</p><p><strong>Portfolio demo only.</strong> Fictional product and illustrative USD price. AI-generated product imagery. No real formulation, skincare claims, purchase or fulfillment.</p>",
+      "tags": [
+        "morrow-demo",
+        "portfolio-concept"
+      ],
+      "totalInventory": 0,
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-cleanser.png?v=1790913564",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-cleanser.png?v=1790913564",
+          "altText": "Fictional Morrow cleanser concept packaging"
+        }
+      ],
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/67615618498877",
+          "title": "150 ml",
+          "sku": "MRW-DEMO-CLEANSER",
+          "price": "28.00",
+          "inventoryQuantity": 0
+        }
+      ],
+      "currencyCode": "USD"
+    },
+    {
+      "id": "gid://shopify/Product/15405173866813",
+      "title": "The Daily Serum",
+      "vendor": "Morrow",
+      "status": "ACTIVE",
+      "productType": "Skincare concept",
+      "descriptionHtml": "<p>An imagined middle moment. A tactile dropper bottle and a minimal silhouette for the Morrow daily ritual.</p><p>30 ml concept packaging.</p><p><strong>Portfolio demo only.</strong> Fictional product and illustrative USD price. AI-generated product imagery. No real formulation, skincare claims, purchase or fulfillment.</p>",
+      "tags": [
+        "morrow-demo",
+        "portfolio-concept"
+      ],
+      "totalInventory": 0,
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-serum.png?v=1790913583",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-serum.png?v=1790913583",
+          "altText": "Fictional Morrow serum concept packaging"
+        }
+      ],
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/67615618564413",
+          "title": "30 ml",
+          "sku": "MRW-DEMO-SERUM",
+          "price": "48.00",
+          "inventoryQuantity": 0
+        }
+      ],
+      "currencyCode": "USD"
+    },
+    {
+      "id": "gid://shopify/Product/15405173899581",
+      "title": "The Daily Cream",
+      "vendor": "Morrow",
+      "status": "ACTIVE",
+      "productType": "Skincare concept",
+      "descriptionHtml": "<p>An imagined finishing touch. A softly rounded jar, an olive lid, and the calm of an everyday moment.</p><p>50 ml concept packaging.</p><p><strong>Portfolio demo only.</strong> Fictional product and illustrative USD price. AI-generated product imagery. No real formulation, skincare claims, purchase or fulfillment.</p>",
+      "tags": [
+        "morrow-demo",
+        "portfolio-concept"
+      ],
+      "totalInventory": 0,
+      "featuredImageUrl": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-cream.png?v=1790913588",
+      "images": [
+        {
+          "url": "https://cdn.shopify.com/s/files/1/1023/3587/3341/files/morrow-daily-cream.png?v=1790913588",
+          "altText": "Fictional Morrow cream concept packaging"
+        }
+      ],
+      "totalVariants": 1,
+      "variants": [
+        {
+          "id": "gid://shopify/ProductVariant/67615618629949",
+          "title": "50 ml",
+          "sku": "MRW-DEMO-CREAM",
+          "price": "38.00",
+          "inventoryQuantity": 0
+        }
+      ],
+      "currencyCode": "USD"
+    }
+  ]
+}

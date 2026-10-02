@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "morrow-cart",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
