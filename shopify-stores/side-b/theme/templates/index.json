@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "storefront-home",
+      "settings": {
+        "product_night_index": "night-index",
+        "product_soft_static": "soft-static",
+        "product_after_hours": "after-hours"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

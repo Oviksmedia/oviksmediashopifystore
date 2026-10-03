@@ -1,0 +1,52 @@
+{% liquid
+  assign demo_product_1 = section.settings.product_the_arc
+  if demo_product_1 == blank
+    assign demo_product_1 = all_products['the-arc']
+  endif
+%}
+{% liquid
+  assign demo_product_2 = section.settings.product_the_fold
+  if demo_product_2 == blank
+    assign demo_product_2 = all_products['the-fold']
+  endif
+%}
+<main id="sable-main" tabindex="-1">
+<section class="sable-hero" aria-labelledby="sable-hero-title"><div class="sable-hero-top"><span>Leather / Form / Intention</span><span>Collection 01</span></div><h1 id="sable-hero-title">{{ section.settings.hero_heading | escape | newline_to_br }}</h1><div class="sable-hero-layout"><figure class="sable-campaign"><img {% if section.settings.hero_image %}src="{{ section.settings.hero_image | image_url: width: 2000 }}"{% else %}src="{{ 'sable-campaign.webp' | asset_url }}"{% endif %} alt="Oxblood Arc shoulder bag with a curved body and brass strap mounts on a dark stone plinth in sharp studio light." width="1536" height="1024" fetchpriority="high"><figcaption>01 / The Arc — Oxblood</figcaption></figure><div class="sable-hero-copy"><p class="sable-label">A study in silhouette</p><h2>Soft form.<br>Strong presence.</h2><p>One curve. A little tension.<br>Leather objects, considered<br>from every angle.</p><a class="sable-light-link" href="#sable-arc">Discover the Arc <span aria-hidden="true">↗</span></a><span class="sable-hero-index" aria-hidden="true">01—02</span></div></div></section>
+<section class="sable-collection" id="sable-collection" aria-labelledby="sable-collection-title"><div class="sable-section-head"><div><p class="sable-label">The objects / Collection 01</p><h2 id="sable-collection-title">A curve. A fold.</h2></div><p>Two shapes. Two ways to carry.<br>A focused first collection.</p></div>
+<article class="sable-product sable-product-arc" id="sable-arc" aria-labelledby="sable-arc-title"><div class="sable-gallery"><div class="sable-main-image"><img id="sable-arc-image" src="{{ 'sable-arc-oxblood.webp' | asset_url }}" alt="Full view of the oxblood Arc shoulder bag, including its arched strap and curved zip-top." width="1120" height="1400" loading="lazy"></div><div class="sable-gallery-controls" aria-label="Arc product views"><button type="button" data-view="form" data-gallery-src="{{ 'sable-arc-oxblood.webp' | asset_url }}" data-gallery-alt="Full form / Oxblood" aria-pressed="true">01 / Full form</button><button type="button" data-view="detail" data-gallery-src="{{ 'sable-detail.webp' | asset_url }}" data-gallery-alt="Material detail / Oxblood reference" aria-pressed="false">02 / Material detail</button></div><p class="sable-image-note" id="sable-image-caption">Full form / Oxblood</p></div><div class="sable-product-info"><p class="sable-label">01 / Shoulder bag</p><div class="sable-name-price"><h3 id="sable-arc-title">The Arc</h3></div><p class="sable-product-description">A crescent silhouette drawn in smooth leather. A generous strap, a curved zip, and just enough metal.</p>{% render 'product-buy', item_product: demo_product_1, form_id: 'home-product-1', button_class: 'sable-add', radios: true %}<p class="sable-price-note">Illustrative price. Concept materials and dimensions.</p><details open><summary>Form &amp; material</summary><p>Smooth leather concept with tonal stitching, black painted edges and brushed brass-tone mounts. Zip closure. Approx. 26 × 19 × 7 cm; strap drop 24 cm. Dimensions are design targets, not measured specifications.</p></details><details><summary>Care concept</summary><p>For a real leather product, confirm care instructions with the maker. This concept proposes a soft dry cloth and storage away from prolonged sunlight; no material testing has been performed.</p></details><p class="sable-ai-note">AI-generated product study. Fine hardware and stitching details may vary between views.</p></div></article>
+<article class="sable-product sable-product-fold" id="sable-fold" aria-labelledby="sable-fold-title"><div class="sable-fold-copy"><p class="sable-label">02 / Small leather good</p><h3 id="sable-fold-title">The Fold</h3><p class="sable-product-description">Less to carry.<br>More room to move.</p><p>A compact cardholder with an oxblood interior and an Ink exterior. The quiet counterpart to the Arc.</p>{% render 'product-buy', item_product: demo_product_2, form_id: 'home-product-2', button_class: 'sable-add', radios: false %}<details><summary>Form &amp; material</summary><p>Folded smooth leather concept. Two card slots and a central pocket, with tonal stitching. Approx. 10 × 7 cm closed. Capacity and dimensions require physical validation.</p></details></div><figure><img src="{{ 'sable-fold.webp' | asset_url }}" alt="Ink leather Fold cardholder opened to reveal an oxblood interior with two card slots." width="1120" height="896" loading="lazy"><figcaption>The Fold / Ink, oxblood interior / AI-generated concept</figcaption></figure></article></section>
+<section class="sable-material" id="sable-material" aria-labelledby="sable-material-title"><figure><img src="{{ 'sable-detail.webp' | asset_url }}" alt="Close detail of the Arc’s oxblood grain, tonal stitching, black edge paint and brass strap mount." width="1120" height="896" loading="lazy"><figcaption>Material study / AI-generated concept</figcaption></figure><div><p class="sable-label">The language of the object</p><h2 id="sable-material-title">Surface.<br>Edge.<br>Light.</h2><p>The curve does the talking.<br>The details hold the thought.</p><p class="sable-material-note">A visual exploration of leather, proportion and restraint. These objects are fictional; material descriptions illustrate the design intent.</p></div></section>
+</main>
+{% schema %}
+{
+  "name": "SABLE storefront",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "hero_heading",
+      "label": "Hero heading",
+      "default": "SABLE"
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "product",
+      "id": "product_the_arc",
+      "label": "The Arc"
+    },
+    {
+      "type": "product",
+      "id": "product_the_fold",
+      "label": "The Fold"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SABLE storefront"
+    }
+  ]
+}
+{% endschema %}

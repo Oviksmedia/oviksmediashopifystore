@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "native-404",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

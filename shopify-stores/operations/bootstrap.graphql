@@ -1,0 +1,4 @@
+query DemoStore {
+  shop { name myshopifyDomain currencyCode }
+  publications(first: 20) { nodes { id name } }
+}

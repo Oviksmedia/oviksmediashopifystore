@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "storefront-home",
+      "settings": {
+        "product_the_line_jersey": "the-line-jersey"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

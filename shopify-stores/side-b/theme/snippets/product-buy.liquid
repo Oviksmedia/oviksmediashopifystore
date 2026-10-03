@@ -1,0 +1,35 @@
+{% doc %}
+  Native Shopify product form. Prices, IDs and availability come from the catalog.
+  @param {product} item_product - Catalog product
+  @param {string} form_id - Unique form ID
+  @param {string} [button_class] - Brand button class
+  @param {boolean} [radios] - Render variant choices as radio buttons
+{% enddoc %}
+{% if item_product != blank %}
+  {% assign chosen_variant = item_product.selected_or_first_available_variant %}
+  {% form 'product', item_product, id: form_id, class: 'native-buy' %}
+    {{ form.errors | default_errors }}
+    <p class="native-live-price" data-native-price>{% if item_product.price_varies %}From {{ item_product.price_min | money_with_currency }}{% else %}{{ chosen_variant.price | money_with_currency }}{% endif %}</p>
+    {% if radios %}
+      <fieldset class="native-options"><legend>{{ item_product.options.first | escape }}</legend>
+        {% for variant in item_product.variants %}
+          <label><input type="radio" name="id" value="{{ variant.id }}" required {% unless variant.available %}disabled{% endunless %} data-variant-title="{{ variant.title | escape }}" data-money="{{ variant.price | money_with_currency | escape }}" data-min="{{ variant.quantity_rule.min | default: 1 }}" data-step="{{ variant.quantity_rule.increment | default: 1 }}" data-max="{{ variant.quantity_rule.max }}" data-image="{% if variant.featured_image %}{{ variant.featured_image | image_url: width: 1200 }}{% endif %}"><span>{{ variant.title | escape }}{% if item_product.price_varies %} / {{ variant.price | money_with_currency }}{% endif %}{% unless variant.available %} / Sold out{% endunless %}</span></label>
+        {% endfor %}
+      </fieldset>
+    {% else %}
+      <label for="{{ form_id }}-variant">{{ item_product.options.first | escape }}</label>
+      <select id="{{ form_id }}-variant" name="id" required>
+        <option value="" selected disabled>Choose an option</option>
+        {% for variant in item_product.variants %}
+          <option value="{{ variant.id }}" {% unless variant.available %}disabled{% endunless %} data-money="{{ variant.price | money_with_currency | escape }}" data-min="{{ variant.quantity_rule.min | default: 1 }}" data-step="{{ variant.quantity_rule.increment | default: 1 }}" data-max="{{ variant.quantity_rule.max }}" data-image="{% if variant.featured_image %}{{ variant.featured_image | image_url: width: 1200 }}{% endif %}">{{ variant.title | escape }} — {{ variant.price | money_with_currency }}{% unless variant.available %} / Sold out{% endunless %}</option>
+        {% endfor %}
+      </select>
+    {% endif %}
+    <div class="native-buy-actions"><div><label for="{{ form_id }}-quantity">Quantity</label><input id="{{ form_id }}-quantity" name="quantity" type="number" min="{{ chosen_variant.quantity_rule.min | default: 1 }}" step="{{ chosen_variant.quantity_rule.increment | default: 1 }}" {% if chosen_variant.quantity_rule.max != blank %}max="{{ chosen_variant.quantity_rule.max }}"{% endif %} value="{{ chosen_variant.quantity_rule.min | default: 1 }}" inputmode="numeric" required></div><button type="submit" name="add" class="{{ button_class | escape }} native-add" {% unless item_product.available %}disabled{% endunless %}>{% if item_product.available %}Add to demo bag ↗{% else %}Sold out{% endif %}</button></div>
+    <input type="hidden" name="return_to" value="{{ routes.cart_url }}">
+    <p class="native-selection-status" role="status" aria-live="polite"></p>
+  {% endform %}
+  <a class="native-product-link" href="{{ item_product.url }}">View product details ↗</a>
+{% else %}
+  <p class="native-catalog-notice">The demo catalog is being prepared.</p>
+{% endif %}

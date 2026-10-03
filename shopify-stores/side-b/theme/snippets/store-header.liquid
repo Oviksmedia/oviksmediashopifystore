@@ -1,0 +1,7 @@
+{% doc %}Brand navigation with native Shopify cart count.{% enddoc %}
+<a class="sideb-skip" href="#sideb-main">Skip to collection</a>
+  <div class="sideb-demo-note">Fictional record imprint / Self-initiated design concept / No real orders</div>
+  <header class="sideb-header">
+    <a class="sideb-logo" href="{{ routes.root_url }}" aria-label="SIDE B storefront home">SIDE B<span aria-hidden="true">●</span></a>
+    <nav aria-label="Store navigation"><a href="{{ routes.root_url }}#sideb-releases">Records</a><a href="{{ routes.root_url }}#sideb-imprint">The imprint</a><a href="{{ routes.cart_url }}" class=" native-bag">Demo bag <span>{{ cart.item_count }}</span></a></nav>
+  </header>

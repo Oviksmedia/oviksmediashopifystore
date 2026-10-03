@@ -1,0 +1,62 @@
+{
+  "checkedAt": "2026-10-03T14:53:58.106Z",
+  "deployId": "6ac114640eb1202022094da2",
+  "url": "https://oviks-morrow-portfolio.netlify.app/",
+  "pages": [
+    {
+      "page": "index",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    },
+    {
+      "page": "morrow",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/morrow.html",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    },
+    {
+      "page": "rift",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/rift.html",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    },
+    {
+      "page": "sable",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/sable.html",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    },
+    {
+      "page": "daybreak",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/daybreak.html",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    },
+    {
+      "page": "arc",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/arc.html",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    },
+    {
+      "page": "side-b",
+      "status": 200,
+      "resolvedURL": "https://oviks-morrow-portfolio.netlify.app/side-b.html",
+      "visibleTextMatchesBuild": true,
+      "storeLinksAndPasswords": true
+    }
+  ],
+  "note": "Netlify injects a hosting comment and rewrites local HTML links to clean URLs. Visible text and exact Shopify links/passwords are checked instead of raw HTML bytes.",
+  "css": {
+    "path": "assets/portfolio.css",
+    "sha256": "a5e943dff8fb4d8a488100b0a393d48d164f522ffb2279054839fcc249ae96e3",
+    "matchesBuild": true
+  }
+}

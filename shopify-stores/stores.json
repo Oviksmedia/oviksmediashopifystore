@@ -1,0 +1,43 @@
+{
+  "morrow": {
+    "domain": "oviks-portfolio-demo.myshopify.com",
+    "password": "suweid",
+    "themeId": 192208175421,
+    "status": "existing"
+  },
+  "rift": {
+    "domain": "rift-portfolio-demo.myshopify.com",
+    "password": "lowcia",
+    "themeId": 201858744647,
+    "status": "published",
+    "publishedAt": "2026-10-03T14:34:07.580Z"
+  },
+  "sable": {
+    "domain": "sable-portfolio-demo.myshopify.com",
+    "password": "chowck",
+    "themeId": 155155202246,
+    "status": "published",
+    "publishedAt": "2026-10-03T14:34:07.581Z"
+  },
+  "daybreak": {
+    "domain": "daybreak-portfolio-demo.myshopify.com",
+    "password": "nowped",
+    "themeId": 188396142820,
+    "status": "published",
+    "publishedAt": "2026-10-03T14:34:07.582Z"
+  },
+  "arc": {
+    "domain": "arc-portfolio-demo.myshopify.com",
+    "password": "reepro",
+    "themeId": 154328236101,
+    "status": "published",
+    "publishedAt": "2026-10-03T14:34:07.582Z"
+  },
+  "side-b": {
+    "domain": "side-b-portfolio-demo.myshopify.com",
+    "password": "yeitwu",
+    "themeId": 201048293759,
+    "status": "published",
+    "publishedAt": "2026-10-03T14:34:07.582Z"
+  }
+}

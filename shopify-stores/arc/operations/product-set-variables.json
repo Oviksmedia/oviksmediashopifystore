@@ -1,0 +1,101 @@
+{
+  "identifier": {
+    "handle": "arc-01"
+  },
+  "input": {
+    "handle": "arc-01",
+    "title": "ARC 01",
+    "descriptionHtml": "<p>A fictional table light: one continuous arch with a recessed inner diffuser. Brushed aluminium and Graphite are illustrative finishes. Proposed dimensions: 380 × 260 × 80 mm. Electrical safety, stability, light output and manufacturing have not been tested.</p><p>Self-initiated portfolio concept by Oviks Media. AI-generated product imagery. No real purchase or fulfillment.</p>",
+    "status": "ACTIVE",
+    "vendor": "ARC",
+    "productType": "Lighting",
+    "tags": [
+      "Oviks Media",
+      "Fictional portfolio concept",
+      "ARC"
+    ],
+    "files": [
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/arc-silver.webp",
+        "filename": "arc-silver.webp",
+        "alt": "ARC 01 / Product view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      },
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/arc-graphite.webp",
+        "filename": "arc-graphite.webp",
+        "alt": "ARC 01 / Additional concept view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      },
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/arc-detail.webp",
+        "filename": "arc-detail.webp",
+        "alt": "ARC 01 / Additional concept view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      }
+    ],
+    "productOptions": [
+      {
+        "name": "Finish",
+        "position": 1,
+        "values": [
+          {
+            "name": "Brushed aluminium"
+          },
+          {
+            "name": "Graphite"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Finish",
+            "name": "Brushed aluminium"
+          }
+        ],
+        "price": "420.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "arc-arc-01-1"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false,
+        "file": {
+          "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/arc-silver.webp",
+          "filename": "arc-silver.webp",
+          "alt": "ARC 01 / Product view",
+          "contentType": "IMAGE",
+          "duplicateResolutionMode": "REPLACE"
+        }
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Finish",
+            "name": "Graphite"
+          }
+        ],
+        "price": "440.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "arc-arc-01-2"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false,
+        "file": {
+          "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/arc-graphite.webp",
+          "filename": "arc-graphite.webp",
+          "alt": "ARC 01 / Additional concept view",
+          "contentType": "IMAGE",
+          "duplicateResolutionMode": "REPLACE"
+        }
+      }
+    ]
+  }
+}

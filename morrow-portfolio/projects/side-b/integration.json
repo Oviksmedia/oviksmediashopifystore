@@ -3,7 +3,15 @@
   "title": "SIDE B",
   "category": "Records & cover design",
   "summary": "Three distinct record sleeves become one bold print-led imprint and a usable collection storefront.",
-  "scope": ["Visual identity", "Original cover series", "Sleeve and label graphics", "Campaign poster", "AI product art direction", "Storefront prototype", "Namespaced Shopify source proposal"],
+  "scope": [
+    "Visual identity",
+    "Original cover series",
+    "Sleeve and label graphics",
+    "Campaign poster",
+    "AI product art direction",
+    "Shopify storefront",
+    "Complete Shopify Liquid theme"
+  ],
   "base": {
     "commit": "f443014f815e393a783a396008436e6245b1d9a9",
     "provenance": "Local parent repository, codex/portfolio-design-refinement; not an asserted GitHub base",
@@ -24,7 +32,9 @@
     "source": "morrow-portfolio/projects/side-b/case.html",
     "kind": "Semantic article fragment to place inside the parent main element",
     "output": "side-b.html",
-    "styles": ["assets/side-b.css"],
+    "styles": [
+      "assets/side-b.css"
+    ],
     "demoLink": "side-b-demo.html",
     "returnLink": "index.html#work"
   },
@@ -32,8 +42,12 @@
     "source": "morrow-portfolio/projects/side-b/demo.html",
     "kind": "Complete standalone HTML document",
     "output": "side-b-demo.html",
-    "styles": ["assets/side-b.css"],
-    "scripts": ["assets/side-b-store.js"],
+    "styles": [
+      "assets/side-b.css"
+    ],
+    "scripts": [
+      "assets/side-b-store.js"
+    ],
     "storageKey": "sideb.demo.bag.v1",
     "limits": "Browser-local bag; no checkout, real inventory, payments, audio or Shopify connection"
   },
@@ -42,7 +56,10 @@
     "targetDirectory": "dist/assets/",
     "rule": "Copy side-b-* files and the side-b/fonts subfolder with its licences; preserve nested relative paths. Do not copy evidence into deploy assets.",
     "cssPrefix": "sideb",
-    "fontFamilyNames": ["SideB Ultra", "SideB Chivo"]
+    "fontFamilyNames": [
+      "SideB Ultra",
+      "SideB Chivo"
+    ]
   },
   "palette": {
     "imprint": "#FFF15A",
@@ -62,9 +79,19 @@
   "motion": "Stillness. Gallery replaces the selected image immediately through native buttons, with matching keyboard/touch/reduced-motion behaviour.",
   "shopify": {
     "sourceDirectory": "morrow-portfolio/projects/side-b/shopify/",
-    "sections": ["shopify/sections/side-b-collection.liquid", "shopify/sections/side-b-product.liquid"],
-    "assets": ["shopify/assets/side-b-shopify.css", "shopify/assets/side-b-ultra.ttf", "shopify/assets/side-b-chivo.ttf"],
-    "localeMergeFiles": ["shopify/locales/en.default.json", "shopify/locales/en.default.schema.json"],
+    "sections": [
+      "shopify/sections/side-b-collection.liquid",
+      "shopify/sections/side-b-product.liquid"
+    ],
+    "assets": [
+      "shopify/assets/side-b-shopify.css",
+      "shopify/assets/side-b-ultra.ttf",
+      "shopify/assets/side-b-chivo.ttf"
+    ],
+    "localeMergeFiles": [
+      "shopify/locales/en.default.json",
+      "shopify/locales/en.default.schema.json"
+    ],
     "instructions": "shopify/README.md",
     "state": "Source only. No upload or live theme verification. Native cart remains owned by the target theme.",
     "sourceValidation": "Local schema, locale, asset and embedded JavaScript checks available. Full Shopify validator blocked by missing bundled @shopify/theme-check-common; no dependencies installed."
@@ -83,5 +110,8 @@
     "screenshotsDirectory": "evidence/",
     "status": "Verified for the local HTML scope; Shopify/device/screen-reader boundaries remain unverified"
   },
-  "parentOwnership": "Final portfolio overview cards, shared navigation/builder integration, combined review, catalog coordination, store access and any publication. Existing Morrow and RIFT files were not changed."
+  "parentOwnership": "Final portfolio overview cards, shared navigation/builder integration, combined review, catalog coordination, store access and any publication. Existing Morrow and RIFT files were not changed.",
+  "shopifyStatus": "Published dedicated Shopify development store. See shopify-stores/stores.json and docs/shopify-migration.md for access and verification.",
+  "publicationStatus": "Portfolio on Netlify; Shopify demo published. Historical module preview instructions below refer to the retained HTML prototype.",
+  "liveStore": "https://side-b-portfolio-demo.myshopify.com/"
 }

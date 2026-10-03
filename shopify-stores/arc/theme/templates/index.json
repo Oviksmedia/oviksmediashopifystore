@@ -1,0 +1,13 @@
+{
+  "sections": {
+    "main": {
+      "type": "storefront-home",
+      "settings": {
+        "product_arc_01": "arc-01"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

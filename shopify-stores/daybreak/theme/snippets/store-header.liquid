@@ -1,0 +1,4 @@
+{% doc %}Brand navigation with native Shopify cart count.{% enddoc %}
+<a class="daybreak-skip" href="#daybreak-main">Skip to content</a>
+<div class="daybreak-notice">Fictional coffee. Real design exploration. <a href="https://oviks-morrow-portfolio.netlify.app/daybreak">View the case study ↗</a></div>
+<header class="daybreak-nav"><a class="daybreak-logo" href="{{ routes.root_url }}#daybreak-main" aria-label="DAYBREAK home">daybreak</a><nav aria-label="Store"><a href="{{ routes.root_url }}#daybreak-coffee">The coffee</a><a href="{{ routes.root_url }}#daybreak-ritual">The ritual</a></nav><a href="{{ routes.cart_url }}" class="daybreak-bag-trigger native-bag">Demo bag <span>{{ cart.item_count }}</span></a></header>

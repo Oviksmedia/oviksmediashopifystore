@@ -1,0 +1,15 @@
+{
+  "sections": {
+    "main": {
+      "type": "storefront-home",
+      "settings": {
+        "product_day_one": "day-one",
+        "product_high_noon": "high-noon",
+        "product_after_hours": "after-hours"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

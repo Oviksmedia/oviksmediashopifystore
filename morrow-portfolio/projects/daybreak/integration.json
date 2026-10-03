@@ -10,7 +10,7 @@
     "AI-assisted campaign and catalog art direction",
     "Responsive storefront",
     "Browser-local demo bag",
-    "Namespaced Shopify Liquid source proposal"
+    "Namespaced Complete Shopify Liquid theme"
   ],
   "cover": {
     "path": "assets/daybreak-campaign.webp",
@@ -63,5 +63,8 @@
     "port": 4402,
     "case": "http://127.0.0.1:4402/daybreak.html",
     "demo": "http://127.0.0.1:4402/daybreak-demo.html"
-  }
+  },
+  "shopifyStatus": "Published dedicated Shopify development store. See shopify-stores/stores.json and docs/shopify-migration.md for access and verification.",
+  "publicationStatus": "Portfolio on Netlify; Shopify demo published. Historical module preview instructions below refer to the retained HTML prototype.",
+  "liveStore": "https://daybreak-portfolio-demo.myshopify.com/"
 }

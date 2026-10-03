@@ -15,6 +15,17 @@ const concepts = conceptOrder.flatMap(slug => {
   return [{slug, folder, spec}];
 });
 const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const stores = JSON.parse(fs.readFileSync(path.join(root,'../shopify-stores/stores.json'),'utf8'));
+function shopifyCase(content, slug) {
+  const store = stores[slug];
+  if (store.status !== 'published') throw new Error(`Shopify store is not published: ${slug}`);
+  const url = `https://${store.domain}/`;
+  content = content.replaceAll(`${slug}-demo.html`,url);
+  // Show access instructions beside the first storefront action.
+  content = content.replace(/(<a\b[^>]*href="https:\/\/[^\"]+\.myshopify\.com\/[^\"]*"[^>]*>[\s\S]*?<\/a>)/,
+    `$1<p class="store-access-note">Visitor password: <strong>${escapeHtml(store.password)}</strong></p>`);
+  return content + `<aside class="shopify-access"><div><p class="eyebrow">WORKING SHOPIFY DEMO</p><h2>Explore the store.</h2><p>Visitor password: <strong>${escapeHtml(store.password)}</strong>. Enter it on the store’s password screen. This is a fictional portfolio project with native Shopify products and a demo bag. No checkout or real fulfillment.</p></div><a class="portfolio-link" href="${url}">Open Shopify demo ↗</a></aside>`;
+}
 const assetOwners = new Set();
 function copyConceptAssets(source, destination) {
   fs.mkdirSync(destination, {recursive:true});
@@ -56,7 +67,7 @@ function conceptCard({slug, spec}, index) {
   const cover = spec.cover;
   const coverPath = cover.path || cover.src || cover.asset;
   if (!coverPath || !coverPath.startsWith('assets/')) throw new Error(`Missing concept cover: ${slug}`);
-  return `<article class="project-card project-${slug}"><a class="project-cover" href="${slug}.html" aria-label="View ${escapeHtml(spec.title)} case study"><img src="${escapeHtml(coverPath)}" alt="${escapeHtml(cover.alt)}" width="${cover.width || 1536}" height="${cover.height || 1024}" loading="lazy"><span class="cover-label">${escapeHtml(spec.title)} / ${escapeHtml(spec.category)}</span><span class="cover-arrow" aria-hidden="true">↗</span></a><div class="project-heading"><h3><a href="${slug}.html">${escapeHtml(spec.title)}</a></h3><span>${String(index+3).padStart(2,'0')}</span></div><p class="project-scope">${escapeHtml(spec.category)} · Identity · Storefront prototype</p><p class="project-summary">${escapeHtml(spec.summary)}</p><div class="project-actions"><a class="portfolio-link" href="${slug}.html">View case study <span aria-hidden="true">↗</span></a><a href="${slug}-demo.html">Try the prototype ↗</a></div><p class="project-note">Self-initiated concept · Browser prototype</p></article>`;
+  return `<article class="project-card project-${slug}"><a class="project-cover" href="${slug}.html" aria-label="View ${escapeHtml(spec.title)} case study"><img src="${escapeHtml(coverPath)}" alt="${escapeHtml(cover.alt)}" width="${cover.width || 1536}" height="${cover.height || 1024}" loading="lazy"><span class="cover-label">${escapeHtml(spec.title)} / ${escapeHtml(spec.category)}</span><span class="cover-arrow" aria-hidden="true">↗</span></a><div class="project-heading"><h3><a href="${slug}.html">${escapeHtml(spec.title)}</a></h3><span>${String(index+3).padStart(2,'0')}</span></div><p class="project-scope">${escapeHtml(spec.category)} · Identity · Shopify / Liquid</p><p class="project-summary">${escapeHtml(spec.summary)}</p><div class="project-actions"><a class="portfolio-link" href="${slug}.html">View case study <span aria-hidden="true">↗</span></a><a href="https://${stores[slug].domain}/">Shopify demo ↗</a></div><p class="project-note">Self-initiated concept · Demo password: <strong>${escapeHtml(stores[slug].password)}</strong></p></article>`;
 }
 let overview = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
 overview = overview.replace('<!-- concept-projects -->', concepts.map(conceptCard).join('\n')).replaceAll('{{project_count}}', String(allProjects.length).padStart(2,'0'));
@@ -73,7 +84,7 @@ morrow = '<div class="case-breadcrumb"><a href="index.html#work">← Selected wo
 const pages = [
   {name:'index', title:'Brand worlds. Working storefronts.', description:'Self-initiated graphic design and storefront concepts spanning skincare, cycling, leather accessories, coffee, lighting and records.', content:overview},
   {name:'morrow', title:'Morrow — skincare identity & Shopify', description:'A self-initiated skincare identity and working Shopify storefront. Explore the brief, design decisions, product pages and demo bag.', content:morrow, styles:'<link rel="stylesheet" href="assets/morrow-premium.css"><link rel="stylesheet" href="assets/morrow-case-study.css">'},
-  {name:'rift', title:'RIFT — cycling identity & storefront concept', description:'A self-initiated cycling apparel concept: bold identity, campaign art direction and an interactive storefront prototype.', content:fs.readFileSync(path.join(root,'src/rift.html'),'utf8'), styles:'<link rel="stylesheet" href="assets/rift.css">'}
+  {name:'rift', title:'RIFT — cycling identity & Shopify', description:'A self-initiated cycling apparel concept: bold identity, campaign art direction and a working Shopify storefront.', content:shopifyCase(fs.readFileSync(path.join(root,'src/rift.html'),'utf8'),'rift'), styles:'<link rel="stylesheet" href="assets/rift.css">'}
 ];
 for (const {slug,folder,spec} of concepts) {
   let content = fs.readFileSync(path.join(folder,spec.caseFile || 'case.html'),'utf8');
@@ -81,7 +92,7 @@ for (const {slug,folder,spec} of concepts) {
   const caseScript = path.join(folder,'assets',slug+'-case.js');
   const caseStyles = spec.styles || spec.stylesheets || spec.case?.styles || [`assets/${slug}.css`];
   const styles = caseStyles.map(file=>`<link rel="stylesheet" href="${escapeHtml(file)}">`).join('') + (fs.existsSync(caseScript)?`<script src="assets/${slug}-case.js" defer></script>`:'');
-  pages.push({name:slug,title:`${spec.title} — ${spec.category} concept`,description:escapeHtml(spec.summary),content,styles});
+  pages.push({name:slug,title:`${spec.title} — ${spec.category} & Shopify`,description:escapeHtml(spec.summary),content:shopifyCase(content,slug),styles});
   fs.copyFileSync(path.join(folder,spec.demoFile || 'demo.html'),path.join(dist,slug+'-demo.html'));
 }
 for (const page of pages) fs.writeFileSync(path.join(dist, page.name + '.html'), shell({...page,content:page.content+projectNavigation(page.name)}));

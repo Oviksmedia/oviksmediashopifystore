@@ -1,0 +1,67 @@
+{% liquid
+  assign demo_product_1 = section.settings.product_day_one
+  if demo_product_1 == blank
+    assign demo_product_1 = all_products['day-one']
+  endif
+%}
+{% liquid
+  assign demo_product_2 = section.settings.product_high_noon
+  if demo_product_2 == blank
+    assign demo_product_2 = all_products['high-noon']
+  endif
+%}
+{% liquid
+  assign demo_product_3 = section.settings.product_after_hours
+  if demo_product_3 == blank
+    assign demo_product_3 = all_products['after-hours']
+  endif
+%}
+<main id="daybreak-main">
+<section class="daybreak-hero" aria-labelledby="daybreak-hero-title"><div class="daybreak-hero-copy"><p class="daybreak-kicker">SPECIALTY COFFEE / EVERYDAY JOY</p><h1 id="daybreak-hero-title">{{ section.settings.hero_heading | escape | newline_to_br }}</h1><p>A little brighter. A little slower.<br>A cup that feels like your kind of day.</p><a class="daybreak-button" href="#daybreak-coffee">Find your daily coffee <span aria-hidden="true">↗</span></a><p class="daybreak-small">Three roast personalities. One good ritual.</p></div><figure class="daybreak-hero-photo"><img {% if section.settings.hero_image %}src="{{ section.settings.hero_image | image_url: width: 2000 }}"{% else %}src="{{ 'daybreak-campaign.webp' | asset_url }}"{% endif %} width="1536" height="1024" alt="Orange Day One, butter High Noon and blue After Hours coffee pouches on a blue plinth in morning light" fetchpriority="high"><figcaption>DAYBREAK / THE DAILY LINEUP</figcaption></figure></section>
+<div class="daybreak-strip" aria-hidden="true"><span>☀ A cup of possibility</span><span>Made for your everyday</span><span>☀ A cup of possibility</span></div>
+<section class="daybreak-shop daybreak-section" id="daybreak-coffee" aria-labelledby="daybreak-shop-title"><div class="daybreak-section-head"><div><p class="daybreak-kicker">01 / PICK YOUR PERSONALITY</p><h2 id="daybreak-shop-title">What’s your<br>kind of coffee?</h2></div><p>Bright, balanced or beautifully bold.<br>Choose a roast, then make it yours.</p></div><p class="daybreak-concept-note">Fictional roast and tasting descriptions. 250 g packs and USD prices are illustrative.</p><div class="daybreak-products">
+<article class="daybreak-product"><div class="daybreak-product-photo"><img src="{{ 'daybreak-day-one.webp' | asset_url }}" width="900" height="900" loading="lazy" alt="Orange Day One 250 g matte coffee pouch"><span class="daybreak-roast-tag">01 / BALANCED</span></div><div class="daybreak-product-heading"><h3>Day One</h3><p>{{ demo_product_1.price | money_with_currency }} <span>/ 250 g</span></p></div><p class="daybreak-product-sub">Your everyday, elevated.</p><dl class="daybreak-taste"><div><dt>Roast</dt><dd>Medium</dd></div><div><dt>Tastes like</dt><dd>Milk chocolate · orange · caramel</dd></div></dl>{% render 'product-buy', item_product: demo_product_1, form_id: 'home-product-1', button_class: 'daybreak-button', radios: false %}</article>
+<article class="daybreak-product"><div class="daybreak-product-photo"><img src="{{ 'daybreak-high-noon.webp' | asset_url }}" width="900" height="900" loading="lazy" alt="Butter-yellow High Noon 250 g matte coffee pouch"><span class="daybreak-roast-tag">02 / BRIGHT</span></div><div class="daybreak-product-heading"><h3>High Noon</h3><p>{{ demo_product_2.price | money_with_currency }} <span>/ 250 g</span></p></div><p class="daybreak-product-sub">A sunny little detour.</p><dl class="daybreak-taste"><div><dt>Roast</dt><dd>Light</dd></div><div><dt>Tastes like</dt><dd>Apricot · honey · lemon peel</dd></div></dl>{% render 'product-buy', item_product: demo_product_2, form_id: 'home-product-2', button_class: 'daybreak-button', radios: false %}</article>
+<article class="daybreak-product"><div class="daybreak-product-photo"><img src="{{ 'daybreak-after-hours.webp' | asset_url }}" width="900" height="900" loading="lazy" alt="Deep-blue After Hours 250 g matte coffee pouch"><span class="daybreak-roast-tag">03 / BOLD</span></div><div class="daybreak-product-heading"><h3>After Hours</h3><p>{{ demo_product_3.price | money_with_currency }} <span>/ 250 g</span></p></div><p class="daybreak-product-sub">A deeper kind of comfort.</p><dl class="daybreak-taste"><div><dt>Roast</dt><dd>Dark</dd></div><div><dt>Tastes like</dt><dd>Dark chocolate · toasted hazelnut</dd></div></dl>{% render 'product-buy', item_product: demo_product_3, form_id: 'home-product-3', button_class: 'daybreak-button', radios: false %}</article>
+</div></section>
+<section class="daybreak-ritual daybreak-section" id="daybreak-ritual" aria-labelledby="daybreak-ritual-title"><div class="daybreak-ritual-art" aria-hidden="true"><svg viewBox="0 0 480 400"><path d="M100 152 Q240 10 380 152" fill="#f66a32"/><path d="M97 169H383M97 191H383" stroke="#fff5db" stroke-width="12" stroke-linecap="round"/><path d="M130 240H327V291Q327 369 230 369Q130 369 130 291Z" fill="#fff5db"/><path d="M327 252H352Q408 252 392 296Q380 327 327 321" stroke="#fff5db" stroke-width="21" fill="none"/><path d="M177 229q-23-28 0-49M226 229q-23-28 0-49" stroke="#f66a32" stroke-width="8" fill="none" stroke-linecap="round"/></svg><span>MAKE A LITTLE ROOM<br>FOR A GOOD MORNING.</span></div><div><p class="daybreak-kicker">02 / YOUR DAILY PAUSE</p><h2 id="daybreak-ritual-title">Big on joy.<br>Easy on the jargon.</h2><p>Some days start with a plan. Others start with a cup. DAYBREAK is a fictional roastery built around the part you can make your own.</p><details><summary>Whole bean or ground?</summary><p>Choose whole bean if you use your own grinder. Filter is a medium grind for a drip brewer or pour-over; French press is coarser; espresso is finer. These are illustrative preparation options.</p></details><details><summary>A starting point for your brew</summary><p>Try 15 g of coffee to 250 ml of water, then adjust to your taste. Your brewer and grind will change the result. This is a general starting ratio, not a tested DAYBREAK recipe.</p></details></div></section>
+<section class="daybreak-signoff"><img src="{{ 'daybreak-sun.svg' | asset_url }}" width="120" height="90" alt="" loading="lazy"><h2>Tomorrow looks bright.</h2><a href="#daybreak-coffee">Meet your next cup <span aria-hidden="true">↗</span></a></section>
+</main>
+{% schema %}
+{
+  "name": "DAYBREAK storefront",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "hero_heading",
+      "label": "Hero heading",
+      "default": "Good days\nstart here."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "product",
+      "id": "product_day_one",
+      "label": "Day One"
+    },
+    {
+      "type": "product",
+      "id": "product_high_noon",
+      "label": "High Noon"
+    },
+    {
+      "type": "product",
+      "id": "product_after_hours",
+      "label": "After Hours"
+    }
+  ],
+  "presets": [
+    {
+      "name": "DAYBREAK storefront"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,117 @@
+[
+  {
+    "slug": "index",
+    "accessNotes": [
+      "Self-initiated concept · Demo password: suweid",
+      "Self-initiated concept · Demo password: lowcia",
+      "Self-initiated concept · Demo password: chowck",
+      "Self-initiated concept · Demo password: nowped",
+      "Self-initiated concept · Demo password: reepro",
+      "Self-initiated concept · Demo password: yeitwu"
+    ],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://oviks-portfolio-demo.myshopify.com/",
+      "https://rift-portfolio-demo.myshopify.com/",
+      "https://sable-portfolio-demo.myshopify.com/",
+      "https://daybreak-portfolio-demo.myshopify.com/",
+      "https://arc-portfolio-demo.myshopify.com/",
+      "https://side-b-portfolio-demo.myshopify.com/",
+      "https://daybreak-portfolio-demo.myshopify.com/",
+      "https://sable-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  },
+  {
+    "slug": "morrow",
+    "accessNotes": [],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://oviks-portfolio-demo.myshopify.com/",
+      "https://oviks-portfolio-demo.myshopify.com/collections/the-daily-edit",
+      "https://oviks-portfolio-demo.myshopify.com/",
+      "https://oviks-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  },
+  {
+    "slug": "rift",
+    "accessNotes": [
+      "Visitor password: lowcia",
+      "WORKING SHOPIFY DEMOExplore the store.Visitor password: lowcia. Enter it on the store’s password screen. This is a fictional portfolio project with native Shopify products and a demo bag. No checkout or real fulfillment.Open Shopify demo ↗"
+    ],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://rift-portfolio-demo.myshopify.com/",
+      "https://rift-portfolio-demo.myshopify.com/",
+      "https://rift-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  },
+  {
+    "slug": "sable",
+    "accessNotes": [
+      "Visitor password: chowck",
+      "WORKING SHOPIFY DEMOExplore the store.Visitor password: chowck. Enter it on the store’s password screen. This is a fictional portfolio project with native Shopify products and a demo bag. No checkout or real fulfillment.Open Shopify demo ↗"
+    ],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://sable-portfolio-demo.myshopify.com/",
+      "https://sable-portfolio-demo.myshopify.com/#sable-arc",
+      "https://sable-portfolio-demo.myshopify.com/",
+      "https://sable-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  },
+  {
+    "slug": "daybreak",
+    "accessNotes": [
+      "Visitor password: nowped",
+      "WORKING SHOPIFY DEMOExplore the store.Visitor password: nowped. Enter it on the store’s password screen. This is a fictional portfolio project with native Shopify products and a demo bag. No checkout or real fulfillment.Open Shopify demo ↗"
+    ],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://daybreak-portfolio-demo.myshopify.com/",
+      "https://daybreak-portfolio-demo.myshopify.com/#daybreak-coffee",
+      "https://daybreak-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  },
+  {
+    "slug": "arc",
+    "accessNotes": [
+      "Visitor password: reepro",
+      "WORKING SHOPIFY DEMOExplore the store.Visitor password: reepro. Enter it on the store’s password screen. This is a fictional portfolio project with native Shopify products and a demo bag. No checkout or real fulfillment.Open Shopify demo ↗"
+    ],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://arc-portfolio-demo.myshopify.com/",
+      "https://arc-portfolio-demo.myshopify.com/#arc-shop",
+      "https://arc-portfolio-demo.myshopify.com/",
+      "https://arc-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  },
+  {
+    "slug": "side-b",
+    "accessNotes": [
+      "Visitor password: yeitwu",
+      "WORKING SHOPIFY DEMOExplore the store.Visitor password: yeitwu. Enter it on the store’s password screen. This is a fictional portfolio project with native Shopify products and a demo bag. No checkout or real fulfillment.Open Shopify demo ↗"
+    ],
+    "brokenImages": [],
+    "pageWidth": 375,
+    "storeLinks": [
+      "https://side-b-portfolio-demo.myshopify.com/",
+      "https://side-b-portfolio-demo.myshopify.com/",
+      "https://side-b-portfolio-demo.myshopify.com/",
+      "https://side-b-portfolio-demo.myshopify.com/"
+    ],
+    "viewport": 390
+  }
+]

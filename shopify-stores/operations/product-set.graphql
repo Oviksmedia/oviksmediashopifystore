@@ -1,0 +1,9 @@
+mutation UpsertDemo($input: ProductSetInput!, $identifier: ProductSetIdentifiers!) {
+  productSet(input: $input, identifier: $identifier, synchronous: true) {
+    product {
+      id handle title status
+      variants(first: 20) { nodes { id title price availableForSale } }
+    }
+    userErrors { field message code }
+  }
+}

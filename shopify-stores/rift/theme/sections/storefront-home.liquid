@@ -1,0 +1,47 @@
+{% liquid
+  assign demo_product_1 = section.settings.product_the_line_jersey
+  if demo_product_1 == blank
+    assign demo_product_1 = all_products['the-line-jersey']
+  endif
+%}
+<main id="rift-main">
+    <section class="rift-store-hero" aria-labelledby="rift-hero-title"><img {% if section.settings.hero_image %}src="{{ section.settings.hero_image | image_url: width: 2000 }}"{% else %}src="{{ 'rift-campaign.webp' | asset_url }}"{% endif %} alt="Three riders in cobalt and acid yellow jerseys share a winding road through a dark volcanic landscape." width="1672" height="941" fetchpriority="high"><div class="rift-store-hero-copy"><p class="rift-label">RIFT / Collective kit 01</p><h1 id="rift-hero-title">{{ section.settings.hero_heading | escape | newline_to_br }}</h1><p>Different riders.<br>One shared direction.</p><a class="rift-action" href="#rift-kit">Find your kit <span aria-hidden="true">↗</span></a></div><span class="rift-hero-caption">Campaign concept / AI-assisted image</span></section>
+    <div class="rift-route-band" aria-hidden="true"><span>YOUR LINE.</span><svg viewBox="0 0 150 24"><path d="M0 22H78L103 2H150" /></svg><span>OUR PACE.</span></div>
+    <section class="rift-shop-product" id="rift-kit" aria-labelledby="rift-kit-title">
+      <figure class="rift-product-photo"><img src="{{ 'rift-jersey.webp' | asset_url }}" alt="Cobalt blue RIFT jersey concept with a single rising acid yellow stripe, short sleeves and a black front zip." width="1100" height="1100" loading="lazy"><figcaption>AI-assisted garment concept / Front view</figcaption></figure>
+      <div class="rift-product-info"><p class="rift-label">Collective kit / 01</p><h2 id="rift-kit-title">THE LINE<br>JERSEY.</h2><p>A clear signal for the group ride. Cobalt blue, one rising stripe and a clean, close-cut silhouette. A jersey concept with the collective at its centre.</p><div class="rift-colour"><span aria-hidden="true"></span> Cobalt / Acid <span class="rift-single">One concept colour</span></div>
+        {% render 'product-buy', item_product: demo_product_1, form_id: 'home-product-1', button_class: 'rift-add', radios: true %}
+        <details><summary>Design details</summary><p>Full-length front zip, short sleeves and a diagonal graphic continuing onto the sleeve. These are proposed design features; fabric composition and performance have not been validated.</p></details>
+        <details><summary>Concept size guide</summary><p>Illustrative body chest measurements in centimetres. This is a prototype guide, not a tested fit specification.</p><dl class="rift-size-guide"><div><dt>XS</dt><dd>82–87</dd></div><div><dt>S</dt><dd>88–93</dd></div><div><dt>M</dt><dd>94–99</dd></div><div><dt>L</dt><dd>100–105</dd></div><div><dt>XL</dt><dd>106–111</dd></div></dl></details>
+      </div>
+    </section>
+    <section class="rift-collective" id="rift-collective" aria-labelledby="rift-collective-title"><p class="rift-label">The collective</p><h2 id="rift-collective-title">FIND YOUR LINE.<br>KEEP OUR PACE.</h2><div><p>Some days you lead. Some days you follow. The ride belongs to everyone who shows up.</p><p>RIFT imagines kit as a shared mark: a line carried by different riders, moving in the same direction.</p></div><span class="rift-collective-mark" aria-hidden="true">↗</span></section>
+  </main>
+{% schema %}
+{
+  "name": "RIFT storefront",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "hero_heading",
+      "label": "Hero heading",
+      "default": "RIDE\nAS ONE."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "product",
+      "id": "product_the_line_jersey",
+      "label": "The Line Jersey"
+    }
+  ],
+  "presets": [
+    {
+      "name": "RIFT storefront"
+    }
+  ]
+}
+{% endschema %}

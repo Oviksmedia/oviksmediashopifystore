@@ -1,0 +1,73 @@
+{
+  "identifier": {
+    "handle": "after-hours"
+  },
+  "input": {
+    "handle": "after-hours",
+    "title": "After Hours",
+    "descriptionHtml": "<p>An imagined jazz release by Niko Vale. Loose rhythm. Sharp edges. Original pale-green sleeve artwork. Fictional artist, track titles and formats; no recorded audio exists. LP + cover print adds an illustrative flat artwork print.</p><p>Self-initiated portfolio concept by Oviks Media. AI-generated product imagery. No real purchase or fulfillment.</p>",
+    "status": "ACTIVE",
+    "vendor": "Niko Vale",
+    "productType": "Jazz",
+    "tags": [
+      "Oviks Media",
+      "Fictional portfolio concept",
+      "SIDE B"
+    ],
+    "files": [
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/side-b-after-product.webp",
+        "filename": "side-b-after-product.webp",
+        "alt": "After Hours / Product view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      }
+    ],
+    "productOptions": [
+      {
+        "name": "Format",
+        "position": 1,
+        "values": [
+          {
+            "name": "Black vinyl LP"
+          },
+          {
+            "name": "LP + cover print"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Format",
+            "name": "Black vinyl LP"
+          }
+        ],
+        "price": "30.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "side-b-after-hours-1"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Format",
+            "name": "LP + cover print"
+          }
+        ],
+        "price": "38.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "side-b-after-hours-2"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      }
+    ]
+  }
+}

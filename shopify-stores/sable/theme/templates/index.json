@@ -1,0 +1,14 @@
+{
+  "sections": {
+    "main": {
+      "type": "storefront-home",
+      "settings": {
+        "product_the_arc": "the-arc",
+        "product_the_fold": "the-fold"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

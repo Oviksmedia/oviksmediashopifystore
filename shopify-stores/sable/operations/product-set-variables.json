@@ -1,0 +1,55 @@
+{
+  "identifier": {
+    "handle": "the-fold"
+  },
+  "input": {
+    "handle": "the-fold",
+    "title": "The Fold",
+    "descriptionHtml": "<p>A fictional compact cardholder with an Ink exterior and Oxblood interior. Two card slots and a central pocket are concept features. Capacity, materials and dimensions require physical validation.</p><p>Self-initiated portfolio concept by Oviks Media. AI-generated product imagery. No real purchase or fulfillment.</p>",
+    "status": "ACTIVE",
+    "vendor": "SABLE",
+    "productType": "Small leather goods",
+    "tags": [
+      "Oviks Media",
+      "Fictional portfolio concept",
+      "SABLE"
+    ],
+    "files": [
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/sable-fold.webp",
+        "filename": "sable-fold.webp",
+        "alt": "The Fold / Product view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      }
+    ],
+    "productOptions": [
+      {
+        "name": "Finish",
+        "position": 1,
+        "values": [
+          {
+            "name": "Ink / Oxblood interior"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Finish",
+            "name": "Ink / Oxblood interior"
+          }
+        ],
+        "price": "65.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "sable-the-fold-1"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      }
+    ]
+  }
+}

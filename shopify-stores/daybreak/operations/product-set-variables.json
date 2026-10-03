@@ -1,0 +1,109 @@
+{
+  "identifier": {
+    "handle": "after-hours"
+  },
+  "input": {
+    "handle": "after-hours",
+    "title": "After Hours",
+    "descriptionHtml": "<p>Fictional 250 g coffee concept. Dark roast; dark chocolate and toasted hazelnut are illustrative tasting notes. A deeper kind of comfort. No coffee is available for purchase or fulfillment.</p><p>Self-initiated portfolio concept by Oviks Media. AI-generated product imagery. No real purchase or fulfillment.</p>",
+    "status": "ACTIVE",
+    "vendor": "DAYBREAK",
+    "productType": "Coffee",
+    "tags": [
+      "Oviks Media",
+      "Fictional portfolio concept",
+      "DAYBREAK"
+    ],
+    "files": [
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/daybreak-after-hours.webp",
+        "filename": "daybreak-after-hours.webp",
+        "alt": "After Hours / Product view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      }
+    ],
+    "productOptions": [
+      {
+        "name": "Preparation",
+        "position": 1,
+        "values": [
+          {
+            "name": "Whole bean"
+          },
+          {
+            "name": "Ground for filter"
+          },
+          {
+            "name": "Ground for espresso"
+          },
+          {
+            "name": "Ground for French press"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Preparation",
+            "name": "Whole bean"
+          }
+        ],
+        "price": "16.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "daybreak-after-hours-1"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Preparation",
+            "name": "Ground for filter"
+          }
+        ],
+        "price": "16.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "daybreak-after-hours-2"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Preparation",
+            "name": "Ground for espresso"
+          }
+        ],
+        "price": "16.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "daybreak-after-hours-3"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Preparation",
+            "name": "Ground for French press"
+          }
+        ],
+        "price": "16.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "daybreak-after-hours-4"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      }
+    ]
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "domain": "side-b-portfolio-demo.myshopify.com",
+  "checkedAt": "2026-10-03T14:03:10.992Z",
+  "currency": "GBP",
+  "products": [
+    {
+      "id": "gid://shopify/Product/15927332372863",
+      "handle": "night-index",
+      "title": "Night Index",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/58607506522495",
+            "title": "Black vinyl LP",
+            "price": "28.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/58607506555263",
+            "title": "LP + cover print",
+            "price": "36.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "gid://shopify/Product/15927333388671",
+      "handle": "soft-static",
+      "title": "Soft Static",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/58607553642879",
+            "title": "Black vinyl LP",
+            "price": "26.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/58607553675647",
+            "title": "LP + cover print",
+            "price": "34.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "gid://shopify/Product/15927333912959",
+      "handle": "after-hours",
+      "title": "After Hours",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/58607567307135",
+            "title": "Black vinyl LP",
+            "price": "30.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/58607567339903",
+            "title": "LP + cover print",
+            "price": "38.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+<main id="rift-main" class="native-page native-cart" tabindex="-1">
+  <p class="native-kicker">RIFT / Shopify demo</p><h1>Your demo bag.</h1><p class="native-disclosure">A working Shopify cart for fictional products. No checkout or real fulfillment.</p>
+  {% if cart.item_count == 0 %}<div class="native-empty"><h2>A little room for something.</h2><p>Your bag is empty.</p><a class="native-button" href="{{ routes.all_products_collection_url }}">Explore the collection ↗</a></div>
+  {% else %}
+    <form action="{{ routes.cart_url }}" method="post" id="native-cart-form">
+      <div class="native-cart-lines">{% for item in cart.items %}<article class="native-cart-line">
+        <a class="native-cart-image" href="{{ item.url }}">{% if item.image %}{{ item.image | image_url: width: 400 | image_tag: widths: '200, 400', sizes: '130px', loading: 'lazy' }}{% endif %}</a>
+        <div><h2><a href="{{ item.url }}">{{ item.product.title | escape }}</a></h2><p>{{ item.variant.title | escape }}</p><p>{{ item.final_price | money_with_currency }} each</p><a class="native-remove" href="{{ item.url_to_remove }}" aria-label="Remove {{ item.product.title | escape }} / {{ item.variant.title | escape }}">Remove</a></div>
+        <div class="native-cart-quantity"><label for="updates-{{ forloop.index }}">Quantity</label><input id="updates-{{ forloop.index }}" name="updates[]" type="number" min="0" step="1" value="{{ item.quantity }}" inputmode="numeric" required></div><strong class="native-line-total">{{ item.final_line_price | money_with_currency }}</strong>
+      </article>{% endfor %}</div>
+      <div class="native-cart-summary"><p>Demo subtotal <strong>{{ cart.total_price | money_with_currency }}</strong></p><p class="native-disclosure">Illustrative prices. Taxes and shipping are not calculated in this demonstration.</p><button type="submit" name="update" class="native-button">Update demo bag</button><a class="native-product-link" href="{{ routes.all_products_collection_url }}">Continue exploring ↗</a></div>
+    </form>
+  {% endif %}
+</main>
+{% schema %}{"name":"Shopify demo bag","settings":[]}{% endschema %}

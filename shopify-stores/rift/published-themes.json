@@ -1,0 +1,16 @@
+[
+  {
+    "id": 201858744647,
+    "name": "RIFT Portfolio",
+    "processing": false,
+    "createdAtRuntime": false,
+    "role": "live"
+  },
+  {
+    "id": 201857532231,
+    "name": "Horizon",
+    "processing": false,
+    "createdAtRuntime": false,
+    "role": "unpublished"
+  }
+]

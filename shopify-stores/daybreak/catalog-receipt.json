@@ -1,0 +1,109 @@
+{
+  "domain": "daybreak-portfolio-demo.myshopify.com",
+  "checkedAt": "2026-10-03T13:57:30.141Z",
+  "currency": "USD",
+  "products": [
+    {
+      "id": "gid://shopify/Product/15335921320164",
+      "handle": "day-one",
+      "title": "Day One",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/67444997849316",
+            "title": "Whole bean",
+            "price": "16.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444997882084",
+            "title": "Ground for filter",
+            "price": "16.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444997914852",
+            "title": "Ground for espresso",
+            "price": "16.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444997947620",
+            "title": "Ground for French press",
+            "price": "16.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "gid://shopify/Product/15335921385700",
+      "handle": "high-noon",
+      "title": "High Noon",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/67444998013156",
+            "title": "Whole bean",
+            "price": "18.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444998045924",
+            "title": "Ground for filter",
+            "price": "18.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444998078692",
+            "title": "Ground for espresso",
+            "price": "18.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444998111460",
+            "title": "Ground for French press",
+            "price": "18.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "gid://shopify/Product/15335921582308",
+      "handle": "after-hours",
+      "title": "After Hours",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/67444998308068",
+            "title": "Whole bean",
+            "price": "16.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444998340836",
+            "title": "Ground for filter",
+            "price": "16.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444998373604",
+            "title": "Ground for espresso",
+            "price": "16.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/67444998406372",
+            "title": "Ground for French press",
+            "price": "16.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    }
+  ]
+}

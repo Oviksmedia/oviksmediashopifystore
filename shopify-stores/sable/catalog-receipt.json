@@ -1,0 +1,45 @@
+{
+  "domain": "sable-portfolio-demo.myshopify.com",
+  "checkedAt": "2026-10-03T14:02:31.757Z",
+  "currency": "USD",
+  "products": [
+    {
+      "id": "gid://shopify/Product/9098437230790",
+      "handle": "the-arc",
+      "title": "The Arc",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/48242748686534",
+            "title": "Oxblood",
+            "price": "280.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/48242748719302",
+            "title": "Ink",
+            "price": "280.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "gid://shopify/Product/9098437296326",
+      "handle": "the-fold",
+      "title": "The Fold",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/48242748784838",
+            "title": "Ink / Oxblood interior",
+            "price": "65.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    }
+  ]
+}

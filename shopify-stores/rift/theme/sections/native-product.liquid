@@ -1,0 +1,12 @@
+<main id="rift-main" class="native-page" tabindex="-1">
+  <nav class="native-breadcrumb" aria-label="Breadcrumb"><a href="{{ routes.root_url }}">RIFT</a><span aria-hidden="true">/</span><a href="{{ routes.all_products_collection_url }}">Collection</a><span aria-hidden="true">/</span><span>{{ product.title | escape }}</span></nav>
+  <div class="native-product-layout">
+    <div class="native-gallery">
+      {% assign product_image = product.selected_or_first_available_variant.featured_image | default: product.featured_image %}
+      {% if product_image %}{{ product_image | image_url: width: 1400 | image_tag: widths: '400, 700, 1000, 1400', sizes: '(min-width: 800px) 55vw, 94vw', class: 'native-product-image', loading: 'eager' }}{% endif %}
+      {% if product.images.size > 1 %}<div class="native-gallery-controls" role="group" aria-label="Product images">{% for image in product.images %}<button type="button" data-native-gallery-src="{{ image | image_url: width: 1400 }}" data-native-gallery-alt="{{ image.alt | default: product.title | escape }}" aria-pressed="{% if image == product_image %}true{% else %}false{% endif %}">View {{ forloop.index }}</button>{% endfor %}</div>{% endif %}
+    </div>
+    <div class="native-product-info"><p class="native-kicker">RIFT / Collection 01</p><h1>{{ product.title | escape }}</h1><div class="native-description">{{ product.description }}</div>{% render 'product-buy', item_product: product, form_id: 'product-page-form', button_class: 'native-button' %}<p class="native-disclosure">A fictional portfolio product. Prices and materials are illustrative. No real purchase or fulfillment.</p></div>
+  </div>
+</main>
+{% schema %}{"name":"Product details","settings":[]}{% endschema %}

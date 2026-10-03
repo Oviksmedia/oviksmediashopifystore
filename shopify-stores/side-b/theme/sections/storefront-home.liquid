@@ -1,0 +1,82 @@
+{% liquid
+  assign demo_product_1 = section.settings.product_night_index
+  if demo_product_1 == blank
+    assign demo_product_1 = all_products['night-index']
+  endif
+%}
+{% liquid
+  assign demo_product_2 = section.settings.product_soft_static
+  if demo_product_2 == blank
+    assign demo_product_2 = all_products['soft-static']
+  endif
+%}
+{% liquid
+  assign demo_product_3 = section.settings.product_after_hours
+  if demo_product_3 == blank
+    assign demo_product_3 = all_products['after-hours']
+  endif
+%}
+<main id="sideb-main" tabindex="-1">
+    <section class="sideb-hero" aria-labelledby="sideb-hero-title">
+      <div class="sideb-hero-copy"><p class="sideb-kicker">Independent by design / Collection 01</p><h1 id="sideb-hero-title">{{ section.settings.hero_heading | escape | newline_to_br }}</h1><div class="sideb-hero-bottom"><p>Records for your shelf.<br>Artwork for your walls.<br>A different point of view.</p><a class="sideb-button" href="#sideb-releases">Find your record <span aria-hidden="true">↘</span></a></div><span class="sideb-stamp" aria-hidden="true">33<br><small>RPM</small></span></div>
+      <figure class="sideb-hero-photo"><img {% if section.settings.hero_image %}src="{{ section.settings.hero_image | image_url: width: 2000 }}"{% else %}src="{{ 'side-b-campaign.webp' | asset_url }}"{% endif %} width="1254" height="1254" fetchpriority="high" alt="Three original SIDE B sleeves in orange, cobalt and pale green, with black vinyl on a record-shop display."><figcaption>Collection 01 / Three imagined releases. AI-generated physical study.</figcaption></figure>
+    </section>
+    <section class="sideb-collection" id="sideb-releases" aria-labelledby="sideb-collection-title">
+      <div class="sideb-section-heading"><div><p class="sideb-kicker">001—003 / The first collection</p><h2 id="sideb-collection-title">Pick a side.</h2></div><p>Three imagined artists.<br>Three distinct cover worlds.</p></div>
+      <div class="sideb-filterbar"><div class="sideb-filters" role="group" aria-label="Filter records by genre"><button type="button" data-filter="all" aria-pressed="true">All records</button><button type="button" data-filter="Electronic" aria-pressed="false">Electronic</button><button type="button" data-filter="Ambient" aria-pressed="false">Ambient</button><button type="button" data-filter="Jazz" aria-pressed="false">Jazz</button></div><p id="sideb-filter-status" role="status" aria-live="polite">3 records</p></div>
+      <div class="sideb-records">
+        <article class="sideb-record" data-genre="Electronic">
+          <a class="sideb-record-image" aria-label="Explore Night Index by Mara Circuit" href="{{ all_products['night-index'].url }}"><img src="{{ 'side-b-night-product.webp' | asset_url }}" width="1024" height="1024" loading="lazy" alt="Orange Night Index sleeve with black circular graphics and a black vinyl record."><span aria-hidden="true">Explore record ↗</span></a>
+          <div class="sideb-record-top"><p class="sideb-kicker">SB—001 / Electronic</p><p>{{ demo_product_1.price | money_with_currency }}</p></div><h3><a href="{{ all_products['night-index'].url }}">Night Index</a></h3><p class="sideb-artist">Mara Circuit</p><p class="sideb-record-description">Angular loops. Signals after dark.</p><a class="sideb-text-button" href="{{ all_products['night-index'].url }}">View record &amp; formats <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="sideb-record" data-genre="Ambient">
+          <a class="sideb-record-image" aria-label="Explore Soft Static by Tender Relay" href="{{ all_products['soft-static'].url }}"><img src="{{ 'side-b-soft-product.webp' | asset_url }}" width="1024" height="1024" loading="lazy" alt="Cobalt Soft Static sleeve with a yellow halftone ellipse and black vinyl."><span aria-hidden="true">Explore record ↗</span></a>
+          <div class="sideb-record-top"><p class="sideb-kicker">SB—002 / Ambient</p><p>{{ demo_product_2.price | money_with_currency }}</p></div><h3><a href="{{ all_products['soft-static'].url }}">Soft Static</a></h3><p class="sideb-artist">Tender Relay</p><p class="sideb-record-description">Slow textures. A little room to drift.</p><a class="sideb-text-button" href="{{ all_products['soft-static'].url }}">View record &amp; formats <span aria-hidden="true">↗</span></a>
+        </article>
+        <article class="sideb-record" data-genre="Jazz">
+          <a class="sideb-record-image" aria-label="Explore After Hours by Niko Vale" href="{{ all_products['after-hours'].url }}"><img src="{{ 'side-b-after-product.webp' | asset_url }}" width="1024" height="1024" loading="lazy" alt="Pale green After Hours sleeve with stepped black bars and black vinyl."><span aria-hidden="true">Explore record ↗</span></a>
+          <div class="sideb-record-top"><p class="sideb-kicker">SB—003 / Jazz</p><p>{{ demo_product_3.price | money_with_currency }}</p></div><h3><a href="{{ all_products['after-hours'].url }}">After Hours</a></h3><p class="sideb-artist">Niko Vale</p><p class="sideb-record-description">Loose rhythm. Sharp edges.</p><a class="sideb-text-button" href="{{ all_products['after-hours'].url }}">View record &amp; formats <span aria-hidden="true">↗</span></a>
+        </article>
+      </div>
+
+    </section>
+    <section class="sideb-imprint" id="sideb-imprint" aria-labelledby="sideb-imprint-title"><div><p class="sideb-kicker">The imprint / The other side of a record</p><h2 id="sideb-imprint-title">Good on<br>the shelf.<br>Better up<br>close.</h2></div><div class="sideb-imprint-copy"><p>Some records catch your eye before they ever reach a turntable. SIDE B starts there: a small collection, a strong sleeve and space for each release to have its own voice.</p><p>Here, the artwork is the story. An angular signal, a soft cloud of static, a stepped rhythm. One graphic system. Three different ways in.</p><a class="sideb-button sideb-button-light" href="https://oviks-morrow-portfolio.netlify.app/side-b">See the design story <span aria-hidden="true">↗</span></a><p class="sideb-small">A fictional imprint. These artists and releases are invented for this portfolio; there is no recorded audio.</p></div><figure><img src="{{ 'side-b-night-detail.webp' | asset_url }}" width="1536" height="1024" loading="lazy" alt="Close view of the orange Night Index sleeve, paper texture and the yellow SIDE B label on black vinyl."><figcaption>Print, paper, grooves / AI-generated material study</figcaption></figure></section>
+  </main>
+{% schema %}
+{
+  "name": "SIDE B storefront",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "hero_heading",
+      "label": "Hero heading",
+      "default": "ON THE\nFLIP SIDE."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "product",
+      "id": "product_night_index",
+      "label": "Night Index"
+    },
+    {
+      "type": "product",
+      "id": "product_soft_static",
+      "label": "Soft Static"
+    },
+    {
+      "type": "product",
+      "id": "product_after_hours",
+      "label": "After Hours"
+    }
+  ],
+  "presets": [
+    {
+      "name": "SIDE B storefront"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,29 @@
+{
+  "domain": "arc-portfolio-demo.myshopify.com",
+  "checkedAt": "2026-10-03T14:02:56.463Z",
+  "currency": "USD",
+  "products": [
+    {
+      "id": "gid://shopify/Product/8314866630725",
+      "handle": "arc-01",
+      "title": "ARC 01",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/45925698175045",
+            "title": "Brushed aluminium",
+            "price": "420.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/45925698207813",
+            "title": "Graphite",
+            "price": "440.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    }
+  ]
+}

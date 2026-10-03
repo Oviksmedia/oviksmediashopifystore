@@ -1,0 +1,43 @@
+{% liquid
+  assign demo_product_1 = section.settings.product_arc_01
+  if demo_product_1 == blank
+    assign demo_product_1 = all_products['arc-01']
+  endif
+%}
+<main id="arc-main">
+<section class="arc-hero" aria-labelledby="arc-hero-title"><div class="arc-hero-copy"><p class="arc-kicker"><span>01</span> / An object for the everyday</p><h1 id="arc-hero-title">{{ section.settings.hero_heading | escape | newline_to_br }}</h1><p class="arc-hero-text">A single curve. A quiet presence.<br>Meet ARC 01, a table light shaped<br>around the space within.</p><a class="arc-action" href="#arc-shop">Explore ARC 01 <span aria-hidden="true">↗</span></a><div class="arc-hero-foot"><span>Table light / Two finishes</span><span>Collection 001</span></div></div><figure class="arc-hero-object"><img {% if section.settings.hero_image %}src="{{ section.settings.hero_image | image_url: width: 2000 }}"{% else %}src="{{ 'arc-silver.webp' | asset_url }}"{% endif %} alt="ARC 01: a brushed aluminium arch lamp with a warm light recessed along its inner edge." width="1000" height="1000" fetchpriority="high"><figcaption><span>ARC 01 / Brushed aluminium</span><span>Form study</span></figcaption></figure></section>
+<section id="arc-object" class="arc-room" aria-labelledby="arc-room-title"><div class="arc-section-head"><p class="arc-kicker"><span>02</span> / Object &amp; space</p><h2 id="arc-room-title">Presence, without excess.</h2></div><figure><img src="{{ 'arc-campaign.webp' | asset_url }}" alt="The same silver ARC arch lamp on a blue-grey stone plinth in a cool architectural room, showing its scale against the doorway." width="1536" height="1024" loading="lazy"><figcaption><span>Room study / A curve against straight lines.</span><span>AI-generated concept image</span></figcaption></figure><div class="arc-room-note"><p>Part sculpture, part light. The open arch gives the eye somewhere to rest, while a line of warmth traces its inside edge.</p><p class="arc-small">Light mood is art direction. This fictional object has no tested photometric, electrical or manufacturing specification.</p></div></section>
+<section id="arc-shop" class="arc-shop" aria-labelledby="arc-product-title"><div class="arc-product-gallery"><figure><img id="arc-product-image" src="{{ 'arc-silver.webp' | asset_url }}" alt="ARC 01 in brushed aluminium, shown in a three-quarter studio view." width="1000" height="1000" loading="lazy"><figcaption id="arc-gallery-caption">Studio view / Brushed aluminium</figcaption></figure><div class="arc-gallery-controls" role="group" aria-label="Product gallery"><button type="button" data-view="silver" data-gallery-src="{{ 'arc-silver.webp' | asset_url }}" data-gallery-alt="Studio view / Brushed aluminium" aria-pressed="true">01 / Aluminium</button><button type="button" data-view="graphite" data-gallery-src="{{ 'arc-graphite.webp' | asset_url }}" data-gallery-alt="Studio view / Graphite" aria-pressed="false">02 / Graphite</button><button type="button" data-view="detail" data-gallery-src="{{ 'arc-detail.webp' | asset_url }}" data-gallery-alt="Material detail / Aluminium reference" aria-pressed="false">03 / Detail</button></div><p class="arc-small">Gallery browsing does not change your chosen finish.</p><p class="arc-sr" id="arc-gallery-live" role="status"></p></div>
+<div class="arc-product-info"><p class="arc-kicker"><span>03</span> / Choose your finish</p><div class="arc-product-heading"><h2 id="arc-product-title">ARC 01</h2><span>Table light</span></div><p>A continuous arch, expressed in two materials. Brushed aluminium catches the room; graphite draws a more defined line.</p>{% render 'product-buy', item_product: demo_product_1, form_id: 'home-product-1', button_class: 'arc-action', radios: true %}<p class="arc-small">Native Shopify demo bag. Fictional product; no checkout or real fulfillment.</p>
+<details open class="arc-specs"><summary>Dimensions &amp; concept notes</summary><dl><div><dt>Height</dt><dd>380 mm</dd></div><div><dt>Width</dt><dd>260 mm</dd></div><div><dt>Depth</dt><dd>80 mm</dd></div><div><dt>Light</dt><dd>Recessed inner diffuser</dd></div></dl><p class="arc-small">Illustrative dimensions; not a measured or manufactured product. Generated surfaces and construction details may vary slightly between views.</p></details><a class="arc-text-link" href="#arc-dimensions">View the scale study ↓</a></div></section>
+<section class="arc-material" aria-labelledby="arc-material-title"><figure><img src="{{ 'arc-detail.webp' | asset_url }}" alt="Close-up of ARC’s curved aluminium shoulder, fine brushed grain and recessed warm diffuser." width="1200" height="800" loading="lazy"><figcaption>Material study / AI-generated concept detail</figcaption></figure><div><p class="arc-kicker"><span>04</span> / The inside line</p><h2 id="arc-material-title">Cool surface.<br>Warm centre.</h2><p>The visual tension is simple: a precise metal exterior surrounding a soft line of light. A close view makes that relationship visible.</p><p class="arc-small">Materials shown are a design proposal. Finish appearance and light colour are conceptual.</p></div></section>
+<section class="arc-dimensions" id="arc-dimensions" aria-labelledby="arc-dim-title"><div><p class="arc-kicker"><span>05</span> / Scale study</p><h2 id="arc-dim-title">A considered<br>footprint.</h2><p>Imagine ARC 01 on a sideboard or generous shelf. The dimensional drawing makes the proposed footprint explicit.</p><p class="arc-small">Illustrative only. Placement, stability, heat, safety and light output have not been tested.</p></div><figure><svg viewBox="0 0 640 480" role="img" aria-labelledby="arc-drawing-title arc-drawing-desc"><title id="arc-drawing-title">ARC 01 illustrative dimensional drawing</title><desc id="arc-drawing-desc">Front elevation of the arch lamp: height 380 millimetres and width 260 millimetres. Proposed depth 80 millimetres.</desc><path class="arc-draw-object" d="M195 365V190a110 110 0 0 1 220 0v175h-38V190a72 72 0 0 0-144 0v175Z"/><path class="arc-draw-line" d="M160 80H130V365H160M195 400V425H415V400M195 365H415"/><path class="arc-draw-line" d="M122 88l16-16m-16 301 16-16m49 60 16 16m204-16 16 16"/><text x="80" y="230" transform="rotate(-90 80 230)">380 mm</text><text x="305" y="458" text-anchor="middle">260 mm</text><text x="490" y="350">80 mm</text><text x="490" y="375" class="arc-draw-small">depth</text></svg><figcaption>ARC 01 / Front elevation / Not to scale</figcaption></figure></section>
+</main>
+{% schema %}
+{
+  "name": "ARC storefront",
+  "settings": [
+    {
+      "type": "textarea",
+      "id": "hero_heading",
+      "label": "Hero heading",
+      "default": "A small\narchitecture\nof light."
+    },
+    {
+      "type": "image_picker",
+      "id": "hero_image",
+      "label": "Hero image"
+    },
+    {
+      "type": "product",
+      "id": "product_arc_01",
+      "label": "ARC 01"
+    }
+  ],
+  "presets": [
+    {
+      "name": "ARC storefront"
+    }
+  ]
+}
+{% endschema %}

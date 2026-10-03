@@ -1,0 +1,127 @@
+{
+  "identifier": {
+    "handle": "the-line-jersey"
+  },
+  "input": {
+    "handle": "the-line-jersey",
+    "title": "The Line Jersey",
+    "descriptionHtml": "<p>A fictional cycling jersey concept. Cobalt blue, one rising acid stripe and a close-cut silhouette. Illustrative sizing; no fabric, performance or fit claims have been validated.</p><p>Self-initiated portfolio concept by Oviks Media. AI-generated product imagery. No real purchase or fulfillment.</p>",
+    "status": "ACTIVE",
+    "vendor": "RIFT",
+    "productType": "Cycling apparel",
+    "tags": [
+      "Oviks Media",
+      "Fictional portfolio concept",
+      "RIFT"
+    ],
+    "files": [
+      {
+        "originalSource": "https://oviks-morrow-portfolio.netlify.app/assets/rift-jersey.webp",
+        "filename": "rift-jersey.webp",
+        "alt": "The Line Jersey / Product view",
+        "contentType": "IMAGE",
+        "duplicateResolutionMode": "REPLACE"
+      }
+    ],
+    "productOptions": [
+      {
+        "name": "Size",
+        "position": 1,
+        "values": [
+          {
+            "name": "XS"
+          },
+          {
+            "name": "S"
+          },
+          {
+            "name": "M"
+          },
+          {
+            "name": "L"
+          },
+          {
+            "name": "XL"
+          }
+        ]
+      }
+    ],
+    "variants": [
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "XS"
+          }
+        ],
+        "price": "95.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "rift-the-line-jersey-1"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "S"
+          }
+        ],
+        "price": "95.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "rift-the-line-jersey-2"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "M"
+          }
+        ],
+        "price": "95.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "rift-the-line-jersey-3"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "L"
+          }
+        ],
+        "price": "95.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "rift-the-line-jersey-4"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      },
+      {
+        "optionValues": [
+          {
+            "optionName": "Size",
+            "name": "XL"
+          }
+        ],
+        "price": "95.00",
+        "inventoryItem": {
+          "tracked": false,
+          "sku": "rift-the-line-jersey-5"
+        },
+        "inventoryPolicy": "CONTINUE",
+        "taxable": false
+      }
+    ]
+  }
+}

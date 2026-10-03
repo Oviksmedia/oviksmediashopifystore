@@ -1,0 +1,47 @@
+{
+  "domain": "rift-portfolio-demo.myshopify.com",
+  "checkedAt": "2026-10-03T14:02:18.521Z",
+  "currency": "GBP",
+  "products": [
+    {
+      "id": "gid://shopify/Product/11266380923207",
+      "handle": "the-line-jersey",
+      "title": "The Line Jersey",
+      "status": "ACTIVE",
+      "variants": {
+        "nodes": [
+          {
+            "id": "gid://shopify/ProductVariant/55261944348999",
+            "title": "XS",
+            "price": "95.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/55261944381767",
+            "title": "S",
+            "price": "95.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/55261944414535",
+            "title": "M",
+            "price": "95.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/55261944447303",
+            "title": "L",
+            "price": "95.00",
+            "availableForSale": true
+          },
+          {
+            "id": "gid://shopify/ProductVariant/55261944480071",
+            "title": "XL",
+            "price": "95.00",
+            "availableForSale": true
+          }
+        ]
+      }
+    }
+  ]
+}

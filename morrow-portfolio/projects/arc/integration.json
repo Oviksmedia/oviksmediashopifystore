@@ -2,24 +2,82 @@
   "slug": "arc",
   "title": "ARC",
   "category": "Sculptural lighting",
-  "summary": "A precise lighting identity and architectural storefront built around one continuous arch, two finishes and a working local bag.",
-  "scope": ["Visual identity", "Art direction", "Campaign and product imagery", "Storefront design", "Browser-local bag", "Shopify Liquid source proposal"],
+  "summary": "A precise lighting identity and architectural storefront built around one continuous arch, two finishes and a native Shopify bag.",
+  "scope": [
+    "Visual identity",
+    "Art direction",
+    "Campaign and product imagery",
+    "Storefront design",
+    "Native Shopify bag",
+    "Complete Shopify Liquid theme"
+  ],
   "modulePath": "morrow-portfolio/projects/arc",
   "caseFile": "case.html",
   "demoFile": "demo.html",
   "finalCasePath": "arc.html",
   "finalDemoPath": "arc-demo.html",
-  "stylesheets": ["assets/arc.css"],
-  "scripts": ["assets/arc-demo.js"],
-  "cover": {"src":"assets/arc-campaign.webp", "alt":"ARC’s silver arch lamp on a mineral stone plinth in a cool architectural room.","width":1536,"height":1024},
-  "palette": {"ink":"#172329","mineral":"#E4E9E9","paper":"#F8FAF9","signal":"#BD3D16"},
-  "typography": {"family":"Space Grotesk","cssFamily":"Arc Grotesk","weights":[400,500],"license":"SIL Open Font License 1.1","files":["assets/fonts/arc-space-grotesk-regular.woff2","assets/fonts/arc-space-grotesk-medium.woff2"],"fallback":"Helvetica, Arial, sans-serif"},
-  "assetFiles": ["assets/arc-campaign.webp","assets/arc-silver.webp","assets/arc-graphite.webp","assets/arc-detail.webp","assets/arc-storefront-preview.webp","assets/arc.css","assets/arc-demo.js","assets/fonts/arc-space-grotesk-regular.woff2","assets/fonts/arc-space-grotesk-medium.woff2","assets/fonts/arc-OFL.txt"],
-  "shopifyFiles": ["shopify/sections/arc-object-gallery.liquid","shopify/locales/en.default.json"],
-  "preview": {"command":"node morrow-portfolio/projects/arc/preview.mjs","port":4403,"case":"http://127.0.0.1:4403/arc.html","demo":"http://127.0.0.1:4403/arc-demo.html"},
+  "stylesheets": [
+    "assets/arc.css"
+  ],
+  "scripts": [
+    "assets/arc-demo.js"
+  ],
+  "cover": {
+    "src": "assets/arc-campaign.webp",
+    "alt": "ARC’s silver arch lamp on a mineral stone plinth in a cool architectural room.",
+    "width": 1536,
+    "height": 1024
+  },
+  "palette": {
+    "ink": "#172329",
+    "mineral": "#E4E9E9",
+    "paper": "#F8FAF9",
+    "signal": "#BD3D16"
+  },
+  "typography": {
+    "family": "Space Grotesk",
+    "cssFamily": "Arc Grotesk",
+    "weights": [
+      400,
+      500
+    ],
+    "license": "SIL Open Font License 1.1",
+    "files": [
+      "assets/fonts/arc-space-grotesk-regular.woff2",
+      "assets/fonts/arc-space-grotesk-medium.woff2"
+    ],
+    "fallback": "Helvetica, Arial, sans-serif"
+  },
+  "assetFiles": [
+    "assets/arc-campaign.webp",
+    "assets/arc-silver.webp",
+    "assets/arc-graphite.webp",
+    "assets/arc-detail.webp",
+    "assets/arc-storefront-preview.webp",
+    "assets/arc.css",
+    "assets/arc-demo.js",
+    "assets/fonts/arc-space-grotesk-regular.woff2",
+    "assets/fonts/arc-space-grotesk-medium.woff2",
+    "assets/fonts/arc-OFL.txt"
+  ],
+  "shopifyFiles": [
+    "shopify/sections/arc-object-gallery.liquid",
+    "shopify/locales/en.default.json"
+  ],
+  "preview": {
+    "command": "node morrow-portfolio/projects/arc/preview.mjs",
+    "port": 4403,
+    "case": "http://127.0.0.1:4403/arc.html",
+    "demo": "http://127.0.0.1:4403/arc-demo.html"
+  },
   "integrationInstructions": "Wrap case.html in the parent’s semantic portfolio shell, load assets/arc.css, copy this module’s assets preserving fonts/ subfolder, and emit demo.html as arc-demo.html. The parent owns overview cards and project navigation. Never copy evidence into deployment assets. The preview index.html is an isolated landing stub, not the combined portfolio.",
-  "sourceBase": {"commit":"f443014f815e393a783a396008436e6245b1d9a9","source":"Local parent repository on codex/portfolio-design-refinement; not GitHub main","branch":"codex/concept-arc"},
-  "publicationStatus": "Local only; no push, upload, deployment or live catalog changes",
-  "shopifyStatus": "Source proposal. Static checks pass; Shopify Theme Check cannot run because its installed validator is missing @shopify/theme-check-common. No live theme render or upload.",
-  "disclosure": "Fictional self-initiated concept with AI-assisted art direction and implementation. Product, prices, dimensions and light mood are illustrative; no client, research, manufactured product or commercial results claimed."
+  "sourceBase": {
+    "commit": "f443014f815e393a783a396008436e6245b1d9a9",
+    "source": "Local parent repository on codex/portfolio-design-refinement; not GitHub main",
+    "branch": "codex/concept-arc"
+  },
+  "publicationStatus": "Portfolio on Netlify; Shopify demo published. Historical module preview instructions below refer to the retained HTML prototype.",
+  "shopifyStatus": "Published dedicated Shopify development store. See shopify-stores/stores.json and docs/shopify-migration.md for access and verification.",
+  "disclosure": "Fictional self-initiated concept with AI-assisted art direction and implementation. Product, prices, dimensions and light mood are illustrative; no client, research, manufactured product or commercial results claimed.",
+  "liveStore": "https://arc-portfolio-demo.myshopify.com/"
 }

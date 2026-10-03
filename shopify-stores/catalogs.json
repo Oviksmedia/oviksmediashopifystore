@@ -1,0 +1,33 @@
+{
+  "rift": {
+    "brand": "RIFT", "domain": "rift-portfolio-demo.myshopify.com", "currency": "GBP", "bodyClass": "rift-demo", "mainId": "rift-main", "stylesheet": "rift.css", "heroHeading": "RIDE\nAS ONE.", "colors": {"paper":"#111917","ink":"#f5f7ed","accent":"#daff00","buttonText":"#111917"},
+    "products": [{"handle":"the-line-jersey","title":"The Line Jersey","description":"A fictional cycling jersey concept. Cobalt blue, one rising acid stripe and a close-cut silhouette. Illustrative sizing; no fabric, performance or fit claims have been validated.","option":"Size","values":["XS","S","M","L","XL"],"prices":["95.00"],"images":["rift-jersey.webp"],"type":"Cycling apparel"}]
+  },
+  "sable": {
+    "brand": "SABLE", "domain": "sable-portfolio-demo.myshopify.com", "currency": "USD", "bodyClass": "sable-store", "mainId": "sable-main", "stylesheet": "sable-store.css", "heroHeading": "SABLE", "colors": {"paper":"#efece5","ink":"#201b19","accent":"#4c161f","buttonText":"#fffaf1"},
+    "products": [
+      {"handle":"the-arc","title":"The Arc","description":"A fictional crescent shoulder bag, explored in Oxblood and Ink. Smooth leather, tonal stitching and brass-tone hardware are design intent. Approximate dimensions are illustrative; no physical product has been manufactured.","option":"Finish","values":["Oxblood","Ink"],"prices":["280.00"],"images":["sable-arc-oxblood.webp","sable-arc-ink.webp","sable-detail.webp"],"variantImages":[0,1],"type":"Shoulder bags"},
+      {"handle":"the-fold","title":"The Fold","description":"A fictional compact cardholder with an Ink exterior and Oxblood interior. Two card slots and a central pocket are concept features. Capacity, materials and dimensions require physical validation.","option":"Finish","values":["Ink / Oxblood interior"],"prices":["65.00"],"images":["sable-fold.webp"],"type":"Small leather goods"}
+    ]
+  },
+  "daybreak": {
+    "brand": "DAYBREAK", "domain": "daybreak-portfolio-demo.myshopify.com", "currency": "USD", "bodyClass": "daybreak-demo", "mainId": "daybreak-main", "stylesheet": "daybreak.css", "heroHeading": "Good days\nstart here.", "colors": {"paper":"#fff5db","ink":"#173a84","accent":"#173a84","buttonText":"#fff5db"},
+    "products": [
+      {"handle":"day-one","title":"Day One","description":"Fictional 250 g coffee concept. Medium roast; milk chocolate, orange and caramel are illustrative tasting notes. Your everyday, elevated. No coffee is available for purchase or fulfillment.","option":"Preparation","values":["Whole bean","Ground for filter","Ground for espresso","Ground for French press"],"prices":["16.00"],"images":["daybreak-day-one.webp"],"type":"Coffee"},
+      {"handle":"high-noon","title":"High Noon","description":"Fictional 250 g coffee concept. Light roast; apricot, honey and lemon peel are illustrative tasting notes. A sunny little detour. No coffee is available for purchase or fulfillment.","option":"Preparation","values":["Whole bean","Ground for filter","Ground for espresso","Ground for French press"],"prices":["18.00"],"images":["daybreak-high-noon.webp"],"type":"Coffee"},
+      {"handle":"after-hours","title":"After Hours","description":"Fictional 250 g coffee concept. Dark roast; dark chocolate and toasted hazelnut are illustrative tasting notes. A deeper kind of comfort. No coffee is available for purchase or fulfillment.","option":"Preparation","values":["Whole bean","Ground for filter","Ground for espresso","Ground for French press"],"prices":["16.00"],"images":["daybreak-after-hours.webp"],"type":"Coffee"}
+    ]
+  },
+  "arc": {
+    "brand": "ARC", "domain": "arc-portfolio-demo.myshopify.com", "currency": "USD", "bodyClass": "arc-store", "mainId": "arc-main", "stylesheet": "arc.css", "heroHeading": "A small\narchitecture\nof light.", "colors": {"paper":"#f8faf9","ink":"#172329","accent":"#172329","buttonText":"#ffffff"},
+    "products": [{"handle":"arc-01","title":"ARC 01","description":"A fictional table light: one continuous arch with a recessed inner diffuser. Brushed aluminium and Graphite are illustrative finishes. Proposed dimensions: 380 × 260 × 80 mm. Electrical safety, stability, light output and manufacturing have not been tested.","option":"Finish","values":["Brushed aluminium","Graphite"],"prices":["420.00","440.00"],"images":["arc-silver.webp","arc-graphite.webp","arc-detail.webp"],"variantImages":[0,1],"type":"Lighting"}]
+  },
+  "side-b": {
+    "brand": "SIDE B", "domain": "side-b-portfolio-demo.myshopify.com", "currency": "GBP", "bodyClass": "sideb-store", "mainId": "sideb-main", "stylesheet": "side-b.css", "heroHeading": "ON THE\nFLIP SIDE.", "colors": {"paper":"#fff34c","ink":"#121212","accent":"#121212","buttonText":"#fff34c"},
+    "products": [
+      {"handle":"night-index","title":"Night Index","description":"An imagined electronic release by Mara Circuit. Angular loops. Signals after dark. Original orange sleeve artwork. Fictional artist, track titles and formats; no recorded audio exists. LP + cover print adds an illustrative flat artwork print.","option":"Format","values":["Black vinyl LP","LP + cover print"],"prices":["28.00","36.00"],"images":["side-b-night-product.webp","side-b-night-detail.webp"],"vendor":"Mara Circuit","type":"Electronic"},
+      {"handle":"soft-static","title":"Soft Static","description":"An imagined ambient release by Tender Relay. Slow textures. A little room to drift. Original cobalt sleeve artwork. Fictional artist, track titles and formats; no recorded audio exists. LP + cover print adds an illustrative flat artwork print.","option":"Format","values":["Black vinyl LP","LP + cover print"],"prices":["26.00","34.00"],"images":["side-b-soft-product.webp"],"vendor":"Tender Relay","type":"Ambient"},
+      {"handle":"after-hours","title":"After Hours","description":"An imagined jazz release by Niko Vale. Loose rhythm. Sharp edges. Original pale-green sleeve artwork. Fictional artist, track titles and formats; no recorded audio exists. LP + cover print adds an illustrative flat artwork print.","option":"Format","values":["Black vinyl LP","LP + cover print"],"prices":["30.00","38.00"],"images":["side-b-after-product.webp"],"vendor":"Niko Vale","type":"Jazz"}
+    ]
+  }
+}
