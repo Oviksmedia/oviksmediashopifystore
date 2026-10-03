@@ -1,0 +1,88 @@
+{
+  "environment": "Local Chromium",
+  "date": "2026-10-03T03:09:29.307Z",
+  "checks": [
+    {
+      "page": "index",
+      "width": 320,
+      "height": 740,
+      "overflow": false,
+      "approachLinks": "pass",
+      "artwork": "loaded"
+    },
+    {
+      "page": "index",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "approachLinks": "pass",
+      "artwork": "loaded"
+    },
+    {
+      "page": "index",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "approachLinks": "pass",
+      "artwork": "loaded"
+    },
+    {
+      "page": "index",
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "approachLinks": "pass",
+      "artwork": "loaded"
+    },
+    {
+      "page": "index",
+      "width": 568,
+      "height": 320,
+      "overflow": false,
+      "approachLinks": "pass",
+      "artwork": "loaded"
+    },
+    {
+      "page": "sable",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "sable",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "daybreak",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "daybreak",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "arc",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "arc",
+      "width": 1440,
+      "overflow": false
+    },
+    {
+      "page": "side-b",
+      "width": 320,
+      "overflow": false
+    },
+    {
+      "page": "side-b",
+      "width": 1440,
+      "overflow": false
+    }
+  ],
+  "errors": [],
+  "limits": "No physical device, screen reader or deployed-host verification"
+}
