@@ -1,0 +1,460 @@
+{
+  "date": "2026-10-03T06:05:38.225Z",
+  "url": "https://oviks-morrow-portfolio.netlify.app/",
+  "deployId": "6ac09b0212c289d133c0a1b9",
+  "scope": "88 public files returned HTTP 200. 76 assets match exact content; 12 HTML pages match page text after hosting transformations. Live shopping interactions not repeated.",
+  "results": [
+    {
+      "file": "arc.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "assets/approach-daybreak-label.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak/fonts/daybreak-epilogue-OFL.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/arc-demo.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "arc-demo.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "assets/arc.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/arc-graphite.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/arc-detail.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/arc-silver.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/arc-campaign.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/arc-storefront-preview.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak/fonts/daybreak-epilogue.ttf",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-case.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak/fonts/daybreak-provenance.json",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-label-day-one.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-demo.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-label-after-hours.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-label-high-noon.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak/fonts/daybreak-fredoka-OFL.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-after-hours.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-high-noon.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-day-one.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak/fonts/daybreak-fredoka.ttf",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-campaign.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak-sun.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/daybreak.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-case-study.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-premium.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/fonts/arc-OFL.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-catalog.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/fonts/arc-space-grotesk-medium.woff2",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-campaign.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/fonts/arc-space-grotesk-regular.woff2",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-shopify-bag.jpg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-ritual.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-shopify-collection.jpg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/portfolio.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable/fonts/sable-manrope-OFL.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/rift-demo.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/rift.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable/fonts/sable-bodoni-OFL.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-arc-ink.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-arc-oxblood.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable/fonts/sable-bodoni-moda.ttf",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/rift-campaign.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable/fonts/sable-manrope.ttf",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/rift-jersey.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/morrow-shopify-product.jpg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-case.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b/fonts/SOURCE.md",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-store.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-store.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b/fonts/Chivo-OFL.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b/fonts/Ultra-LICENSE.txt",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b/fonts/Ultra-Regular.ttf",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-after-hours-cover.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-fold.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-campaign.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/sable-detail.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b/fonts/Chivo-Variable.ttf",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-night-index-cover.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-label.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-after-hours-cover.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-after-product.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-night-index-back.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-night-product.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-campaign.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-night-index-back.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-night-index-cover.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-label.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-poster.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-night-detail.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "index.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "assets/side-b.css",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "rift.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "morrow.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "assets/side-b-store.js",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "daybreak.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "rift-demo.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "daybreak-demo.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "assets/side-b-soft-static-cover.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-poster.svg",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-soft-product.webp",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "assets/side-b-soft-static-cover.png",
+      "status": 200,
+      "match": true
+    },
+    {
+      "file": "side-b-demo.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "sable.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "sable-demo.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    },
+    {
+      "file": "side-b.html",
+      "status": 200,
+      "match": true,
+      "normalization": "Compare page text; Netlify adds hosting comment and rewrites links"
+    }
+  ]
+}
