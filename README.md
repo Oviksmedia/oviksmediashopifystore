@@ -1,6 +1,6 @@
 # Oviks Media — graphic design & Shopify portfolio
 
-A portfolio of self-initiated design concepts, with a working Morrow Shopify demo and a separate RIFT cycling storefront prototype.
+A portfolio of six self-initiated design concepts: Morrow skincare, RIFT cycling, SABLE leather accessories, DAYBREAK coffee, ARC lighting and SIDE B records. Morrow has a working Shopify demo; the other five have separate browser storefront prototypes.
 
 ## Published websites
 
@@ -16,6 +16,7 @@ The `codex/portfolio-design-refinement` branch contains review changes. It has n
 - `morrow-portfolio/src/index.html`: portfolio introduction, project overview and approach.
 - `morrow-portfolio/src/rift.html`: RIFT case-study content.
 - `morrow-portfolio/src/rift-demo.html`: standalone RIFT storefront prototype.
+- `morrow-portfolio/projects/{sable,daybreak,arc,side-b}/`: authored case studies, standalone storefronts, namespaced assets, font licenses, briefs, verification and integration manifests. Shopify source proposals remain inside these modules.
 - `morrow-portfolio/assets/portfolio.css`: shared portfolio shell, navigation and responsive layout.
 - `morrow-portfolio/assets/rift.css` and `rift-demo.js`: RIFT identity, storefront styling and browser-local demo bag.
 - `morrow-portfolio/assets/`: optimized portfolio imagery and actual Shopify screenshots.
@@ -42,7 +43,11 @@ node morrow-portfolio/preview.mjs
 
 Open http://127.0.0.1:4391. Stop the preview with Ctrl+C.
 
-The build checks all four generated pages for unrendered Liquid, duplicate IDs, missing local assets, broken page links and broken fragments. The original skincare imagery remains in the theme; portfolio pages use optimized WebP copies.
+The build checks all twelve generated pages for unrendered Liquid, duplicate IDs, a single main landmark, missing local assets, broken links and broken fragments. It also checks CSS asset paths and prevents collisions between module assets. Review evidence and Shopify source files are excluded from deployment assets. The original skincare imagery remains in the theme; portfolio pages use optimized WebP copies.
+
+The builder reads each module's `integration.json` and wraps case fragments in the shared shell. Edit authored module content rather than generated pages. The overview lists all six projects; each case has a project navigation block. Prototypes link back to their case and the overview.
+
+The current combined review server uses http://127.0.0.1:4392. The default preview command still uses port 4391; set `PORTFOLIO_PREVIEW_PORT=4392` when that port is occupied.
 
 ## Browser verification
 
@@ -54,11 +59,11 @@ node morrow-portfolio/verify-shopify.mjs
 node morrow-portfolio/verify-shopify.mjs --refined
 ```
 
-Keep the local preview server running for `verify-preview.mjs`. It checks the generated pages, resources, responsive layouts and RIFT bag/keyboard behavior.
+Keep the local preview server running for `verify-preview.mjs`. It checks all twelve pages, resources, responsive layouts and RIFT bag/keyboard behavior. Set `PORTFOLIO_PREVIEW_URL` to the running server when using a different port. Each module's `verify.mjs` can use the same variable to test its shopping flow against the combined output. Existing Playwright is required; no package installation is performed.
 
 `verify-shopify.mjs` uses the public visitor password and a new visitor session to check product pages and the demo bag. It adds a fictional cleanser, updates quantity and removes it; it does not access the admin or place an order. `--refined` substitutes this branch's CSS responses locally in that browser session to inspect the proposed theme typography. It does **not** upload or publish a theme. Both modes exercise a real network service and should only be run against this authorized portfolio demo.
 
-RIFT is a static prototype, not a Shopify theme. Its demo bag stays in browser localStorage and offers no checkout, inventory or payment integration.
+RIFT and the four additional storefronts are browser prototypes. Their independently namespaced bags use browser storage with visible failure recovery; they offer no checkout, real inventory, payment or live Shopify integration. The four modules also supply unuploaded Shopify source proposals. Their structural checks do not establish Shopify rendering. Full Theme Check is currently unavailable because the bundled helper lacks `@shopify/theme-check-common`.
 
 ## Publishing — after preview approval
 
@@ -72,7 +77,7 @@ The current shopping flow includes three product pages, native product forms, qu
 
 ## Project honesty
 
-Both brands are clearly labeled fictional, self-initiated concepts. AI assistance is disclosed. No client relationships, testimonials, research findings, clinical performance or sales results are represented. RIFT imagery has conceptual garment-detail variation; sizing and prices are illustrative.
+All six brands are clearly labeled fictional, self-initiated concepts. AI assistance and generated imagery are disclosed. No client relationships, testimonials, research findings, clinical performance or sales results are represented. Product details, dimensions, tasting notes, invented artists, sizes and prices are illustrative. Generated physical imagery can vary in material or lettering details; original editable coffee labels and record artwork provide exact graphic references. Font licenses and image prompts are retained in each module.
 
 ## Collaborator access
 

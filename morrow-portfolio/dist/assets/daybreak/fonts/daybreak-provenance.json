@@ -1,0 +1,6 @@
+{
+  "downloaded":"2026-10-03",
+  "license":"SIL Open Font License 1.1; original fonts unmodified",
+  "fredoka":{"family":"Fredoka","authors":"The Fredoka Project Authors","source":"https://github.com/google/fonts/blob/main/ofl/fredoka/Fredoka%5Bwdth,wght%5D.ttf","licenseSource":"https://github.com/google/fonts/blob/main/ofl/fredoka/OFL.txt","sha256":"2ba02e68b152868aef9ba28e24b3648c7d457fe6f25c761f2c2c53fb61a73fc8","fallback":"Arial Rounded MT Bold, Arial, sans-serif"},
+  "epilogue":{"family":"Epilogue","authors":"The Epilogue Project Authors","source":"https://github.com/google/fonts/blob/main/ofl/epilogue/Epilogue%5Bwght%5D.ttf","licenseSource":"https://github.com/google/fonts/blob/main/ofl/epilogue/OFL.txt","sha256":"012f651b45f47c10c7714cb7e3f2f7d9ccb7f235a2cc72c6b273ddc735705c67","fallback":"Arial, sans-serif"}
+}

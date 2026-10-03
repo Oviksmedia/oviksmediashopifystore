@@ -1,0 +1,56 @@
+{
+  "tool": "Built-in image_gen",
+  "disclosure": "Original AI-generated fictional products; grain, stitching and hardware vary slightly. Not manufactured or physically tested.",
+  "sources": [
+    {
+      "id": "campaign",
+      "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-8a84-7431-8fff-31349b67c235/exec-3a04751b-f022-4d77-b3ba-24a86bcc24c4.png",
+      "asset": "assets/sable-campaign.webp",
+      "prompt": "Use case: ads-marketing. Create an original fashion-house leather-accessories campaign photograph, landscape 3:2. One precisely defined shoulder bag: compact sculptural crescent/half-moon body, deep oxblood burgundy smooth semi-gloss leather, a single wide short arched leather strap attached at upper corners with two tiny brushed pale-brass rectangular mounts, an uninterrupted clean front panel without flap or logo, black edge paint and subtle tonal seam following the curved bottom. Top zipper, no front clasp. Bag sits on a rough near-black rectangular stone plinth angled across the lower half, with strap upright clearly outlining negative space. Chalk plaster studio backdrop, sharp directional sunlight from upper left, deep diagonal shadow to right. Bag occupies right-center, shot eye-level with slightly elevated three-quarter angle, large enough for tactile leather grain and edge definition. Editorial still life, expensive physical-looking photography, hard crop of the black plinth, spare composition, analog warmth, restrained natural grain. No text, no people, no logos, no extra objects, no shiny patent finish, no decorative chains. Purpose: strong real object silhouette for fictional SABLE portfolio campaign; this image establishes the invariant bag design for later product images.",
+      "reference": null,
+      "width": 1536,
+      "height": 1024,
+      "bytes": 156020
+    },
+    {
+      "id": "oxblood",
+      "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-8a84-7431-8fff-31349b67c235/exec-dd44ec3a-126b-4650-9ac2-07051eac8cee.png",
+      "asset": "assets/sable-arc-oxblood.webp",
+      "prompt": "Use case: product-mockup. Input image is the invariant product reference. Photograph EXACTLY the same oxblood leather Arc shoulder bag in this reference, retaining its crescent body with concave zip-top, generous tall single wide arched strap, small rectangular pale brass mounts, smooth semi-gloss oxblood leather, black edge paint and tonal seam around curved bottom, no front flap or logo. Change presentation only: a front three-quarter catalogue studio view against seamless pale chalk #F3EEE7, matte flat floor, softly cast shadow to right, diffused large studio lighting so the burgundy is discernible. Whole bag and complete strap visible, centered with generous margin. Portrait 4:5 or square, no plinth, no other objects, no text, no redesign. Physical object photography, precise edges, plausible fine leather grain, beautiful restrained fashion product view. Keep same proportions and hardware as reference.",
+      "reference": "campaign",
+      "width": 1120,
+      "height": 1400,
+      "bytes": 88202
+    },
+    {
+      "id": "ink",
+      "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-8a84-7431-8fff-31349b67c235/exec-7c41ef6f-08c3-4a9a-a2e9-abe69bee0692.png",
+      "asset": "assets/sable-arc-ink.webp",
+      "prompt": "Use case: precise-object-edit. Change ONLY the leather color of the reference Arc shoulder bag from Oxblood burgundy to Ink near-black. Keep exactly the same bag silhouette, body proportions, arched strap shape, zipper teeth, pale brass mounts, seams, black edge paint, physical position, background, camera angle and soft studio light. Leather stays smooth semi-gloss, with enough subtle reflection to show black leather grain; no patent shine. Seamless chalk backdrop remains unchanged. No text, no logo, no new elements. It is the Ink variant of the exact same product.",
+      "reference": "oxblood",
+      "width": 1120,
+      "height": 1400,
+      "bytes": 80912
+    },
+    {
+      "id": "fold",
+      "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-8a84-7431-8fff-31349b67c235/exec-c78b87f7-a3da-4186-96e2-e2a8b1ce2c21.png",
+      "asset": "assets/sable-fold.webp",
+      "prompt": "Use case: product-mockup. Original fictional leather-accessories small good for SABLE, a companion to a smooth leather crescent bag. A minimalist folded cardholder, near-black Ink exterior with oxblood burgundy interior, two discreet card slots and a simple central pocket, tonal seam, black edge paint. Open flat at a slight diagonal on seamless chalk studio floor. The right interior panel shows two card slots with NO cards; the left panel is plain smooth leather. Small tactile object, approximate closed size 10x7cm. Large portrait of material, soft directional studio light, realistic gentle leather grain, pale background, compact sculptural form, no branding, no text, no packaging, no hands, no extra objects. Landscape 5:4, object fills central two-thirds, fashion still life with enough margin.",
+      "reference": null,
+      "width": 1120,
+      "height": 896,
+      "bytes": 119734
+    },
+    {
+      "id": "detail",
+      "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-8a84-7431-8fff-31349b67c235/exec-5d56b307-13d0-4466-b06c-29ed769525df.png",
+      "asset": "assets/sable-detail.webp",
+      "prompt": "Use case: precise-object-edit. Reference is the exact SABLE oxblood Arc shoulder bag. Create a tightly cropped macro product-detail photograph of this SAME bag: focus on the upper right rectangular pale brushed brass strap mount, strap attachment, black painted edge, the burgundy leather grain and tonal stitching just below the zipper. Keep the physical materials, colors, mount form and leather/seam construction unchanged, only change camera framing to an extreme tactile close-up with clear fine texture and soft directional light. Landscape 5:4, diagonal bag edge crossing frame, no whole bag needed, no hands, no logos, no text, no extra hardware, no patent gloss. This is complementary material evidence for the original product, not a different bag.",
+      "reference": "oxblood",
+      "width": 1120,
+      "height": 896,
+      "bytes": 173532
+    }
+  ]
+}

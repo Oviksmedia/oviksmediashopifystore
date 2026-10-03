@@ -1,0 +1,67 @@
+{
+  "slug": "daybreak",
+  "title": "DAYBREAK",
+  "category": "Specialty coffee",
+  "summary": "A sunny packaging identity that turns three roast personalities into an approachable everyday shopping choice.",
+  "scope": [
+    "Brand direction",
+    "Graphic identity",
+    "Packaging system",
+    "AI-assisted campaign and catalog art direction",
+    "Responsive storefront",
+    "Browser-local demo bag",
+    "Namespaced Shopify Liquid source proposal"
+  ],
+  "cover": {
+    "path": "assets/daybreak-campaign.webp",
+    "alt": "DAYBREAK blue, orange and butter coffee packaging on a blue plinth in morning light"
+  },
+  "caseFile": "case.html",
+  "caseOutput": "daybreak.html",
+  "demoFile": "demo.html",
+  "demoOutput": "daybreak-demo.html",
+  "caseLink": "daybreak.html",
+  "demoLink": "daybreak-demo.html",
+  "palette": {
+    "orange": "#F66A32",
+    "blue": "#173A84",
+    "paper": "#FFF5DB",
+    "butter": "#F8D872",
+    "ink": "#302217"
+  },
+  "typography": {
+    "display": "Fredoka variable, 600",
+    "body": "Epilogue variable, 400–700",
+    "license": "SIL OFL 1.1, self-hosted",
+    "fontDirectory": "assets/daybreak/fonts"
+  },
+  "modulePath": "morrow-portfolio/projects/daybreak",
+  "modulePaths": {
+    "case": "morrow-portfolio/projects/daybreak/case.html",
+    "demo": "morrow-portfolio/projects/daybreak/demo.html",
+    "assets": "morrow-portfolio/projects/daybreak/assets",
+    "shopify": "morrow-portfolio/projects/daybreak/shopify",
+    "preview": "morrow-portfolio/projects/daybreak/preview.mjs",
+    "evidence": "morrow-portfolio/projects/daybreak/evidence"
+  },
+  "integration": {
+    "copyAssets": "Copy assets/ contents recursively to dist/assets/; all names are daybreak-prefixed or scoped in daybreak/fonts.",
+    "caseHead": [
+      "assets/daybreak.css",
+      "assets/daybreak-case.js (defer)"
+    ],
+    "caseContainsMain": true,
+    "caseWrapping": "case.html is one main fragment, already namespaced. Wrap in the existing portfolio document shell; do not nest main elements.",
+    "demo": "Copy demo.html to dist/daybreak-demo.html without rebuilding its bag.",
+    "evidence": "Internal review only; not deployment assets. No case/deployed HTML depends on evidence/.",
+    "parentOwnership": "Portfolio overview, cards, navigation, shared builder, actual store integration and publishing remain with coordinating chat."
+  },
+  "base": "f443014f815e393a783a396008436e6245b1d9a9",
+  "baseSource": "Local parent checkout, not remote GitHub",
+  "branch": "codex/concept-daybreak",
+  "preview": {
+    "port": 4402,
+    "case": "http://127.0.0.1:4402/daybreak.html",
+    "demo": "http://127.0.0.1:4402/daybreak-demo.html"
+  }
+}

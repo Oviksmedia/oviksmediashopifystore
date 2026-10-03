@@ -1,0 +1,55 @@
+{
+  "baseCommit": "f443014f815e393a783a396008436e6245b1d9a9",
+  "parentBranch": "codex/portfolio-design-refinement",
+  "reviewBeforePublishing": true,
+  "projects": [
+    {
+      "slug": "sable",
+      "threadId": "01a0ff09-8a84-7431-8fff-31349b67c235",
+      "hostId": "local",
+      "name": "SABLE",
+      "title": "SABLE leather accessories portfolio concept",
+      "category": "Leather accessories",
+      "port": 4401,
+      "direction": "FASHION / MATERIAL: a fictional leather accessories house, two or three bags/small leather goods maximum. Work with tall high-contrast fashion typography paired with compact functional labels, an oxblood/black/chalk palette, tactile close-ups, asymmetry and decisive cropping. Avoid Morrow's olive/cream Georgia register and RIFT's cobalt/heavy sans sports register. The hero should establish the object and silhouette through a strong campaign composition, rather than a generic centered headline. Product experience: color/finish variant selection, meaningful gallery/detail views, bag add/update/remove. Prices/material descriptions are clearly illustrative. Include a namespaced Shopify Liquid product/featured-collection section and editable settings in the module, using actual Shopify product/variant data and native product forms. This source is a proposal until separately validated/uploaded; do not claim a live Shopify build.",
+      "workspace": "C:/Users/Oviks/OneDrive/Documents/ChatGPT/Sprinb board/portfolio-concepts/sable/workspace",
+      "module": "morrow-portfolio/projects/sable"
+    },
+    {
+      "slug": "daybreak",
+      "threadId": "01a0ff09-910d-7e82-b37d-45648bde2d33",
+      "hostId": "local",
+      "name": "DAYBREAK",
+      "title": "DAYBREAK coffee packaging and storefront concept",
+      "category": "Specialty coffee",
+      "port": 4402,
+      "direction": "PACKAGING / EVERYDAY CHOICE: a fictional specialty coffee roastery with two or three illustrative roast products. Rounded, substantial type; confident warm orange with contrasting blue and warm paper; original bag graphics and code-native illustration accents. The category should feel lively and approachable while carefully composed, not like Morrow skincare or RIFT sports. Hero: an expressive packaging still life with a strong graphic system. Product experience: roast choice, whole-bean versus grind selection, clear illustrative pack size/price, locally working demo bag. Design a reusable label/packaging system and show its application beyond the hero. All taste/origin/roast notes are fictional concept descriptions, not research, supply chain proof or real producer relationships. One brief graphic/packaging reveal may be useful; static design must remain strong.",
+      "workspace": "C:/Users/Oviks/OneDrive/Documents/ChatGPT/Sprinb board/portfolio-concepts/daybreak/workspace",
+      "module": "morrow-portfolio/projects/daybreak"
+    },
+    {
+      "slug": "arc",
+      "threadId": "01a0ff09-a143-7440-bfac-3ad13064c1c1",
+      "hostId": "local",
+      "name": "ARC",
+      "title": "ARC sculptural lighting portfolio concept",
+      "category": "Sculptural lighting",
+      "port": 4403,
+      "direction": "OBJECT / SPACE: a fictional lighting collection with one anchor lamp plus one or two complementary objects maximum. Precise geometric typography; cool mineral/metal tones and a restrained strong accent; an architectural object gallery with clear spatial scale. Show the same designed lamp consistently in product and room/detail imagery, using reference-led image generation as needed. Hero concept is the sculptural object and how it occupies space; do not default to decorative room parallax or floating type. Product experience: finish selection with consistent generated comparison images, visible illustrative dimensions, clear gallery, working local demo bag. Light mood imagery is an art-directed concept, not photometric performance evidence. Include a namespaced Shopify Liquid section/schema that reads real catalog/variant data, with editable campaign/finish presentation and correct native form semantics; preserve inherited Morrow templates. Source proposal until validated/uploaded. Spatial skills qualify here; load only what genuinely supports the object/space decision.",
+      "workspace": "C:/Users/Oviks/OneDrive/Documents/ChatGPT/Sprinb board/portfolio-concepts/arc/workspace",
+      "module": "morrow-portfolio/projects/arc"
+    },
+    {
+      "slug": "side-b",
+      "threadId": "01a0ff09-b0d4-7d10-abb7-94f3dfc63dec",
+      "hostId": "local",
+      "name": "SIDE B",
+      "title": "SIDE B independent records portfolio concept",
+      "category": "Records and cover design",
+      "port": 4404,
+      "direction": "CULTURE / COLLECTION: a fictional independent record imprint with three invented releases maximum, clearly fictional titles/artists and no invented collaborations, testimonials or chart/sales claims. Design original, coherent but individually distinct cover artwork and label/sleeve graphics, then create generated physical vinyl/sleeve product photography. Typography should have an expressive poster/cultural register distinct from all other concepts; explore strong display/slab lettering with carefully controlled utilitarian captions. A bold print-inspired palette and a collection-driven layout, not a beige luxury template. Product experience: meaningful collection filtering, product detail/format choice, gallery or sleeve-detail reveal, working local demo bag. No fake 'play' control: audio only if an actual authorized asset exists and provenance is documented; otherwise omit playback. Demonstrate graphic-design depth through covers and campaign/poster application. One controlled sleeve/cover reveal can support discovery; motion is optional.",
+      "workspace": "C:/Users/Oviks/OneDrive/Documents/ChatGPT/Sprinb board/portfolio-concepts/side-b/workspace",
+      "module": "morrow-portfolio/projects/side-b"
+    }
+  ]
+}

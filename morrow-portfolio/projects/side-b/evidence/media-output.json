@@ -1,0 +1,32 @@
+[
+  {
+    "asset": "assets/side-b-campaign.webp",
+    "width": 1254,
+    "height": 1254,
+    "bytes": 247800
+  },
+  {
+    "asset": "assets/side-b-night-product.webp",
+    "width": 1100,
+    "height": 1100,
+    "bytes": 173066
+  },
+  {
+    "asset": "assets/side-b-soft-product.webp",
+    "width": 1100,
+    "height": 1100,
+    "bytes": 166762
+  },
+  {
+    "asset": "assets/side-b-after-product.webp",
+    "width": 1100,
+    "height": 1100,
+    "bytes": 121222
+  },
+  {
+    "asset": "assets/side-b-night-detail.webp",
+    "width": 1536,
+    "height": 1024,
+    "bytes": 252050
+  }
+]

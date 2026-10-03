@@ -1,0 +1,13 @@
+import path from 'node:path';
+import fs from 'node:fs';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const require=createRequire('C:/Users/Oviks/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/runtime.cjs');
+const {chromium}=require('playwright');
+const browser=await chromium.launch({headless:true});const page=await browser.newPage({viewport:{width:1440,height:1000}});
+await page.goto('http://127.0.0.1:4404/side-b-demo.html');await page.evaluate(()=>document.fonts.ready);await page.locator('.sideb-hero-photo img').evaluate(img=>img.decode());
+const fonts=await page.evaluate(()=>({display:document.fonts.check('20px "SideB Ultra"'),body:document.fonts.check('20px "SideB Chivo"'),families:[...document.fonts].map(font=>({family:font.family,status:font.status}))}));
+if(!fonts.display||!fonts.body)throw new Error('Font loading failed');
+await page.screenshot({path:path.join(root,'side-b-review-preview.jpg')});
+fs.writeFileSync(path.join(root,'final-preview.json'),JSON.stringify({fonts,url:page.url(),status:200,screenshot:'side-b-review-preview.jpg'},null,2));console.log(fonts);await browser.close();

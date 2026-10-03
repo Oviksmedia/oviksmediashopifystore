@@ -6,21 +6,60 @@ const root = path.dirname(fileURLToPath(import.meta.url));
 const theme = path.join(root, '../shopify-skincare/theme');
 const dist = path.join(root, 'dist');
 fs.mkdirSync(path.join(dist, 'assets'), {recursive: true});
+const conceptOrder = ['sable', 'daybreak', 'arc', 'side-b'];
+const concepts = conceptOrder.flatMap(slug => {
+  const folder = path.join(root, 'projects', slug);
+  if (!fs.existsSync(path.join(folder, 'integration.json'))) return [];
+  const spec = JSON.parse(fs.readFileSync(path.join(folder, 'integration.json'), 'utf8'));
+  if (spec.slug !== slug) throw new Error(`Wrong module identity: ${slug}`);
+  return [{slug, folder, spec}];
+});
+const escapeHtml = value => String(value).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const assetOwners = new Set();
+function copyConceptAssets(source, destination) {
+  fs.mkdirSync(destination, {recursive:true});
+  for (const entry of fs.readdirSync(source, {withFileTypes:true})) {
+    const from = path.join(source, entry.name), to = path.join(destination, entry.name);
+    if (entry.isDirectory()) copyConceptAssets(from, to);
+    else if (entry.isFile()) {
+      if (assetOwners.has(to)) throw new Error(`Asset collision: ${to}`);
+      assetOwners.add(to);
+      fs.copyFileSync(from, to);
+    } else throw new Error(`Unsupported asset entry: ${from}`);
+  }
+}
 
 // Edit the authored sources, then regenerate the deployable dist folder.
 for (const file of fs.readdirSync(path.join(root, 'assets'))) {
   if (file.endsWith('-preview.png')) continue; // Review evidence belongs in docs, not deploy assets.
   fs.copyFileSync(path.join(root, 'assets', file), path.join(dist, 'assets', file));
+  assetOwners.add(path.join(dist, 'assets', file));
 }
 for (const name of ['morrow-premium.css', 'morrow-case-study.css']) {
-  fs.copyFileSync(path.join(theme, 'assets', name), path.join(dist, 'assets', name));
+  const css = fs.readFileSync(path.join(theme, 'assets', name),'utf8').replaceAll('morrow-catalog-v2.png','morrow-catalog.webp');
+  fs.writeFileSync(path.join(dist, 'assets', name), css);
+  assetOwners.add(path.join(dist, 'assets', name));
 }
+for (const concept of concepts) copyConceptAssets(path.join(concept.folder, 'assets'), path.join(dist, 'assets'));
 const favicon = 'data:image/svg+xml,' + encodeURIComponent('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32"><rect width="32" height="32" rx="4" fill="#202722"/><text x="16" y="23" text-anchor="middle" font-family="Arial" font-weight="bold" font-size="20" fill="#fff">O</text></svg>');
-const header = (active) => `<header class="portfolio-header"><a class="portfolio-wordmark" href="index.html" aria-label="Oviks Media portfolio home">OVIKS<span>MEDIA</span><span class="wordmark-dot" aria-hidden="true"></span></a><nav aria-label="Portfolio navigation"><a href="index.html#work"${active === 'index' ? ' aria-current="page"' : ''}>Selected work</a><a href="morrow.html"${active === 'morrow' ? ' aria-current="page"' : ''}>Morrow</a><a href="rift.html"${active === 'rift' ? ' aria-current="page"' : ''}>RIFT</a></nav></header>`;
+const header = (active) => `<header class="portfolio-header"><a class="portfolio-wordmark" href="index.html" aria-label="Oviks Media portfolio home">OVIKS<span>MEDIA</span><span class="wordmark-dot" aria-hidden="true"></span></a><nav aria-label="Portfolio navigation"><a href="index.html#work"${active === 'index' ? ' aria-current="page"' : ''}>Selected work</a><a href="index.html#approach">Design approach</a></nav></header>`;
 const footer = `<footer class="portfolio-footer"><div><a class="footer-name" href="index.html">Oviks Media</a><p>Graphic design &amp; Shopify storefronts.<br>Self-initiated concepts. AI-assisted production.</p></div><nav aria-label="Footer navigation"><a href="index.html#work">Selected work</a><a href="https://github.com/Oviksmedia/oviksmediashopifystore">Project source on GitHub ↗</a><a href="#main">Back to top ↑</a></nav><span>© 2026 Oviks Media</span></footer>`;
 function shell({name, title, description, content, styles = ''}) {
   return `<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>${title} | Oviks Media</title><meta name="description" content="${description}"><link rel="icon" href="${favicon}"><link rel="stylesheet" href="assets/portfolio.css">${styles}</head><body class="portfolio-page page-${name}"><a class="skip-link" href="#main">Skip to content</a>${header(name)}<main id="main" tabindex="-1">${content}</main>${footer}</body></html>`;
 }
+const allProjects = [{slug:'morrow',title:'Morrow'},{slug:'rift',title:'RIFT'},...concepts.map(c=>({slug:c.slug,title:c.spec.title}))];
+function projectNavigation(name) {
+  if (name === 'index') return '';
+  return `<nav class="portfolio-project-nav" aria-label="Explore portfolio projects"><p>Explore another project</p><div>${allProjects.map(project=>`<a href="${project.slug}.html"${project.slug===name?' aria-current="page"':''}>${escapeHtml(project.title)}</a>`).join('')}</div></nav>`;
+}
+function conceptCard({slug, spec}, index) {
+  const cover = spec.cover;
+  const coverPath = cover.path || cover.src || cover.asset;
+  if (!coverPath || !coverPath.startsWith('assets/')) throw new Error(`Missing concept cover: ${slug}`);
+  return `<article class="project-card project-${slug}"><a class="project-cover" href="${slug}.html" aria-label="View ${escapeHtml(spec.title)} case study"><img src="${escapeHtml(coverPath)}" alt="${escapeHtml(cover.alt)}" width="${cover.width || 1536}" height="${cover.height || 1024}" loading="lazy"><span class="cover-label">${escapeHtml(spec.title)} / ${escapeHtml(spec.category)}</span><span class="cover-arrow" aria-hidden="true">↗</span></a><div class="project-heading"><h3><a href="${slug}.html">${escapeHtml(spec.title)}</a></h3><span>${String(index+3).padStart(2,'0')}</span></div><p class="project-scope">${escapeHtml(spec.category)} · Identity · Storefront prototype</p><p class="project-summary">${escapeHtml(spec.summary)}</p><div class="project-actions"><a class="portfolio-link" href="${slug}.html">View case study <span aria-hidden="true">↗</span></a><a href="${slug}-demo.html">Try the prototype ↗</a></div><p class="project-note">Self-initiated concept · Browser prototype</p></article>`;
+}
+let overview = fs.readFileSync(path.join(root,'src/index.html'),'utf8');
+overview = overview.replace('<!-- concept-projects -->', concepts.map(conceptCard).join('\n')).replaceAll('{{project_count}}', String(allProjects.length).padStart(2,'0'));
 let morrow = fs.readFileSync(path.join(theme, 'sections/morrow-case-study.liquid'), 'utf8').split('{% schema %}')[0];
 morrow = morrow.replace(/\{\{ '([^']+)' \| asset_url \| stylesheet_tag \}\}/g, '')
   .replace(/\{\{ '([^']+)' \| asset_url \}\}/g, 'assets/$1')
@@ -32,19 +71,30 @@ const screens = `<section class="mrw-case-screens" id="screens" aria-labelledby=
 morrow = morrow.replace('<section class="mrw-case-disclosure"', screens + '<section class="mrw-case-disclosure"');
 morrow = '<div class="case-breadcrumb"><a href="index.html#work">← Selected work</a><span>01 / Morrow</span></div>' + morrow;
 const pages = [
-  {name:'index', title:'Brand worlds. Working storefronts.', description:'Selected self-initiated graphic design and storefront projects by Oviks Media: Morrow skincare on Shopify and RIFT cycling apparel.', content:fs.readFileSync(path.join(root,'src/index.html'),'utf8')},
+  {name:'index', title:'Brand worlds. Working storefronts.', description:'Self-initiated graphic design and storefront concepts spanning skincare, cycling, leather accessories, coffee, lighting and records.', content:overview},
   {name:'morrow', title:'Morrow — skincare identity & Shopify', description:'A self-initiated skincare identity and working Shopify storefront. Explore the brief, design decisions, product pages and demo bag.', content:morrow, styles:'<link rel="stylesheet" href="assets/morrow-premium.css"><link rel="stylesheet" href="assets/morrow-case-study.css">'},
   {name:'rift', title:'RIFT — cycling identity & storefront concept', description:'A self-initiated cycling apparel concept: bold identity, campaign art direction and an interactive storefront prototype.', content:fs.readFileSync(path.join(root,'src/rift.html'),'utf8'), styles:'<link rel="stylesheet" href="assets/rift.css">'}
 ];
-for (const page of pages) fs.writeFileSync(path.join(dist, page.name + '.html'), shell(page));
+for (const {slug,folder,spec} of concepts) {
+  let content = fs.readFileSync(path.join(folder,spec.caseFile || 'case.html'),'utf8');
+  content = content.replace(/^\s*<main\b([^>]*)>/, '<article$1>').replace(/<\/main>\s*$/, '</article>');
+  const caseScript = path.join(folder,'assets',slug+'-case.js');
+  const caseStyles = spec.styles || spec.stylesheets || spec.case?.styles || [`assets/${slug}.css`];
+  const styles = caseStyles.map(file=>`<link rel="stylesheet" href="${escapeHtml(file)}">`).join('') + (fs.existsSync(caseScript)?`<script src="assets/${slug}-case.js" defer></script>`:'');
+  pages.push({name:slug,title:`${spec.title} — ${spec.category} concept`,description:escapeHtml(spec.summary),content,styles});
+  fs.copyFileSync(path.join(folder,spec.demoFile || 'demo.html'),path.join(dist,slug+'-demo.html'));
+}
+for (const page of pages) fs.writeFileSync(path.join(dist, page.name + '.html'), shell({...page,content:page.content+projectNavigation(page.name)}));
 fs.copyFileSync(path.join(root,'src/rift-demo.html'), path.join(dist,'rift-demo.html'));
 
 // Validate each generated page, local asset, page link and fragment.
-for (const filename of ['index.html','morrow.html','rift.html','rift-demo.html']) {
+const generatedPages = [...pages.map(page=>page.name+'.html'), 'rift-demo.html', ...concepts.map(c=>c.slug+'-demo.html')];
+for (const filename of generatedPages) {
   const html = fs.readFileSync(path.join(dist, filename), 'utf8');
   if (html.includes('{{') || html.includes('{%')) throw new Error(`Unrendered Liquid in ${filename}`);
   const ids = [...html.matchAll(/\bid="([^"]+)"/g)].map(match => match[1]);
   if (ids.length !== new Set(ids).size) throw new Error(`Duplicate ids in ${filename}`);
+  if ([...html.matchAll(/<main\b/g)].length !== 1) throw new Error(`Expected one main landmark in ${filename}`);
   for (const [, reference] of html.matchAll(/(?:src|href)="([^"]+)"/g)) {
     if (/^(https?:|data:|mailto:)/.test(reference)) continue;
     const [file, fragment] = reference.split('#');
@@ -53,4 +103,17 @@ for (const filename of ['index.html','morrow.html','rift.html','rift-demo.html']
     if (fragment && path.extname(target) === '.html' && !fs.readFileSync(target, 'utf8').includes(`id="${fragment}"`)) throw new Error(`${filename}: broken fragment ${reference}`);
   }
 }
-console.log('Built and validated 4 portfolio pages, local assets, links and fragments.');
+function validateStyles(folder) {
+  for (const entry of fs.readdirSync(folder,{withFileTypes:true})) {
+    const file = path.join(folder,entry.name);
+    if (entry.isDirectory()) validateStyles(file);
+    else if (entry.name.endsWith('.css')) {
+      for (const [, reference] of fs.readFileSync(file,'utf8').matchAll(/url\(\s*['"]?([^'"\s)]+)['"]?\s*\)/g)) {
+        if (/^(data:|https?:|#)/.test(reference)) continue;
+        if (!fs.existsSync(path.resolve(folder,reference.split(/[?#]/)[0]))) throw new Error(`Missing CSS asset: ${reference} in ${file}`);
+      }
+    }
+  }
+}
+validateStyles(path.join(dist,'assets'));
+console.log(`Built and validated ${generatedPages.length} portfolio pages for ${allProjects.length} projects, assets, links, fragments and main landmarks.`);

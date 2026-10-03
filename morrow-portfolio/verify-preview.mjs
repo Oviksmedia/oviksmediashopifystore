@@ -18,10 +18,11 @@ const errors = [];
 page.on('pageerror', error => errors.push(error.message));
 page.on('console', message => {if (message.type() === 'error') errors.push(message.text());});
 const results = [];
+const routes = fs.readdirSync(path.join(root,'dist')).filter(file=>file.endsWith('.html'));
 try {
-  for (const route of ['index.html', 'morrow.html', 'rift.html', 'rift-demo.html']) {
-    for (const width of [320, 390, 768, 1440]) {
-      await page.setViewportSize({width, height:width === 1440 ? 1000 : 844});
+  for (const route of routes) {
+    for (const [width,height] of [[320,740],[390,844],[768,1024],[1440,1000],[568,320]]) {
+      await page.setViewportSize({width, height});
       const response = await page.goto(`${base}/${route}`);
       assert.equal(response.status(), 200, route);
       // Force requested assets for the integrity check; visual checks retain authored lazy loading.
@@ -36,11 +37,12 @@ try {
       assert.equal(layout.headings, 1, `${route} must have one h1`);
       assert.equal(layout.missingAlt, 0, `${route} missing image descriptions`);
       if (width === 390 || width === 1440) await page.screenshot({path:path.join(evidence, route.replace('.html','') + (width === 390 ? '-mobile' : '-desktop') + '.jpg'), type:'jpeg', quality:88, fullPage:true});
-      results.push({route, width, images:'loaded', overflow:false});
+      assert.equal(await page.locator('main').count(),1,`${route} must have one main landmark`);
+      results.push({route, width, height, images:'loaded', overflow:false});
     }
   }
   // Follow every local link/resource from the generated HTML in the running server.
-  for (const route of ['index.html', 'morrow.html', 'rift.html', 'rift-demo.html']) {
+  for (const route of routes) {
     await page.goto(`${base}/${route}`);
     const urls = await page.locator('a[href],link[href],script[src],img[src]').evaluateAll(elements => elements.map(element => element.href || element.src).filter(url => url.startsWith(location.origin)));
     for (const url of new Set(urls)) assert.equal((await context.request.get(url)).status(), 200, `Broken resource: ${url}`);

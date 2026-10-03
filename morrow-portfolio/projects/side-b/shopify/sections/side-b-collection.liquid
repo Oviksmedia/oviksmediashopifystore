@@ -1,0 +1,42 @@
+{{ 'side-b-shopify.css' | asset_url | stylesheet_tag }}
+{% style %}
+  @font-face { font-family: SideB Ultra; src: url({{ 'side-b-ultra.ttf' | asset_url }}); font-display: swap; }
+  @font-face { font-family: SideB Chivo; src: url({{ 'side-b-chivo.ttf' | asset_url }}); font-weight: 100 900; font-display: swap; }
+{% endstyle %}
+<section class="sideb-shop sideb-shop-collection" aria-labelledby="sideb-heading-{{ section.id }}">
+  <p class="sideb-shop-kicker">{{ 'side_b.concept_note' | t }}</p>
+  <h2 id="sideb-heading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+  {% assign sideb_collection = section.settings.release_collection %}
+  {% if sideb_collection != blank and sideb_collection.products_count > 0 %}
+    <div class="sideb-shop-grid">
+      {% for sideb_product in sideb_collection.products limit: 3 %}
+        <article class="sideb-shop-card">
+          <a href="{{ sideb_product.url }}">
+            {% if sideb_product.featured_image != blank %}
+              {{ sideb_product.featured_image | image_url: width: 1000 | image_tag: loading: 'lazy', widths: '320, 640, 1000', sizes: '(min-width: 750px) 33vw, 100vw' }}
+            {% endif %}
+            <h3>{{ sideb_product.title | escape }}</h3>
+          </a>
+          <p>{{ sideb_product.vendor | escape }} / {{ sideb_product.type | escape }}</p>
+          {% assign sideb_price = sideb_product.price_min | money %}
+          <p>{{ 'side_b.price_from' | t: price: sideb_price }}</p>
+          <a class="sideb-shop-link" href="{{ sideb_product.url }}">{{ 'side_b.view_formats' | t }}</a>
+        </article>
+      {% endfor %}
+    </div>
+  {% else %}
+    <p>{{ 'side_b.empty_collection' | t }}</p>
+  {% endif %}
+</section>
+{% schema %}
+{
+  "name": "t:side_b.schema.collection_name",
+  "tag": "section",
+  "class": "sideb-shop-section",
+  "settings": [
+    { "type": "text", "id": "heading", "label": "t:side_b.schema.heading", "default": "Pick a side." },
+    { "type": "collection", "id": "release_collection", "label": "t:side_b.schema.collection" }
+  ],
+  "presets": [{ "name": "t:side_b.schema.collection_name" }]
+}
+{% endschema %}

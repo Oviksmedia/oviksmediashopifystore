@@ -1,0 +1,187 @@
+{
+  "date": "2026-10-03",
+  "environment": "Bundled Playwright / headless Chromium / Windows",
+  "scope": "Isolated local SIDE B case and HTML storefront. No live Shopify or device verification.",
+  "checks": [
+    {
+      "name": "Responsive layout, loaded lazy images, local links and targets",
+      "result": "pass",
+      "detail": "Case and demo at 1440×1000, 320×740, 390×844, 768×1024 and 568×320; no horizontal overflow or broken local resources. Non-dialog buttons/inputs/selects are at least 44px high."
+    },
+    {
+      "name": "Meaningful genre filtering",
+      "result": "pass",
+      "detail": "Correct record shown for each genre; selected state and live record count; hidden cards have no rendered/focusable controls."
+    },
+    {
+      "name": "Empty bag and Escape",
+      "result": "pass",
+      "detail": "Empty explanation, zero subtotal, native modal dismissal and opener focus restoration."
+    },
+    {
+      "name": "Format validation, quantity validation and edition separation",
+      "result": "pass",
+      "detail": "Unselected format and quantities blank/0/negative/fractional/10 rejected; 2 LPs at £28 plus 1 art edition at £36 produce 3 items and £92.00 across two distinct lines."
+    },
+    {
+      "name": "Bag updates, persistence and removal",
+      "result": "pass",
+      "detail": "Invalid update retains £92; valid update yields £120 and keeps field focus; reload preserves bag; removing editions reaches £84 then empty £0 with feedback inside bag dialog."
+    },
+    {
+      "name": "Per-edition maximum and keyboard restoration",
+      "result": "pass",
+      "detail": "Duplicate adds cannot exceed 9 of the same edition. Escape restores the record opener. Shift+Tab/Tab wrap within the modal."
+    },
+    {
+      "name": "Malformed storage recovery",
+      "result": "pass",
+      "detail": "Invalid JSON, unknown product, duplicate edition and fractional saved quantity reset to an empty bag with an explicit notice, including inside the active bag dialog."
+    },
+    {
+      "name": "Unavailable storage fallback",
+      "result": "pass",
+      "detail": "SecurityError on read and QuotaExceededError on write retain an in-memory bag; 2 Soft Static art editions total £68; honest visit-only messaging inside active dialogs."
+    },
+    {
+      "name": "Touch and reduced motion",
+      "result": "pass",
+      "detail": "Emulated mobile touch opens product, changes detail immediately and adds record; no running animations. No physical device is claimed."
+    },
+    {
+      "name": "Colour pairings",
+      "result": "pass",
+      "detail": "Declared text and cover pairings exceed 4.5:1; focus pairings exceed 3:1. This is scoped evidence, not a WCAG conformance claim."
+    },
+    {
+      "name": "JavaScript and console errors",
+      "result": "pass",
+      "detail": "No pageerror or console error across exercised local pages and failure fixtures."
+    }
+  ],
+  "viewports": [
+    {
+      "route": "side-b-demo.html",
+      "width": 1440,
+      "height": 1000,
+      "horizontalOverflow": false,
+      "imagesLoaded": 5,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b.html",
+      "width": 1440,
+      "height": 1000,
+      "horizontalOverflow": false,
+      "imagesLoaded": 9,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b-demo.html",
+      "width": 320,
+      "height": 740,
+      "horizontalOverflow": false,
+      "imagesLoaded": 5,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b.html",
+      "width": 320,
+      "height": 740,
+      "horizontalOverflow": false,
+      "imagesLoaded": 9,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b-demo.html",
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "imagesLoaded": 5,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b.html",
+      "width": 390,
+      "height": 844,
+      "horizontalOverflow": false,
+      "imagesLoaded": 9,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b-demo.html",
+      "width": 768,
+      "height": 1024,
+      "horizontalOverflow": false,
+      "imagesLoaded": 5,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b.html",
+      "width": 768,
+      "height": 1024,
+      "horizontalOverflow": false,
+      "imagesLoaded": 9,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b-demo.html",
+      "width": 568,
+      "height": 320,
+      "horizontalOverflow": false,
+      "imagesLoaded": 5,
+      "interactiveControlsAtLeast44pxHigh": true
+    },
+    {
+      "route": "side-b.html",
+      "width": 568,
+      "height": 320,
+      "horizontalOverflow": false,
+      "imagesLoaded": 9,
+      "interactiveControlsAtLeast44pxHigh": true
+    }
+  ],
+  "errors": [],
+  "screenshots": [
+    "side-b-demo-desktop.jpg",
+    "side-b-case-desktop.jpg",
+    "side-b-demo-mobile.jpg",
+    "side-b-bag-mobile.jpg",
+    "side-b-case-mobile.jpg",
+    "side-b-bag-short-landscape.jpg",
+    "side-b-product-desktop.jpg",
+    "side-b-bag-desktop.jpg",
+    "side-b-product-mobile.jpg"
+  ],
+  "contrast": [
+    {
+      "pair": "ink / yellow",
+      "ratio": 15.37
+    },
+    {
+      "pair": "ink / paper",
+      "ratio": 16.16
+    },
+    {
+      "pair": "focus / yellow",
+      "ratio": 6.9
+    },
+    {
+      "pair": "focus / paper",
+      "ratio": 7.25
+    },
+    {
+      "pair": "cover ink / orange",
+      "ratio": 4.94
+    },
+    {
+      "pair": "cover yellow / blue",
+      "ratio": 6.9
+    },
+    {
+      "pair": "cover ink / green",
+      "ratio": 11.35
+    }
+  ],
+  "status": "verified for local scope"
+}

@@ -1,0 +1,14 @@
+import path from 'node:path';
+import {fileURLToPath} from 'node:url';
+import {createRequire} from 'node:module';
+const root=path.dirname(fileURLToPath(import.meta.url));
+const require=createRequire('C:/Users/Oviks/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/runtime.cjs');
+const {chromium}=require('playwright');
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1440,height:1000},deviceScaleFactor:1});
+await page.goto('http://127.0.0.1:4404/side-b-demo.html');await page.evaluate(()=>document.fonts.ready);
+await page.locator('img').evaluateAll(images=>images.forEach(img=>img.loading='eager'));await page.evaluate(()=>Promise.all([...document.images].map(img=>img.decode().catch(()=>{}))));
+await page.screenshot({path:path.join(root,'side-b-initial-desktop.jpg'),fullPage:true});
+await page.setViewportSize({width:390,height:844});await page.screenshot({path:path.join(root,'side-b-initial-mobile.jpg'),fullPage:true});
+console.log(await page.evaluate(()=>({width:innerWidth,scrollWidth:document.documentElement.scrollWidth,overflow:[...document.querySelectorAll('body *')].filter(el=>el.getBoundingClientRect().right>innerWidth+1&&!el.closest('dialog')).map(el=>el.className)})));
+await browser.close();

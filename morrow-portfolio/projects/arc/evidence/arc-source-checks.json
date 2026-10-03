@@ -1,0 +1,79 @@
+{
+  "checks": [
+    {
+      "name": "schema parses",
+      "passed": true
+    },
+    {
+      "name": "schema setting IDs unique",
+      "passed": true
+    },
+    {
+      "name": "block setting IDs unique",
+      "passed": true
+    },
+    {
+      "name": "all UI translation keys exist",
+      "passed": true
+    },
+    {
+      "name": "real product setting",
+      "passed": true
+    },
+    {
+      "name": "catalog variants and prices",
+      "passed": true
+    },
+    {
+      "name": "native product form",
+      "passed": true
+    },
+    {
+      "name": "catalog availability",
+      "passed": true
+    },
+    {
+      "name": "quantity rules change with variant",
+      "passed": true
+    },
+    {
+      "name": "namespaced IDs",
+      "passed": true
+    },
+    {
+      "name": "no fabricated cart handler",
+      "passed": true
+    },
+    {
+      "name": "inline JS syntax",
+      "passed": true
+    },
+    {
+      "name": "CSS braces balanced",
+      "passed": true
+    },
+    {
+      "name": "normal text contrast >= 4.5",
+      "passed": true
+    },
+    {
+      "name": "control boundary contrast >= 3",
+      "passed": true
+    }
+  ],
+  "contrast": {
+    "inkOnPaper": 15.31,
+    "mutedOnPaper": 6.92,
+    "mutedOnMineral": 5.91,
+    "whiteOnSignal": 5.46,
+    "signalOnPaper": 5.21,
+    "controlOnPaper": 4.42,
+    "controlOnMineral": 3.78
+  },
+  "passed": true,
+  "scope": "Static structure, JSON, translation references, native-form intent, JS syntax and contrast calculations. This is not a Liquid compilation or live Shopify validation.",
+  "shopifyValidator": {
+    "attempted": true,
+    "result": "Could not start: ERR_MODULE_NOT_FOUND for @shopify/theme-check-common. No dependencies installed."
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "sable": {
+    "ui": {
+      "gallery": "More product views",
+      "from": "From",
+      "variant": "Finish / variant",
+      "quantity": "Quantity",
+      "add": "Add to bag",
+      "sold_out": "Sold out",
+      "full_product": "View full product details",
+      "choose_product": "Choose a featured product in the section settings.",
+      "empty_collection": "This collection has no products yet.",
+      "no_script": "Variant prices are shown in the selector. If this product has special quantity rules, use its full product page before adding."
+    }
+  }
+}

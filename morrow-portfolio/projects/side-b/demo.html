@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>SIDE B — On the flip side</title>
+  <meta name="description" content="An original fictional record imprint: three covers, one collection, a browser-local demo bag. A self-initiated design project by Oviks Media.">
+  <link rel="icon" href="assets/side-b-label.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/side-b/fonts/Ultra-Regular.ttf" as="font" type="font/ttf" crossorigin>
+  <link rel="stylesheet" href="assets/side-b.css">
+  <script src="assets/side-b-store.js" defer></script>
+</head>
+<body class="sideb-store">
+  <a class="sideb-skip" href="#sideb-main">Skip to collection</a>
+  <div class="sideb-demo-note">Fictional record imprint / Self-initiated design concept / No real orders</div>
+  <header class="sideb-header">
+    <a class="sideb-logo" href="side-b-demo.html" aria-label="SIDE B storefront home">SIDE B<span aria-hidden="true">●</span></a>
+    <nav aria-label="Store navigation"><a href="#sideb-releases">Records</a><a href="#sideb-imprint">The imprint</a><button id="sideb-bag-open" type="button" aria-haspopup="dialog">Demo bag <span id="sideb-count">0</span></button></nav>
+  </header>
+  <main id="sideb-main" tabindex="-1">
+    <section class="sideb-hero" aria-labelledby="sideb-hero-title">
+      <div class="sideb-hero-copy"><p class="sideb-kicker">Independent by design / Collection 01</p><h1 id="sideb-hero-title">ON THE<br>FLIP SIDE.</h1><div class="sideb-hero-bottom"><p>Records for your shelf.<br>Artwork for your walls.<br>A different point of view.</p><a class="sideb-button" href="#sideb-releases">Find your record <span aria-hidden="true">↘</span></a></div><span class="sideb-stamp" aria-hidden="true">33<br><small>RPM</small></span></div>
+      <figure class="sideb-hero-photo"><img src="assets/side-b-campaign.webp" width="1254" height="1254" fetchpriority="high" alt="Three original SIDE B sleeves in orange, cobalt and pale green, with black vinyl on a record-shop display."><figcaption>Collection 01 / Three imagined releases. AI-generated physical study.</figcaption></figure>
+    </section>
+    <section class="sideb-collection" id="sideb-releases" aria-labelledby="sideb-collection-title">
+      <div class="sideb-section-heading"><div><p class="sideb-kicker">001—003 / The first collection</p><h2 id="sideb-collection-title">Pick a side.</h2></div><p>Three imagined artists.<br>Three distinct cover worlds.</p></div>
+      <div class="sideb-filterbar"><div class="sideb-filters" role="group" aria-label="Filter records by genre"><button type="button" data-filter="all" aria-pressed="true">All records</button><button type="button" data-filter="Electronic" aria-pressed="false">Electronic</button><button type="button" data-filter="Ambient" aria-pressed="false">Ambient</button><button type="button" data-filter="Jazz" aria-pressed="false">Jazz</button></div><p id="sideb-filter-status" role="status" aria-live="polite">3 records</p></div>
+      <div class="sideb-records">
+        <article class="sideb-record" data-genre="Electronic">
+          <button class="sideb-record-image" data-product="night" type="button" aria-haspopup="dialog" aria-label="Explore Night Index by Mara Circuit"><img src="assets/side-b-night-product.webp" width="1024" height="1024" loading="lazy" alt="Orange Night Index sleeve with black circular graphics and a black vinyl record."><span aria-hidden="true">Explore record ↗</span></button>
+          <div class="sideb-record-top"><p class="sideb-kicker">SB—001 / Electronic</p><p>From £28</p></div><h3><button data-product="night" type="button" aria-haspopup="dialog">Night Index</button></h3><p class="sideb-artist">Mara Circuit</p><p class="sideb-record-description">Angular loops. Signals after dark.</p><button class="sideb-text-button" data-product="night" type="button" aria-haspopup="dialog">View record &amp; formats <span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="sideb-record" data-genre="Ambient">
+          <button class="sideb-record-image" data-product="soft" type="button" aria-haspopup="dialog" aria-label="Explore Soft Static by Tender Relay"><img src="assets/side-b-soft-product.webp" width="1024" height="1024" loading="lazy" alt="Cobalt Soft Static sleeve with a yellow halftone ellipse and black vinyl."><span aria-hidden="true">Explore record ↗</span></button>
+          <div class="sideb-record-top"><p class="sideb-kicker">SB—002 / Ambient</p><p>From £26</p></div><h3><button data-product="soft" type="button" aria-haspopup="dialog">Soft Static</button></h3><p class="sideb-artist">Tender Relay</p><p class="sideb-record-description">Slow textures. A little room to drift.</p><button class="sideb-text-button" data-product="soft" type="button" aria-haspopup="dialog">View record &amp; formats <span aria-hidden="true">↗</span></button>
+        </article>
+        <article class="sideb-record" data-genre="Jazz">
+          <button class="sideb-record-image" data-product="after" type="button" aria-haspopup="dialog" aria-label="Explore After Hours by Niko Vale"><img src="assets/side-b-after-product.webp" width="1024" height="1024" loading="lazy" alt="Pale green After Hours sleeve with stepped black bars and black vinyl."><span aria-hidden="true">Explore record ↗</span></button>
+          <div class="sideb-record-top"><p class="sideb-kicker">SB—003 / Jazz</p><p>From £30</p></div><h3><button data-product="after" type="button" aria-haspopup="dialog">After Hours</button></h3><p class="sideb-artist">Niko Vale</p><p class="sideb-record-description">Loose rhythm. Sharp edges.</p><button class="sideb-text-button" data-product="after" type="button" aria-haspopup="dialog">View record &amp; formats <span aria-hidden="true">↗</span></button>
+        </article>
+      </div>
+      <noscript><p class="sideb-notice">The collection is visible above. Enable JavaScript to explore formats and use the local demo bag.</p></noscript>
+    </section>
+    <section class="sideb-imprint" id="sideb-imprint" aria-labelledby="sideb-imprint-title"><div><p class="sideb-kicker">The imprint / The other side of a record</p><h2 id="sideb-imprint-title">Good on<br>the shelf.<br>Better up<br>close.</h2></div><div class="sideb-imprint-copy"><p>Some records catch your eye before they ever reach a turntable. SIDE B starts there: a small collection, a strong sleeve and space for each release to have its own voice.</p><p>Here, the artwork is the story. An angular signal, a soft cloud of static, a stepped rhythm. One graphic system. Three different ways in.</p><a class="sideb-button sideb-button-light" href="side-b.html">See the design story <span aria-hidden="true">↗</span></a><p class="sideb-small">A fictional imprint. These artists and releases are invented for this portfolio; there is no recorded audio.</p></div><figure><img src="assets/side-b-night-detail.webp" width="1536" height="1024" loading="lazy" alt="Close view of the orange Night Index sleeve, paper texture and the yellow SIDE B label on black vinyl."><figcaption>Print, paper, grooves / AI-generated material study</figcaption></figure></section>
+  </main>
+  <footer class="sideb-footer"><a class="sideb-logo" href="#sideb-main">SIDE B<span aria-hidden="true">●</span></a><p>Original design. Imagined music.<br>AI-generated imagery. Illustrative GBP prices.</p><a href="index.html#work">Oviks Media / Selected work ↗</a></footer>
+  <p id="sideb-storage-status" class="sideb-storage-note" role="status"></p>
+  <dialog id="sideb-product-dialog" class="sideb-dialog sideb-product-dialog" aria-labelledby="sideb-product-title" aria-describedby="sideb-product-disclosure">
+    <div class="sideb-dialog-bar"><p class="sideb-kicker" id="sideb-product-catalog">Record detail</p><button class="sideb-close" type="button" data-close aria-label="Close record details">Close <span aria-hidden="true">×</span></button></div>
+    <div class="sideb-product-layout"><div class="sideb-product-gallery"><img id="sideb-product-image" src="assets/side-b-night-product.webp" width="1024" height="1024" alt="Night Index physical sleeve study"><div class="sideb-gallery-tabs" role="group" aria-label="Record image view"><button id="sideb-gallery-front" type="button" data-view="front" aria-pressed="true">Record &amp; sleeve</button><button id="sideb-gallery-detail" type="button" data-view="detail" aria-pressed="false">Sleeve detail</button></div><p class="sideb-small" id="sideb-gallery-caption">AI-generated physical study.</p></div>
+    <div class="sideb-product-info"><h2 id="sideb-product-title">Night Index</h2><p id="sideb-product-artist" class="sideb-product-artist">Mara Circuit</p><p id="sideb-product-description"></p><details class="sideb-tracklist"><summary>Imagined track listing</summary><ol id="sideb-tracks"></ol><p class="sideb-small">Fictional titles; no audio is available.</p></details><form id="sideb-product-form" novalidate><label for="sideb-format">Choose a format</label><select id="sideb-format" name="format" required aria-describedby="sideb-format-help"><option value="">Select format</option></select><p id="sideb-format-help" class="sideb-small">Both concepts use black vinyl. The art edition adds a flat cover print.</p><div class="sideb-choice-row"><div><label for="sideb-quantity">Quantity</label><input id="sideb-quantity" type="number" inputmode="numeric" min="1" max="9" step="1" value="1" required aria-describedby="sideb-quantity-help"><span id="sideb-quantity-help" class="sideb-small">1–9 per format</span></div><p class="sideb-price" id="sideb-product-price">From £28</p></div><button class="sideb-button" type="submit">Add to demo bag <span aria-hidden="true">+</span></button><p class="sideb-feedback" id="sideb-product-status" role="status" aria-live="polite" aria-atomic="true"></p><button id="sideb-product-view-bag" class="sideb-text-button" type="button" hidden>View your demo bag ↗</button></form><p id="sideb-product-disclosure" class="sideb-small">Browser-local prototype. Illustrative formats and prices. No checkout, real inventory or Shopify connection.</p></div></div>
+  </dialog>
+  <dialog id="sideb-bag-dialog" class="sideb-dialog sideb-bag-dialog" aria-labelledby="sideb-bag-title" aria-describedby="sideb-bag-disclosure">
+    <div class="sideb-dialog-bar"><h2 id="sideb-bag-title">Your demo bag.</h2><button class="sideb-close" type="button" data-close aria-label="Close demo bag">Close <span aria-hidden="true">×</span></button></div><p id="sideb-bag-disclosure" class="sideb-small">Stored in this browser only. No checkout, real inventory, payments or Shopify integration.</p><p id="sideb-bag-storage" class="sideb-notice" hidden></p><div id="sideb-bag-items"></div><div class="sideb-bag-summary"><span>Illustrative subtotal</span><strong id="sideb-bag-total">£0.00</strong></div><p class="sideb-feedback" id="sideb-bag-status" role="status" aria-live="polite" aria-atomic="true"></p><button class="sideb-button" type="button" data-close>Keep digging <span aria-hidden="true">↙</span></button><p class="sideb-small">This is a bag interaction demonstration. Nothing can be purchased.</p>
+  </dialog>
+</body>
+</html>

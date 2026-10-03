@@ -1,0 +1,26 @@
+[
+  {
+    "file": "assets/fonts/arc-space-grotesk-regular.woff2",
+    "bytes": 42708,
+    "sha256": "C6620E3D49A9F9DBA3BE3AA93C89D6D5A51096CB1C616D2691EDB630551D5DA5",
+    "source": "https://github.com/floriankarsten/space-grotesk/tree/03507d024a01282884232081fc6011c09ff4e849",
+    "license": "SIL OFL 1.1",
+    "verifiedDate": "2026-10-03"
+  },
+  {
+    "file": "assets/fonts/arc-space-grotesk-medium.woff2",
+    "bytes": 42796,
+    "sha256": "F20A85BE4C8A74DDAD94D46FCCE503666498855E5A87755D75CD728D801BBE58",
+    "source": "https://github.com/floriankarsten/space-grotesk/tree/03507d024a01282884232081fc6011c09ff4e849",
+    "license": "SIL OFL 1.1",
+    "verifiedDate": "2026-10-03"
+  },
+  {
+    "file": "assets/fonts/arc-OFL.txt",
+    "bytes": 4494,
+    "sha256": "C9A6F76D065B19EE383E42C8A114915E733BCBAED9759DE41F4016B64D502CD5",
+    "source": "https://github.com/floriankarsten/space-grotesk/tree/03507d024a01282884232081fc6011c09ff4e849",
+    "license": "SIL OFL 1.1",
+    "verifiedDate": "2026-10-03"
+  }
+]

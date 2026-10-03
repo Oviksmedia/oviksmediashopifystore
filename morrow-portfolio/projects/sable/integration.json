@@ -1,0 +1,22 @@
+{
+  "slug":"sable",
+  "title":"SABLE",
+  "category":"Leather accessories",
+  "summary":"A fashion identity built around a sculptural leather silhouette, with finish comparison and a working local demo bag.",
+  "scope":["Brand identity","Original AI art direction","Storefront UX","HTML/CSS/JavaScript prototype","Shopify Liquid section proposal"],
+  "cover":{"path":"assets/sable-campaign.webp","alt":"Oxblood crescent shoulder bag on a black stone plinth in hard studio light."},
+  "caseFile":"case.html",
+  "demoFile":"demo.html",
+  "outputCase":"sable.html",
+  "outputDemo":"sable-demo.html",
+  "styles":["assets/sable-case.css"],
+  "palette":{"oxblood":"#4D101C","ink":"#141211","chalk":"#F3EEE7"},
+  "type":{"display":"Bodoni Moda, upright 500, optical sizing","functional":"Manrope 400–700","fallbacks":"Times New Roman / Arial"},
+  "modulePath":"morrow-portfolio/projects/sable/",
+  "exactPaths":{"case":"morrow-portfolio/projects/sable/case.html","demo":"morrow-portfolio/projects/sable/demo.html","assets":"morrow-portfolio/projects/sable/assets/","shopify":"morrow-portfolio/projects/sable/shopify/sections/sable-product-collection.liquid","preview":"morrow-portfolio/projects/sable/preview.mjs","evidence":"morrow-portfolio/projects/sable/evidence/"},
+  "base":"f443014f815e393a783a396008436e6245b1d9a9 (local parent revision, not remote main)",
+  "branch":"codex/concept-sable",
+  "preview":{"case":"http://127.0.0.1:4401/sable.html","demo":"http://127.0.0.1:4401/sable-demo.html"},
+  "integration":"Wrap case.html in the shared main shell and load sable-case.css; copy demo.html as sable-demo.html and recursively copy assets into dist/assets, including assets/sable/fonts. Do not copy evidence. Parent owns overview/cards/navigation.",
+  "shopifyStatus":"Source proposal only; no upload or live theme validation. Full Theme Check unavailable because the installed helper lacks @shopify/theme-check-common."
+}

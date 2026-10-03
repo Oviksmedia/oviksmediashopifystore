@@ -1,0 +1,41 @@
+{
+  "date": "2026-10-03",
+  "checks": [
+    {
+      "name": "Manifest JSON and module paths",
+      "result": "pass",
+      "detail": "Manifest parses; case and demo source files exist."
+    },
+    {
+      "name": "Storefront JavaScript parse",
+      "result": "pass",
+      "detail": "Bundled Node parses the local bag implementation. Browser behaviour is covered separately."
+    },
+    {
+      "name": "side-b-collection.liquid",
+      "result": "pass",
+      "detail": "Single valid JSON schema, unique setting IDs, present translation keys and referenced assets; embedded JavaScript parses. This is not Liquid/theme execution."
+    },
+    {
+      "name": "side-b-product.liquid",
+      "result": "pass",
+      "detail": "Single valid JSON schema, unique setting IDs, present translation keys and referenced assets; embedded JavaScript parses. This is not Liquid/theme execution."
+    },
+    {
+      "name": "Native Shopify form intent",
+      "result": "pass",
+      "detail": "Product form uses Shopify product, selected variant IDs and routes.cart_url. No inherited template was edited. Live behaviour unverified."
+    },
+    {
+      "name": "Font copies",
+      "result": "pass",
+      "detail": "Shopify font binaries are byte-identical to the licensed main assets."
+    }
+  ],
+  "fullShopifyValidator": {
+    "status": "unavailable",
+    "attempted": true,
+    "reason": "Installed shopify-liquid/scripts/validate.mjs failed with ERR_MODULE_NOT_FOUND for @shopify/theme-check-common. No dependency installed.",
+    "liveShopifyVerification": false
+  }
+}

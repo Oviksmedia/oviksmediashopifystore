@@ -1,0 +1,1288 @@
+{
+  "date": "2026-10-03",
+  "environment": "Bundled Playwright / headless Chromium on Windows; localhost only",
+  "checks": [
+    {
+      "name": "arc-demo.html desktop images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html desktop no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html desktop font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html desktop unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop shopping touch targets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop visible focus outline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html#arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html#arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html#arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html desktop images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html desktop no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html desktop font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html desktop unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc.html#main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /index.html#approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /morrow.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /rift.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /sable.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /daybreak.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "desktop local link /side-b.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile320 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile320 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile320 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile320 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 shopping touch targets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 visible focus outline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html#arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html#arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html#arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 modal fits viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 bag add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile320 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile320 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile320 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile320 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc.html#main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /index.html#approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /morrow.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /rift.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /sable.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /daybreak.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile320 local link /side-b.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile390 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile390 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile390 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html mobile390 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 shopping touch targets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 visible focus outline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html#arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html#arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html#arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 modal fits viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 bag add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile390 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile390 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile390 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html mobile390 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc.html#main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /index.html#approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /morrow.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /rift.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /sable.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /daybreak.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "mobile390 local link /side-b.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html tablet768 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html tablet768 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html tablet768 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html tablet768 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 shopping touch targets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 visible focus outline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html#arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html#arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html#arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 modal fits viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 bag add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html tablet768 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html tablet768 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html tablet768 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html tablet768 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc.html#main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /index.html#approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /morrow.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /rift.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /sable.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /daybreak.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tablet768 local link /side-b.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html landscape568 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html landscape568 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html landscape568 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc-demo.html landscape568 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 shopping touch targets",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 visible focus outline",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html#arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #arc-main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html#arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #arc-object",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html#arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #arc-dimensions",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 modal fits viewport",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 bag add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html landscape568 images loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html landscape568 no overflow",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html landscape568 font loaded",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "arc.html landscape568 unique IDs",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc.html#main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #main",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /index.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /index.html#work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #work",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /index.html#approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #approach",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc-demo.html#arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 fragment #arc-shop",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /morrow.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /rift.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /sable.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /daybreak.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /arc.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "landscape568 local link /side-b.html",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "finish required",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "validation focuses radio",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reject quantity \"0\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reject quantity \"1.5\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reject quantity \"21\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reject quantity \"\"",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "add silver two / total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "announcement inside dialog",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "focus wraps backwards",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "focus wraps forwards",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 0",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 1",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 2",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 3",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 4",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 5",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 6",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 7",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 8",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 9",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 10",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 11",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 12",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 13",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "dialog containment 14",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Escape closes dialog",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "focus restored to add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "gallery does not alter finish",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "variant distinctions and total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "update quantity total",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bad update retained",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "bad update feedback",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "remove / totals",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "persistence",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "empty state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "empty summary hidden",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "per finish cumulative limit",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion immediate",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "reduced motion image safe final state",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "malformed recovered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "malformed dialog recovery announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unknown recovered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "unknown dialog recovery announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fraction recovered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "fraction dialog recovery announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate recovered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "duplicate dialog recovery announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tooMany recovered",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "tooMany dialog recovery announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read-and-write storage fallback add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read-and-write fallback announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read-and-write fallback update",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "read-and-write fallback remove",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "write-only storage fallback add",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "write-only fallback announcement",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "write-only fallback update",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "write-only fallback remove",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "errors": [],
+  "passed": true,
+  "limits": [
+    "No physical-device or screen-reader tests",
+    "No live Shopify render, catalog mutation or upload",
+    "Concept dimensions, light performance and materials are not physical evidence"
+  ]
+}

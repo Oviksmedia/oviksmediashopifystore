@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-03",
+  "passed": true,
+  "checks": [
+    "Schema JSON parses",
+    "Unique setting IDs",
+    "Section name <=25 characters",
+    "Range setting boundaries and defaults",
+    "Translation key resolution",
+    "Balanced Liquid block tags",
+    "Embedded JS parses",
+    "Native product form and actual product/variant/price/quantity rule references"
+  ],
+  "fullThemeCheck": {
+    "passed": false,
+    "available": false,
+    "reason": "Installed Shopify helper cannot import @shopify/theme-check-common. No packages installed."
+  },
+  "liveShopifyValidated": false
+}

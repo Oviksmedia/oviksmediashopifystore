@@ -1,0 +1,338 @@
+{
+  "timestamp": "2026-10-03T00:24:56.726Z",
+  "environment": {
+    "node": "v24.12.0",
+    "playwright": "bundled",
+    "browser": "Chromium"
+  },
+  "tests": [
+    {
+      "name": "sable.html at desktop-1440 (1440x900)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable.html at tablet-768 (768x1024)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable.html at mobile-390 (390x844)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable.html at mobile-320 (320x568)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable.html at landscape-568x320 (568x320)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 568,
+          "clientWidth": 568,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable-demo.html at desktop-1440 (1440x900)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 1440,
+          "clientWidth": 1440,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable-demo.html at tablet-768 (768x1024)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 768,
+          "clientWidth": 768,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable-demo.html at mobile-390 (390x844)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 390,
+          "clientWidth": 390,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable-demo.html at mobile-320 (320x568)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 320,
+          "clientWidth": 320,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "sable-demo.html at landscape-568x320 (568x320)",
+      "passed": true,
+      "details": {
+        "overflow": {
+          "scrollWidth": 568,
+          "clientWidth": 568,
+          "hasOverflow": false
+        },
+        "consoleErrors": [],
+        "brokenImagesCount": 0
+      }
+    },
+    {
+      "name": "The Arc finish switch to Ink",
+      "passed": true,
+      "details": {
+        "initialSrc": "http://127.0.0.1:4401/assets/sable-arc-oxblood.webp",
+        "inkSrc": "http://127.0.0.1:4401/assets/sable-arc-ink.webp",
+        "inkCaption": "Full form / Ink",
+        "inkStatus": "Ink finish selected. Full form shown."
+      }
+    },
+    {
+      "name": "The Arc gallery switch to Material Detail",
+      "passed": true,
+      "details": {
+        "detailSrc": "http://127.0.0.1:4401/assets/sable-detail.webp",
+        "detailCaption": "Material detail / Oxblood reference, shared for both finishes",
+        "detailAria": "true"
+      }
+    },
+    {
+      "name": "Quantity validation rejects 0",
+      "passed": true,
+      "details": {
+        "zeroValidationMsg": "Ink finish selected. Full form shown."
+      }
+    },
+    {
+      "name": "Add Arc to demo bag with accessible modal focus and live announcement",
+      "passed": true,
+      "details": {
+        "bagOpened": true,
+        "focusedElementId": "sable-bag-close",
+        "liveStatus": "1 × The Arc, Ink added. Illustrative total $280.00.",
+        "bagTotal": "$280.00",
+        "bagCount": "1"
+      }
+    },
+    {
+      "name": "Dialog focus containment (20 forward/backward Tabs stay in dialog)",
+      "passed": true,
+      "details": {}
+    },
+    {
+      "name": "Escape closes dialog and restores focus",
+      "passed": true,
+      "details": {
+        "bagClosed": true,
+        "restoredFocusText": "Add to demo bag ↗"
+      }
+    },
+    {
+      "name": "Add The Fold cardholder ($65), subtotal $345.00",
+      "passed": true,
+      "details": {
+        "multiCount": "2",
+        "multiTotal": "$345.00"
+      }
+    },
+    {
+      "name": "Update Arc quantity to 2, subtotal $625.00 with live announcement",
+      "passed": true,
+      "details": {
+        "updatedTotal": "$625.00",
+        "qtyLiveStatus": "Quantity updated for The Arc, Ink. Illustrative total $625.00."
+      }
+    },
+    {
+      "name": "Remove Fold, subtotal returns to $560.00 with live announcement",
+      "passed": true,
+      "details": {
+        "afterRemoveTotal": "$560.00",
+        "removeStatus": "The Fold, Ink / Oxblood interior removed. Bag updated."
+      }
+    },
+    {
+      "name": "Remove Arc to empty bag state",
+      "passed": true,
+      "details": {
+        "emptyTotal": "$0.00",
+        "emptyMsg": "Your bag has room for an idea."
+      }
+    },
+    {
+      "name": "localStorage persistence across reload",
+      "passed": true,
+      "details": {
+        "persistedCount": "1"
+      }
+    },
+    {
+      "name": "Recovery from corrupted localStorage resets safely",
+      "passed": true,
+      "details": {
+        "recoveredCount": "0",
+        "storageNote": "Unreadable saved bag was reset. New changes save in this browser."
+      }
+    },
+    {
+      "name": "prefers-reduced-motion: reduce disables transitions (0s)",
+      "passed": true,
+      "details": {
+        "buttonTransition": "0s"
+      }
+    }
+  ],
+  "screenshots": [
+    {
+      "name": "sable-desktop-1440.png",
+      "viewport": {
+        "name": "desktop-1440",
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "sable-tablet-768.png",
+      "viewport": {
+        "name": "tablet-768",
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "sable-mobile-390.png",
+      "viewport": {
+        "name": "mobile-390",
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "sable-mobile-320.png",
+      "viewport": {
+        "name": "mobile-320",
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "name": "sable-landscape-568x320.png",
+      "viewport": {
+        "name": "landscape-568x320",
+        "width": 568,
+        "height": 320
+      }
+    },
+    {
+      "name": "sable-demo-desktop-1440.png",
+      "viewport": {
+        "name": "desktop-1440",
+        "width": 1440,
+        "height": 900
+      }
+    },
+    {
+      "name": "sable-demo-tablet-768.png",
+      "viewport": {
+        "name": "tablet-768",
+        "width": 768,
+        "height": 1024
+      }
+    },
+    {
+      "name": "sable-demo-mobile-390.png",
+      "viewport": {
+        "name": "mobile-390",
+        "width": 390,
+        "height": 844
+      }
+    },
+    {
+      "name": "sable-demo-mobile-320.png",
+      "viewport": {
+        "name": "mobile-320",
+        "width": 320,
+        "height": 568
+      }
+    },
+    {
+      "name": "sable-demo-landscape-568x320.png",
+      "viewport": {
+        "name": "landscape-568x320",
+        "width": 568,
+        "height": 320
+      }
+    },
+    {
+      "name": "sable-demo-ink-variant-1440.png",
+      "description": "Arc in Ink variant"
+    },
+    {
+      "name": "sable-demo-material-detail-1440.png",
+      "description": "Arc material detail macro view"
+    },
+    {
+      "name": "sable-demo-bag-open-1440.png",
+      "description": "Modal bag open with Arc added"
+    }
+  ]
+}

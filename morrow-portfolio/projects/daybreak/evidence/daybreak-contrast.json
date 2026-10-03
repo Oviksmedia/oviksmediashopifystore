@@ -1,0 +1,30 @@
+{
+  "scope": "Actual UI palette pair calculations; not full WCAG conformance",
+  "pairs": [
+    {
+      "foreground": "#173A84",
+      "background": "#FFF5DB",
+      "ratio": 9.79,
+      "uses": "Primary body, controls; inverse blue sections"
+    },
+    {
+      "foreground": "#302217",
+      "background": "#F66A32",
+      "ratio": 5.14,
+      "uses": "Orange section body and small label metadata"
+    },
+    {
+      "foreground": "#173A84",
+      "background": "#F66A32",
+      "ratio": 3.56,
+      "uses": "Large label artwork type and geometric mark only"
+    },
+    {
+      "foreground": "#302217",
+      "background": "#F8D872",
+      "ratio": 11.02,
+      "uses": "Butter specimen caption"
+    }
+  ],
+  "limits": "AI raster packaging text is concept artwork and may vary; the HTML repeats product names, pack size, roast and price in clear live text."
+}

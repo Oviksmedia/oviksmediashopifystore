@@ -1,0 +1,71 @@
+{{ 'side-b-shopify.css' | asset_url | stylesheet_tag }}
+<section class="sideb-shop sideb-shop-product" aria-labelledby="sideb-product-heading-{{ section.id }}">
+  {% if product != blank %}
+    {% assign sideb_variant = product.selected_or_first_available_variant %}
+    {% assign sideb_image = sideb_variant.featured_image | default: product.featured_image %}
+    <div class="sideb-shop-product-grid">
+      <div>
+        {% if sideb_image != blank %}
+          {{ sideb_image | image_url: width: 1400 | image_tag: class: 'sideb-shop-product-image', loading: 'eager', widths: '400, 800, 1400', sizes: '(min-width: 750px) 50vw, 100vw' }}
+        {% endif %}
+      </div>
+      <div>
+        <p class="sideb-shop-kicker">{{ 'side_b.concept_note' | t }}</p>
+        <h1 id="sideb-product-heading-{{ section.id }}">{{ product.title | escape }}</h1>
+        <p>{{ product.vendor | escape }}</p>
+        <div>{{ product.description }}</div>
+        <p class="sideb-shop-price" data-sideb-price>{{ sideb_variant.price | money }}</p>
+        {% assign sideb_form_id = 'sideb-form-' | append: section.id %}
+        {% form 'product', product, id: sideb_form_id %}
+          {{ form.errors | default_errors }}
+          <label for="sideb-variant-{{ section.id }}">{{ 'side_b.format' | t }}</label>
+          <select id="sideb-variant-{{ section.id }}" name="id" data-sideb-variant required>
+            {% for variant in product.variants %}
+              {% assign sideb_option_image = variant.featured_image | default: product.featured_image %}
+              <option value="{{ variant.id }}" data-price="{{ variant.price | money | escape }}" data-available="{{ variant.available }}"{% if sideb_option_image != blank %} data-image="{{ sideb_option_image | image_url: width: 1400 }}" data-alt="{{ sideb_option_image.alt | default: product.title | escape }}"{% endif %}{% if variant == sideb_variant %} selected{% endif %}{% unless variant.available %} disabled{% endunless %}>
+                {{ variant.title | escape }} — {{ variant.price | money }}{% unless variant.available %} / {{ 'side_b.unavailable' | t }}{% endunless %}
+              </option>
+            {% endfor %}
+          </select>
+          <label for="sideb-quantity-{{ section.id }}">{{ 'side_b.quantity' | t }}</label>
+          <input id="sideb-quantity-{{ section.id }}" type="number" name="quantity" min="1" max="9" step="1" value="1" inputmode="numeric" required>
+          <button type="submit" name="add" data-sideb-add data-add-label="{{ 'side_b.add_demo' | t | escape }}" data-unavailable-label="{{ 'side_b.unavailable' | t | escape }}"{% unless sideb_variant.available %} disabled{% endunless %}>{% if sideb_variant.available %}{{ 'side_b.add_demo' | t }}{% else %}{{ 'side_b.unavailable' | t }}{% endif %}</button>
+        {% endform %}
+        <p class="sideb-shop-small">{{ 'side_b.native_cart_note' | t }}</p>
+        <a class="sideb-shop-link" href="{{ routes.cart_url }}">{{ 'side_b.view_bag' | t }}</a>
+      </div>
+    </div>
+  {% else %}
+    <h2 id="sideb-product-heading-{{ section.id }}">{{ 'side_b.no_product' | t }}</h2>
+  {% endif %}
+</section>
+{% style %}
+  @font-face { font-family: SideB Ultra; src: url({{ 'side-b-ultra.ttf' | asset_url }}); font-display: swap; }
+  @font-face { font-family: SideB Chivo; src: url({{ 'side-b-chivo.ttf' | asset_url }}); font-weight: 100 900; font-display: swap; }
+{% endstyle %}
+{% javascript %}
+  document.addEventListener('change', function (event) {
+    if (!event.target.matches('[data-sideb-variant]')) return;
+    const section = event.target.closest('.sideb-shop-product');
+    const option = event.target.selectedOptions[0];
+    if (!section || !option) return;
+    section.querySelector('[data-sideb-price]').textContent = option.dataset.price;
+    const addButton = section.querySelector('[data-sideb-add]');
+    addButton.disabled = option.dataset.available !== 'true';
+    addButton.textContent = addButton.disabled ? addButton.dataset.unavailableLabel : addButton.dataset.addLabel;
+    const image = section.querySelector('.sideb-shop-product-image');
+    if (image && option.dataset.image) {
+      image.removeAttribute('srcset');
+      image.src = option.dataset.image;
+      image.alt = option.dataset.alt || '';
+    }
+  });
+{% endjavascript %}
+{% schema %}
+{
+  "name": "t:side_b.schema.product_name",
+  "tag": "section",
+  "class": "sideb-shop-section",
+  "settings": []
+}
+{% endschema %}

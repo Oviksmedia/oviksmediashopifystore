@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-03",
+  "checks": [
+    "Both self-hosted fonts loaded in Chromium",
+    "Touch emulation: Ink finish, add and remove",
+    "Keyboard skip link focuses main; visible focus styles specified",
+    "No-JavaScript disclosure and readable 320px layout"
+  ],
+  "contrast": [
+    {
+      "role": "Body",
+      "foreground": "#141211",
+      "background": "#F3EEE7",
+      "ratio": 16.18,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "role": "Secondary text",
+      "foreground": "#645B55",
+      "background": "#F3EEE7",
+      "ratio": 5.74,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "role": "Action and status",
+      "foreground": "#F3EEE7",
+      "background": "#4D101C",
+      "ratio": 12.94,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "role": "Campaign",
+      "foreground": "#F3EEE7",
+      "background": "#141211",
+      "ratio": 16.18,
+      "minimum": 4.5,
+      "passed": true
+    },
+    {
+      "role": "Focus ring on chalk",
+      "foreground": "#9C5729",
+      "background": "#F3EEE7",
+      "ratio": 4.78,
+      "minimum": 3,
+      "passed": true
+    }
+  ],
+  "touchTargets": [
+    {
+      "label": "Objects",
+      "height": 44,
+      "width": 44
+    },
+    {
+      "label": "Material",
+      "height": 44,
+      "width": 44
+    },
+    {
+      "label": "Bag 0",
+      "height": 44,
+      "width": 60.59375
+    },
+    {
+      "label": "01 / Full form",
+      "height": 51.140625,
+      "width": 175.5
+    },
+    {
+      "label": "02 / Material detail",
+      "height": 51.140625,
+      "width": 175.5
+    },
+    {
+      "label": "Oxblood",
+      "height": 48,
+      "width": 130.40625
+    },
+    {
+      "label": "Ink",
+      "height": 48,
+      "width": 97.890625
+    },
+    {
+      "label": "sable-arc-qty",
+      "height": 44,
+      "width": 75
+    },
+    {
+      "label": "Add to demo bag ↗",
+      "height": 52,
+      "width": 351
+    },
+    {
+      "label": "Form & material",
+      "height": 44,
+      "width": 351
+    },
+    {
+      "label": "Care concept",
+      "height": 44,
+      "width": 351
+    },
+    {
+      "label": "Ink / Oxblood interior",
+      "height": 46,
+      "width": 351
+    },
+    {
+      "label": "sable-fold-qty",
+      "height": 44,
+      "width": 75
+    },
+    {
+      "label": "Add to demo bag ↗",
+      "height": 52,
+      "width": 351
+    },
+    {
+      "label": "Form & material",
+      "height": 44,
+      "width": 351
+    },
+    {
+      "label": "SABLE",
+      "height": 59.390625,
+      "width": 163
+    },
+    {
+      "label": "Read the project ↗",
+      "height": 44,
+      "width": 103.046875
+    },
+    {
+      "label": "Return to portfolio ↗",
+      "height": 44,
+      "width": 112.765625
+    }
+  ],
+  "visualReview": {
+    "inspected": [
+      "sable-demo-desktop.jpg",
+      "sable-demo-mobile.jpg",
+      "sable-case-desktop.jpg",
+      "sable-bag-390x844.jpg"
+    ],
+    "observations": "Legible fashion hierarchy, object silhouettes unobscured, stable finish controls and contained bag at mobile. Grain/hardware variation is disclosed.",
+    "limits": "Screenshot review is visual judgment, not customer research or screen-reader testing."
+  },
+  "passed": true
+}

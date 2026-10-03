@@ -1,0 +1,19 @@
+{
+  "fonts": {
+    "display": true,
+    "body": true,
+    "families": [
+      {
+        "family": "SideB Ultra",
+        "status": "loaded"
+      },
+      {
+        "family": "SideB Chivo",
+        "status": "loaded"
+      }
+    ]
+  },
+  "url": "http://127.0.0.1:4404/side-b-demo.html",
+  "status": 200,
+  "screenshot": "side-b-review-preview.jpg"
+}

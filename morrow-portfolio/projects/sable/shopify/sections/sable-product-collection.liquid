@@ -1,0 +1,148 @@
+{% liquid
+  assign sable_product = section.settings.product
+  assign sable_variant = sable_product.selected_or_first_available_variant
+  assign sable_image = sable_variant.featured_image | default: sable_product.featured_image
+  assign sable_form_id = 'sable-product-form-' | append: section.id
+%}
+{% style %}
+  @font-face { font-family: SableBodoni; src: url({{ 'sable-bodoni-moda.ttf' | asset_url }}) format('truetype'); font-weight: 400 900; font-display: swap; }
+  @font-face { font-family: SableManrope; src: url({{ 'sable-manrope.ttf' | asset_url }}) format('truetype'); font-weight: 200 800; font-display: swap; }
+  #SableSection-{{ section.id }} { --sable-source-surface: {{ section.settings.surface }}; --sable-source-accent: {{ section.settings.accent }}; }
+{% endstyle %}
+<section id="SableSection-{{ section.id }}" class="sable-source" aria-labelledby="SableHeading-{{ section.id }}">
+  <header class="sable-source-header">
+    <p class="sable-source-label">{{ section.settings.eyebrow | escape }}</p>
+    <h2 id="SableHeading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+    {% if section.settings.campaign != blank %}
+      {{ section.settings.campaign | image_url: width: 1800 | image_tag: widths: '600, 900, 1200, 1800', sizes: '100vw', loading: 'lazy', class: 'sable-source-campaign' }}
+    {% endif %}
+    {% if section.settings.notice != blank %}<p class="sable-source-notice">{{ section.settings.notice | escape }}</p>{% endif %}
+  </header>
+  {% if sable_product != blank %}
+    <article class="sable-source-product">
+      <div class="sable-source-gallery">
+        {% if sable_image != blank %}
+          {{ sable_image | image_url: width: 1200 | image_tag: widths: '400, 700, 1000, 1200', sizes: '(min-width: 750px) 50vw, 100vw', loading: 'lazy', class: 'sable-source-selected-image' }}
+        {% endif %}
+        {% if sable_product.images.size > 1 %}
+          <details><summary>{{ 'sable.ui.gallery' | t }}</summary>
+            <div class="sable-source-detail-images">
+              {% for sable_detail in sable_product.images offset: 1 limit: 3 %}
+                {{ sable_detail | image_url: width: 700 | image_tag: widths: '350, 700', sizes: '50vw', loading: 'lazy' }}
+              {% endfor %}
+            </div>
+          </details>
+        {% endif %}
+      </div>
+      <div class="sable-source-buy">
+        <h3>{{ sable_product.title | escape }}</h3>
+        <p class="sable-source-price">{{ 'sable.ui.from' | t }} {{ sable_product.price | money }}</p>
+        <div class="sable-source-description">{{ sable_product.description }}</div>
+        {% form 'product', sable_product, id: sable_form_id, class: 'sable-source-form' %}
+          {{ form.errors | default_errors }}
+          <label for="SableVariant-{{ section.id }}">{{ 'sable.ui.variant' | t }}</label>
+          <select id="SableVariant-{{ section.id }}" name="id" data-sable-variant>
+            {% for sable_option in sable_product.variants %}
+              {% assign sable_option_image = sable_option.featured_image | default: sable_product.featured_image %}
+              <option value="{{ sable_option.id }}" data-min="{{ sable_option.quantity_rule.min }}" data-step="{{ sable_option.quantity_rule.increment }}" data-max="{{ sable_option.quantity_rule.max }}" {% if sable_option_image != blank %}data-image="{{ sable_option_image | image_url: width: 1200 }}"{% endif %} data-alt="{{ sable_product.title | escape }} / {{ sable_option.title | escape }}" {% if sable_option == sable_variant %}selected{% endif %} {% unless sable_option.available %}disabled{% endunless %}>
+                {{ sable_option.title | escape }} — {{ sable_option.price | money }}{% unless sable_option.available %} — {{ 'sable.ui.sold_out' | t }}{% endunless %}
+              </option>
+            {% endfor %}
+          </select>
+          <label for="SableQuantity-{{ section.id }}">{{ 'sable.ui.quantity' | t }}</label>
+          <input id="SableQuantity-{{ section.id }}" name="quantity" type="number" value="{{ sable_variant.quantity_rule.min | default: 1 }}" min="{{ sable_variant.quantity_rule.min | default: 1 }}" step="{{ sable_variant.quantity_rule.increment | default: 1 }}" {% if sable_variant.quantity_rule.max != blank %}max="{{ sable_variant.quantity_rule.max }}"{% endif %} required inputmode="numeric" data-sable-quantity>
+          <button type="submit" name="add" data-add-label="{{ 'sable.ui.add' | t | escape }}" data-sold-label="{{ 'sable.ui.sold_out' | t | escape }}" {% unless sable_variant.available %}disabled{% endunless %}>{% if sable_variant.available %}{{ 'sable.ui.add' | t }}{% else %}{{ 'sable.ui.sold_out' | t }}{% endif %}</button>
+          <p class="sable-source-feedback" role="status" aria-live="polite" data-sable-feedback></p>
+          <noscript><p>{{ 'sable.ui.no_script' | t }}</p></noscript>
+        {% endform %}
+        <a href="{{ sable_product.url }}">{{ 'sable.ui.full_product' | t }}</a>
+      </div>
+    </article>
+  {% elsif request.design_mode %}
+    <p>{{ 'sable.ui.choose_product' | t }}</p>
+  {% endif %}
+  {% if section.settings.collection != blank %}
+    <div class="sable-source-collection">
+      <h3>{{ section.settings.collection_heading | escape }}</h3>
+      <div class="sable-source-cards">
+        {% for sable_item in section.settings.collection.products limit: section.settings.product_limit %}
+          <article><a href="{{ sable_item.url }}">
+            {% if sable_item.featured_image != blank %}{{ sable_item.featured_image | image_url: width: 800 | image_tag: widths: '400, 800', sizes: '(min-width: 750px) 33vw, 100vw', loading: 'lazy' }}{% endif %}
+            <h4>{{ sable_item.title | escape }}</h4><p>{{ 'sable.ui.from' | t }} {{ sable_item.price | money }}</p>
+            {% unless sable_item.available %}<p>{{ 'sable.ui.sold_out' | t }}</p>{% endunless %}
+          </a></article>
+        {% else %}
+          <p>{{ 'sable.ui.empty_collection' | t }}</p>
+        {% endfor %}
+      </div>
+    </div>
+  {% endif %}
+</section>
+{% stylesheet %}
+  .sable-source { background:var(--sable-source-surface,#f3eee7);color:#141211;padding:clamp(24px,5vw,80px);font-family:SableManrope,Arial,sans-serif; }
+  .sable-source * { box-sizing:border-box; }
+  .sable-source h2,.sable-source h3 { font-family:SableBodoni,'Times New Roman',serif;font-weight:400;line-height:1.1; }
+  .sable-source h2 { font-size:clamp(40px,6vw,90px);margin:14px 0 30px; }
+  .sable-source h3 { font-size:clamp(32px,4vw,54px);margin:0 0 20px; }
+  .sable-source a { color:inherit;text-underline-offset:5px; }
+  .sable-source img { display:block;max-width:100%;width:100%;height:auto; }
+  .sable-source :focus-visible { outline:3px solid #9c5729;outline-offset:5px; }
+  .sable-source-label { text-transform:uppercase;font-size:11px;letter-spacing:.12em; }
+  .sable-source-campaign { max-height:650px;object-fit:cover; }
+  .sable-source-notice { font-size:12px;line-height:1.6;margin:18px 0 35px; }
+  .sable-source-product { display:grid;grid-template-columns:1.2fr 1fr;gap:6vw; }
+  .sable-source-selected-image { aspect-ratio:4/5;object-fit:cover; }
+  .sable-source details { margin-top:18px; }
+  .sable-source summary { cursor:pointer;min-height:44px; }
+  .sable-source-detail-images { display:grid;grid-template-columns:1fr 1fr;gap:12px; }
+  .sable-source-buy { padding:20px 0; }
+  .sable-source-description { font-size:14px;line-height:1.65;margin:20px 0; }
+  .sable-source-form { display:grid;gap:12px;margin:24px 0; }
+  .sable-source-form label { font-size:12px; }
+  .sable-source-form select,.sable-source-form input { font:inherit;background:transparent;color:inherit;border:1px solid #645b55;min-height:46px;padding:10px;max-width:100%; }
+  .sable-source-form input { width:90px; }
+  .sable-source-form button { background:var(--sable-source-accent,#4d101c);color:#fff;border:1px solid currentColor;padding:15px;min-height:52px;font:inherit;cursor:pointer; }
+  .sable-source-form button:disabled { background:#645b55;cursor:not-allowed; }
+  .sable-source-feedback { font-size:12px;min-height:20px;margin:0; }
+  .sable-source-collection { margin-top:70px; }
+  .sable-source-cards { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px; }
+  .sable-source-cards img { aspect-ratio:4/5;object-fit:cover; }
+  .sable-source-cards h4 { font-size:20px;font-weight:400;margin:16px 0 8px; }
+  .sable-source-cards p { font-size:12px; }
+  @media(max-width:749px) { .sable-source-product,.sable-source-cards { grid-template-columns:1fr; } }
+{% endstylesheet %}
+{% javascript %}
+  document.addEventListener('change', function(event) {
+    if (!event.target.matches('[data-sable-variant]')) return;
+    const select = event.target, form = select.closest('form'), option = select.selectedOptions[0];
+    const quantity = form.querySelector('[data-sable-quantity]');
+    quantity.min = option.dataset.min || '1';quantity.step = option.dataset.step || '1';
+    if(option.dataset.max) quantity.max = option.dataset.max; else quantity.removeAttribute('max');
+    quantity.value = quantity.min;
+    const image = form.closest('.sable-source-product').querySelector('.sable-source-selected-image');
+    if(image && option.dataset.image) { image.removeAttribute('srcset');image.src = option.dataset.image;image.alt = option.dataset.alt; }
+    const add = form.querySelector('button[name=add]');add.disabled = option.disabled;add.textContent = option.disabled ? add.dataset.soldLabel : add.dataset.addLabel;
+    form.querySelector('[data-sable-feedback]').textContent = option.textContent.trim();
+  });
+{% endjavascript %}
+{% schema %}
+{
+  "name": "SABLE objects",
+  "tag": "div",
+  "class": "sable-source-section",
+  "settings": [
+    {"type":"text","id":"eyebrow","label":"Eyebrow","default":"Collection 01 / SABLE"},
+    {"type":"text","id":"heading","label":"Heading","default":"Objects of intention"},
+    {"type":"image_picker","id":"campaign","label":"Campaign image"},
+    {"type":"textarea","id":"notice","label":"Concept disclosure","default":"Fictional design concept. Verify product specifications, prices and inventory before release."},
+    {"type":"product","id":"product","label":"Featured product"},
+    {"type":"collection","id":"collection","label":"Featured collection"},
+    {"type":"text","id":"collection_heading","label":"Collection heading","default":"A curve. A fold."},
+    {"type":"range","id":"product_limit","label":"Products shown","min":1,"max":3,"step":1,"default":2},
+    {"type":"color","id":"surface","label":"Surface (check text contrast)","default":"#F3EEE7"},
+    {"type":"color","id":"accent","label":"Button (check white text contrast)","default":"#4D101C"}
+  ],
+  "presets": [{"name":"SABLE objects"}]
+}
+{% endschema %}
+

@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-03",
+  "environment": "Bundled Playwright / headless Chromium / local preview",
+  "viewports": [
+    {
+      "page": "sable.html",
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable-demo.html",
+      "width": 1440,
+      "height": 1000,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable.html",
+      "width": 320,
+      "height": 720,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable-demo.html",
+      "width": 320,
+      "height": 720,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable.html",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable-demo.html",
+      "width": 390,
+      "height": 844,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable.html",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable-demo.html",
+      "width": 768,
+      "height": 1024,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable.html",
+      "width": 568,
+      "height": 320,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    },
+    {
+      "page": "sable-demo.html",
+      "width": 568,
+      "height": 320,
+      "overflow": false,
+      "images": [],
+      "duplicateIds": [],
+      "passed": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "Responsive case/demo, eager-loaded images, duplicate IDs, all local links and fragments, finish/gallery and modal flow at 1440/320/390/768/568x320",
+      "passed": true
+    },
+    {
+      "name": "Native validation, three distinct variant/product lines, exact integer-cent totals, quantity correction, removal/empty, persistence, cumulative quantity cap",
+      "passed": true
+    },
+    {
+      "name": "Malformed JSON, unknown variant, invalid stored quantity and duplicate lines reset safely",
+      "passed": true
+    },
+    {
+      "name": "Storage read and write failure: in-session add/remove remains usable with explicit warning",
+      "passed": true
+    },
+    {
+      "name": "Reduced motion: zero transitions/animations and immediate variant state",
+      "passed": true
+    },
+    {
+      "name": "No browser JavaScript or console errors in viewport runs",
+      "passed": true
+    }
+  ],
+  "errors": [],
+  "limitations": [
+    "No physical devices or screen reader tested.",
+    "No live Shopify theme, cart or inventory tested.",
+    "No checkout exists."
+  ],
+  "passed": true
+}

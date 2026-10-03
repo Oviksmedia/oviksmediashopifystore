@@ -1,0 +1,172 @@
+{
+  "date": "2026-10-03T02:54:45.235Z",
+  "environment": "Bundled Playwright / Chromium, localhost only",
+  "checks": [
+    {
+      "name": "All case/demo local links, images and fonts after eager/lazy loading",
+      "status": "pass"
+    },
+    {
+      "name": "Empty bag, Escape and focus restoration",
+      "status": "pass"
+    },
+    {
+      "name": "Required grind validation",
+      "status": "pass"
+    },
+    {
+      "name": "Add confirmation is inside active dialog and keyboard containment",
+      "status": "pass"
+    },
+    {
+      "name": "Variant distinctions, repeated additions and accurate subtotal",
+      "status": "pass"
+    },
+    {
+      "name": "Quantity validation, exact totals and maximum quantity",
+      "status": "pass"
+    },
+    {
+      "name": "Removal, persistent reload and empty bag",
+      "status": "pass"
+    },
+    {
+      "name": "Malformed and untrusted stored bag recovery",
+      "status": "pass"
+    },
+    {
+      "name": "Cross-tab bag synchronization",
+      "status": "pass"
+    },
+    {
+      "name": "Unavailable and quota-failed storage still permits session bag",
+      "status": "pass"
+    },
+    {
+      "name": "Reduced-motion immediate final labels and dynamic preference change",
+      "status": "pass"
+    },
+    {
+      "name": "Touch at 390px and short-landscape dialog visibility",
+      "status": "pass"
+    },
+    {
+      "name": "Liquid section schema parse, unique settings/block IDs and balanced tags (not Theme Check)",
+      "status": "pass"
+    }
+  ],
+  "viewports": [
+    {
+      "page": "/daybreak-demo.html",
+      "width": 1440,
+      "height": 1000,
+      "scroll": 1440,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak.html",
+      "width": 1440,
+      "height": 1000,
+      "scroll": 1440,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak-demo.html",
+      "width": 320,
+      "height": 740,
+      "scroll": 320,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak.html",
+      "width": 320,
+      "height": 740,
+      "scroll": 320,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak-demo.html",
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak.html",
+      "width": 390,
+      "height": 844,
+      "scroll": 390,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak-demo.html",
+      "width": 768,
+      "height": 1024,
+      "scroll": 768,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak.html",
+      "width": 768,
+      "height": 1024,
+      "scroll": 768,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak-demo.html",
+      "width": 568,
+      "height": 320,
+      "scroll": 568,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    },
+    {
+      "page": "/daybreak.html",
+      "width": 568,
+      "height": 320,
+      "scroll": 568,
+      "images": true,
+      "fontDisplay": true,
+      "fontBody": true,
+      "badTargets": [],
+      "status": "pass"
+    }
+  ],
+  "errors": [],
+  "status": "pass"
+}

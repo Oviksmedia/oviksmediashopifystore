@@ -1,0 +1,15 @@
+import {createRequire} from 'node:module';
+import {fileURLToPath} from 'node:url';
+const require=createRequire(import.meta.url);
+const {chromium}=require('C:/Users/Oviks/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/playwright');
+const sharp=require('C:/Users/Oviks/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/node_modules/sharp');
+const browser=await chromium.launch({headless:true});
+const page=await browser.newPage({viewport:{width:1400,height:940}});
+await page.goto('http://127.0.0.1:4403/arc-demo.html');await page.evaluate(()=>document.fonts.ready);
+await page.screenshot({path:fileURLToPath(new URL('evidence/arc-demo-desktop.jpg',import.meta.url)),type:'jpeg',quality:80});
+await page.locator('#arc-shop').scrollIntoViewIfNeeded();await page.locator('#arc-product-image').evaluate(img=>img.decode());
+const shot=await page.screenshot({type:'jpeg',quality:85});
+await sharp(shot).webp({quality:83}).toFile(fileURLToPath(new URL('assets/arc-storefront-preview.webp',import.meta.url)));
+await page.screenshot({path:fileURLToPath(new URL('evidence/arc-shop-desktop.jpg',import.meta.url)),type:'jpeg',quality:80});
+await page.goto('http://127.0.0.1:4403/arc.html');await page.evaluate(()=>document.fonts.ready);await page.screenshot({path:fileURLToPath(new URL('evidence/arc-case-desktop.jpg',import.meta.url)),type:'jpeg',quality:80});
+await browser.close();

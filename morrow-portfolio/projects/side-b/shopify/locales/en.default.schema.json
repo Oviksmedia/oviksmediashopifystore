@@ -1,0 +1,10 @@
+{
+  "side_b": {
+    "schema": {
+      "collection_name": "SIDE B collection",
+      "product_name": "SIDE B record",
+      "heading": "Collection heading",
+      "collection": "Record collection"
+    }
+  }
+}

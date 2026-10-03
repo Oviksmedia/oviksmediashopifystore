@@ -1,0 +1,15 @@
+{
+  "side_b": {
+    "concept_note": "SIDE B / Fictional record concept / No real orders",
+    "price_from": "From {{ price }}",
+    "view_formats": "View record and formats",
+    "empty_collection": "No releases are selected. Choose the SIDE B collection in the theme editor.",
+    "format": "Choose a format",
+    "quantity": "Quantity (1–9)",
+    "add_demo": "Add to demo bag",
+    "unavailable": "Unavailable",
+    "view_bag": "View native demo bag",
+    "native_cart_note": "This source uses Shopify's native product form and cart. Fictional demo products; no real purchases.",
+    "no_product": "This section needs a product template."
+  }
+}

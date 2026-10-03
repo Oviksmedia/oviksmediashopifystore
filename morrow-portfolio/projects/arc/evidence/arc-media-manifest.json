@@ -1,0 +1,50 @@
+[
+  {
+    "name": "campaign",
+    "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-a143-7440-bfac-3ad13064c1c1/exec-53aa2ccb-06de-49b1-9178-0e99475e0440.png",
+    "output": "assets/arc-campaign.webp",
+    "format": "webp",
+    "width": 1536,
+    "height": 1024,
+    "channels": 3,
+    "premultiplied": false,
+    "hasAlpha": false,
+    "size": 117382
+  },
+  {
+    "name": "silver",
+    "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-a143-7440-bfac-3ad13064c1c1/exec-b369edd8-3f4f-4a8e-9f58-98cd995f5c10.png",
+    "output": "assets/arc-silver.webp",
+    "format": "webp",
+    "width": 1000,
+    "height": 1000,
+    "channels": 3,
+    "premultiplied": false,
+    "hasAlpha": false,
+    "size": 19524
+  },
+  {
+    "name": "graphite",
+    "source": "C:/Users/Oviks/.codex/generated_images/01a0ff09-a143-7440-bfac-3ad13064c1c1/exec-e596dda6-b874-47c6-ac80-87c8be933826.png",
+    "output": "assets/arc-graphite.webp",
+    "format": "webp",
+    "width": 1000,
+    "height": 1000,
+    "channels": 3,
+    "premultiplied": false,
+    "hasAlpha": false,
+    "size": 22208
+  },
+  {
+    "name": "detail",
+    "source": "Built-in imagegen returned image data; original saved to evidence/arc-detail-original.png",
+    "output": "assets/arc-detail.webp",
+    "format": "webp",
+    "width": 1200,
+    "height": 800,
+    "channels": 3,
+    "premultiplied": false,
+    "hasAlpha": false,
+    "size": 62834
+  }
+]

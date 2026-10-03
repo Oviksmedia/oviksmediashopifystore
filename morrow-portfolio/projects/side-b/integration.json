@@ -1,0 +1,87 @@
+{
+  "slug": "side-b",
+  "title": "SIDE B",
+  "category": "Records & cover design",
+  "summary": "Three distinct record sleeves become one bold print-led imprint and a usable collection storefront.",
+  "scope": ["Visual identity", "Original cover series", "Sleeve and label graphics", "Campaign poster", "AI product art direction", "Storefront prototype", "Namespaced Shopify source proposal"],
+  "base": {
+    "commit": "f443014f815e393a783a396008436e6245b1d9a9",
+    "provenance": "Local parent repository, codex/portfolio-design-refinement; not an asserted GitHub base",
+    "branch": "codex/concept-side-b"
+  },
+  "modulePath": "morrow-portfolio/projects/side-b/",
+  "absoluteModulePath": "C:/Users/Oviks/OneDrive/Documents/ChatGPT/Sprinb board/portfolio-concepts/side-b/workspace/morrow-portfolio/projects/side-b/",
+  "cover": {
+    "asset": "assets/side-b-campaign.webp",
+    "source": "morrow-portfolio/projects/side-b/assets/side-b-campaign.webp",
+    "alt": "Three original SIDE B sleeves—orange Night Index, cobalt Soft Static and pale green After Hours—with black vinyl and a yellow campaign poster in an AI-generated record-shop display.",
+    "width": 1254,
+    "height": 1254,
+    "recommendedObjectPosition": "50% 62%",
+    "disclosure": "Original cover graphics; AI-generated physical concept photography"
+  },
+  "case": {
+    "source": "morrow-portfolio/projects/side-b/case.html",
+    "kind": "Semantic article fragment to place inside the parent main element",
+    "output": "side-b.html",
+    "styles": ["assets/side-b.css"],
+    "demoLink": "side-b-demo.html",
+    "returnLink": "index.html#work"
+  },
+  "demo": {
+    "source": "morrow-portfolio/projects/side-b/demo.html",
+    "kind": "Complete standalone HTML document",
+    "output": "side-b-demo.html",
+    "styles": ["assets/side-b.css"],
+    "scripts": ["assets/side-b-store.js"],
+    "storageKey": "sideb.demo.bag.v1",
+    "limits": "Browser-local bag; no checkout, real inventory, payments, audio or Shopify connection"
+  },
+  "assets": {
+    "sourceDirectory": "morrow-portfolio/projects/side-b/assets/",
+    "targetDirectory": "dist/assets/",
+    "rule": "Copy side-b-* files and the side-b/fonts subfolder with its licences; preserve nested relative paths. Do not copy evidence into deploy assets.",
+    "cssPrefix": "sideb",
+    "fontFamilyNames": ["SideB Ultra", "SideB Chivo"]
+  },
+  "palette": {
+    "imprint": "#FFF15A",
+    "ink": "#171715",
+    "paper": "#F5F3EB",
+    "nightIndex": "#F14B2D",
+    "softStatic": "#283FC5",
+    "afterHours": "#BBD6A6",
+    "mechanic": "Yellow identifies the imprint; orange, cobalt and pale green identify individual releases. Black structures type and actions."
+  },
+  "typography": {
+    "display": "Ultra Regular — wide slab; Apache 2.0; self-hosted",
+    "body": "Chivo variable — utility grotesque; SIL OFL 1.1; self-hosted",
+    "fallbacks": "Rockwell/Georgia for display; Arial/Helvetica for body",
+    "provenance": "assets/side-b/fonts/SOURCE.md"
+  },
+  "motion": "Stillness. Gallery replaces the selected image immediately through native buttons, with matching keyboard/touch/reduced-motion behaviour.",
+  "shopify": {
+    "sourceDirectory": "morrow-portfolio/projects/side-b/shopify/",
+    "sections": ["shopify/sections/side-b-collection.liquid", "shopify/sections/side-b-product.liquid"],
+    "assets": ["shopify/assets/side-b-shopify.css", "shopify/assets/side-b-ultra.ttf", "shopify/assets/side-b-chivo.ttf"],
+    "localeMergeFiles": ["shopify/locales/en.default.json", "shopify/locales/en.default.schema.json"],
+    "instructions": "shopify/README.md",
+    "state": "Source only. No upload or live theme verification. Native cart remains owned by the target theme.",
+    "sourceValidation": "Local schema, locale, asset and embedded JavaScript checks available. Full Shopify validator blocked by missing bundled @shopify/theme-check-common; no dependencies installed."
+  },
+  "preview": {
+    "harness": "morrow-portfolio/projects/side-b/preview.mjs",
+    "port": 4404,
+    "caseUrl": "http://127.0.0.1:4404/side-b.html",
+    "demoUrl": "http://127.0.0.1:4404/side-b-demo.html"
+  },
+  "evidence": {
+    "browser": "evidence/verification.json",
+    "source": "evidence/source-checks.json",
+    "review": "evidence/review.md",
+    "media": "media-provenance.json",
+    "screenshotsDirectory": "evidence/",
+    "status": "Verified for the local HTML scope; Shopify/device/screen-reader boundaries remain unverified"
+  },
+  "parentOwnership": "Final portfolio overview cards, shared navigation/builder integration, combined review, catalog coordination, store access and any publication. Existing Morrow and RIFT files were not changed."
+}

@@ -1,0 +1,37 @@
+{
+  "disclosure": "Original AI-generated fictional concept photography, built-in imagegen. No real manufactured product or client.",
+  "sources": [
+    {
+      "slug": "campaign",
+      "path": "C:/Users/Oviks/.codex/generated_images/01a0ff09-910d-7e82-b37d-45648bde2d33/exec-fb3fa125-3f7a-4f4e-b1bb-b305bebaf3ee.png",
+      "prompt": "Use case: product-mockup. Create an original high-quality studio campaign photograph for a fictional specialty coffee brand DAYBREAK. Landscape 1536x1024 composition, three physical matte paper flat-bottom resealable 250g coffee pouches with sealed top seams and subtle side gussets on a sculptural royal deep blue plinth with warm orange seamless background, hard morning sunlight from upper left and beautiful credible shadows. Main orange pouch faces camera at center-left, a butter-yellow pouch set slightly behind to the right, and deep blue pouch to left, all full visible and clean. Packaging graphic system: substantial rounded friendly blue typography reading DAYBREAK near the top, small SPECIALTY COFFEE, large roast label DAY ONE on orange, HIGH NOON on butter pouch, AFTER HOURS in butter letters on blue pouch. Each has a simple oversized clean geometric sunrise arc illustration with three stripe lines in contrasting blue/butter/orange, small numeral 01 / 02 / 03 and 250 g. Extremely art-directed real product photography, premium matte paper creasing, tight intentional composition, no hands, no scattered beans, no other objects, no extraneous text, no watermark, no stock brand. Rounded Fredoka-like type. All bags same construction, stable geometry. This is a fictional concept, not a real manufactured product. Keep label text clear and short.",
+      "references": []
+    },
+    {
+      "slug": "day-one",
+      "path": "C:\\Users\\Oviks\\.codex\\generated_images\\01a0ff09-910d-7e82-b37d-45648bde2d33\\exec-2a68372d-fd43-4b49-b48e-6ba29dcabc1b.png",
+      "prompt": "Use case: product-mockup. Reference image is the exact DAYBREAK packaging identity and physical pouches. Create a separate square catalog photograph of ONLY the orange DAY ONE 01 250 g pouch, three-quarter near-front view centered on pale warm butter paper background, full product visible with generous breathing room and soft directional morning shadow. Keep the bag geometry, matte paper texture, sealed top, DAYBREAK rounded blue letters, SPECIALTY COFFEE, butter semicircle sunrise over two blue bars, DAY ONE, 01 and 250 g from the reference absolutely unchanged. Product occupies 72 percent of height. No props, hands, beans, pedestal, extra text or watermark. Photographic, not an illustration. Maintain same physical product.",
+      "references": [
+        "C:/Users/Oviks/.codex/generated_images/01a0ff09-910d-7e82-b37d-45648bde2d33/exec-fb3fa125-3f7a-4f4e-b1bb-b305bebaf3ee.png"
+      ]
+    },
+    {
+      "slug": "high-noon",
+      "path": "C:/Users/Oviks/OneDrive/Documents/ChatGPT/Sprinb board/portfolio-concepts/daybreak/workspace/morrow-portfolio/projects/daybreak/evidence/daybreak-high-noon-original.png",
+      "prompt": "Use case: product-mockup. Reference 1 is the exact DAYBREAK three-bag campaign identity. Reference 2 is the catalog framing and light. Create a separate square catalog photograph of ONLY the butter-yellow HIGH NOON 02 250 g pouch from reference 1, same three-quarter near-front view, centered on pale warm butter paper background and same morning shadow as reference 2. Keep the pouch geometry, matte paper, sealed top, rounded deep-blue DAYBREAK letters, SPECIALTY COFFEE, orange semicircle sunrise over two blue bars, HIGH NOON, 02 and 250 g. Same product height and composition as reference 2. No props, hands, beans, pedestal, extra text or watermark. Real product photography. Preserve physical packaging and label system.",
+      "references": [
+        "C:/Users/Oviks/.codex/generated_images/01a0ff09-910d-7e82-b37d-45648bde2d33/exec-fb3fa125-3f7a-4f4e-b1bb-b305bebaf3ee.png",
+        "C:\\Users\\Oviks\\.codex\\generated_images\\01a0ff09-910d-7e82-b37d-45648bde2d33\\exec-2a68372d-fd43-4b49-b48e-6ba29dcabc1b.png"
+      ]
+    },
+    {
+      "slug": "after-hours",
+      "path": "C:\\Users\\Oviks\\.codex\\generated_images\\01a0ff09-910d-7e82-b37d-45648bde2d33\\exec-28f8ba21-0fbe-4705-846a-3b9da03aa77f.png",
+      "prompt": "Use case: product-mockup. Reference 1 is the exact DAYBREAK three-bag campaign identity. Reference 2 is the catalog framing and light. Create a separate square catalog photograph of ONLY the deep-blue AFTER HOURS 03 250 g pouch from reference 1, same three-quarter near-front view, centered on pale warm butter paper background and same morning shadow as reference 2. Keep the pouch geometry, matte paper, sealed top, rounded butter DAYBREAK letters, SPECIALTY COFFEE, butter semicircle sunrise over two butter bars, AFTER HOURS, 03 and 250 g. Same product height and composition as reference 2. No props, hands, beans, pedestal, extra text or watermark. Real product photography. Preserve physical packaging and label system.",
+      "references": [
+        "C:/Users/Oviks/.codex/generated_images/01a0ff09-910d-7e82-b37d-45648bde2d33/exec-fb3fa125-3f7a-4f4e-b1bb-b305bebaf3ee.png",
+        "C:\\Users\\Oviks\\.codex\\generated_images\\01a0ff09-910d-7e82-b37d-45648bde2d33\\exec-2a68372d-fd43-4b49-b48e-6ba29dcabc1b.png"
+      ]
+    }
+  ]
+}
