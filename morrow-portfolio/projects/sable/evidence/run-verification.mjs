@@ -1,4 +1,4 @@
-﻿import { createRequire } from 'node:module';
+import { createRequire } from 'node:module';
 import { fileURLToPath } from 'node:url';
 import path from 'node:path';
 import fs from 'node:fs/promises';
@@ -28,7 +28,7 @@ function recordTest(name, passed, details = {}) {
 async function run() {
   const browser = await playwright.chromium.launch({ headless: true });
   const baseUrl = 'http://127.0.0.1:4401';
-  
+
   // 1. Viewports test on sable.html and sable-demo.html
   const viewports = [
     { name: 'desktop-1440', width: 1440, height: 900 },
@@ -109,7 +109,7 @@ async function run() {
   const inkSrc = await page.evaluate(() => document.getElementById('sable-arc-image').src);
   const inkCaption = await page.evaluate(() => document.getElementById('sable-image-caption').textContent);
   const inkStatus = await page.evaluate(() => document.querySelector('#sable-arc-form [data-product-status]').textContent);
-  
+
   const inkPassed = inkSrc.includes('sable-arc-ink.webp') && inkCaption.includes('Ink') && inkStatus.includes('Ink');
   recordTest('The Arc finish switch to Ink', inkPassed, { initialSrc, inkSrc, inkCaption, inkStatus });
 
@@ -123,7 +123,7 @@ async function run() {
   const detailSrc = await page.evaluate(() => document.getElementById('sable-arc-image').src);
   const detailCaption = await page.evaluate(() => document.getElementById('sable-image-caption').textContent);
   const detailAria = await page.evaluate(() => document.querySelector('button[data-view="detail"]').getAttribute('aria-pressed'));
-  
+
   const detailPassed = detailSrc.includes('sable-detail.webp') && detailAria === 'true';
   recordTest('The Arc gallery switch to Material Detail', detailPassed, { detailSrc, detailCaption, detailAria });
 
@@ -275,4 +275,3 @@ run().catch(err => {
   console.error('Test run failed:', err);
   process.exit(1);
 });
-
