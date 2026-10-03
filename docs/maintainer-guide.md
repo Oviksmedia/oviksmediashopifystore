@@ -46,7 +46,9 @@ Homepage heading, hero image and product choices are also editable through the t
 
 GitHub: https://github.com/Oviksmedia/oviksmediashopifystore
 
-Netlify site ID: `649edcb7-78dc-4c1b-aa24-970925a92379`. Deploy only the rebuilt `morrow-portfolio/dist` from this repository. Sibling standalone folders outside this repository are older copies. GitHub pushes do not automatically update Shopify.
+Netlify project: `oviksmedia-portfolio`, https://oviksmedia-portfolio.netlify.app/. Site ID: `649edcb7-78dc-4c1b-aa24-970925a92379`. Deploy only the rebuilt `morrow-portfolio/dist` from this repository. Sibling standalone folders outside this repository are older copies. GitHub pushes do not automatically update Shopify.
+
+The project was renamed from `oviks-morrow-portfolio` on 3 October 2026 to represent all six brands. Use the new address for applications and shared links. Earlier verification receipts retain the address used when their checks ran. The rename keeps the existing deployment and Shopify store access details.
 
 All stores remain password-protected development demonstrations with fictional products. Checkout, payments, real fulfillment, manufacturing, physical-device and screen-reader validation are outside this release. See the migration handover for precisely what was tested.
 
@@ -56,7 +58,7 @@ The portfolio identifies Overcomer Israel and is tailored to the FullPond applic
 
 ### Latest presentation release — 3 October 2026
 
-Production deployment: `6ac1249d53392df0f3341030` at https://oviks-morrow-portfolio.netlify.app/.
+Production deployment: `6ac1249d53392df0f3341030` at https://oviksmedia-portfolio.netlify.app/.
 
 The overview and contact panel identify Overcomer Israel, show the supplied portrait, link to oviks.israel@gmail.com and frame the selection for FullPond's Senior Graphic & Shopify Designer role. All seven overview/case pages retain their exact store URLs and visitor passwords. The repeated production-tool banners were replaced with project descriptions; the fictional development-demo scope and source provenance records remain accurate. DAYBREAK's case description now reflects its native Shopify bag rather than the historical prototype dialog.
 

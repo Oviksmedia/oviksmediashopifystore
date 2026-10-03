@@ -4,7 +4,7 @@
 
 Selected work prepared for FullPond’s **Senior Graphic & Shopify Designer** role. Six self-initiated brand concepts connect visual identity, packaging and campaign direction to working Shopify storefronts.
 
-**[Explore the portfolio](https://oviks-morrow-portfolio.netlify.app/)** · [Contact Overcomer Israel](mailto:oviks.israel@gmail.com)
+**[Explore the portfolio](https://oviksmedia-portfolio.netlify.app/)** · [Contact Overcomer Israel](mailto:oviks.israel@gmail.com)
 
 <img src="morrow-portfolio/assets/overcomer-israel.jpg" alt="Overcomer Israel" width="120">
 
@@ -12,16 +12,16 @@ Selected work prepared for FullPond’s **Senior Graphic & Shopify Designer** ro
 
 ## Selected projects
 
-[![Morrow — skincare identity and Shopify storefront](morrow-portfolio/assets/morrow-campaign.webp)](https://oviks-morrow-portfolio.netlify.app/morrow)
+[![Morrow — skincare identity and Shopify storefront](morrow-portfolio/assets/morrow-campaign.webp)](https://oviksmedia-portfolio.netlify.app/morrow)
 
 | Project | Design focus | Case study | Shopify demo | Visitor password |
 | --- | --- | --- | --- | --- |
-| **MORROW** | Skincare · Identity & packaging | [View](https://oviks-morrow-portfolio.netlify.app/morrow) | [Open](https://oviks-portfolio-demo.myshopify.com/) | suweid |
-| **RIFT** | Cycling · Identity & campaign | [View](https://oviks-morrow-portfolio.netlify.app/rift) | [Open](https://rift-portfolio-demo.myshopify.com/) | lowcia |
-| **SABLE** | Leather accessories · Art direction | [View](https://oviks-morrow-portfolio.netlify.app/sable) | [Open](https://sable-portfolio-demo.myshopify.com/) | chowck |
-| **DAYBREAK** | Coffee · Label system & packaging | [View](https://oviks-morrow-portfolio.netlify.app/daybreak) | [Open](https://daybreak-portfolio-demo.myshopify.com/) | nowped |
-| **ARC** | Lighting · Product presentation | [View](https://oviks-morrow-portfolio.netlify.app/arc) | [Open](https://arc-portfolio-demo.myshopify.com/) | reepro |
-| **SIDE B** | Records · Cover design & collection | [View](https://oviks-morrow-portfolio.netlify.app/side-b) | [Open](https://side-b-portfolio-demo.myshopify.com/) | yeitwu |
+| **MORROW** | Skincare · Identity & packaging | [View](https://oviksmedia-portfolio.netlify.app/morrow) | [Open](https://oviks-portfolio-demo.myshopify.com/) | suweid |
+| **RIFT** | Cycling · Identity & campaign | [View](https://oviksmedia-portfolio.netlify.app/rift) | [Open](https://rift-portfolio-demo.myshopify.com/) | lowcia |
+| **SABLE** | Leather accessories · Art direction | [View](https://oviksmedia-portfolio.netlify.app/sable) | [Open](https://sable-portfolio-demo.myshopify.com/) | chowck |
+| **DAYBREAK** | Coffee · Label system & packaging | [View](https://oviksmedia-portfolio.netlify.app/daybreak) | [Open](https://daybreak-portfolio-demo.myshopify.com/) | nowped |
+| **ARC** | Lighting · Product presentation | [View](https://oviksmedia-portfolio.netlify.app/arc) | [Open](https://arc-portfolio-demo.myshopify.com/) | reepro |
+| **SIDE B** | Records · Cover design & collection | [View](https://oviksmedia-portfolio.netlify.app/side-b) | [Open](https://side-b-portfolio-demo.myshopify.com/) | yeitwu |
 
 ## What to explore
 
