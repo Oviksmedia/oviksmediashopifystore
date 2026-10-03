@@ -1,0 +1,74 @@
+{
+  "checkedAt": "2026-10-03T15:50:59.174Z",
+  "pages": [
+    {
+      "page": "index",
+      "brokenLoadedImages": [],
+      "contactLinks": 2,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "page": "morrow",
+      "brokenLoadedImages": [],
+      "contactLinks": 1,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "page": "rift",
+      "brokenLoadedImages": [],
+      "contactLinks": 1,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "page": "sable",
+      "brokenLoadedImages": [],
+      "contactLinks": 1,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "page": "daybreak",
+      "brokenLoadedImages": [],
+      "contactLinks": 1,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "page": "arc",
+      "brokenLoadedImages": [],
+      "contactLinks": 1,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    },
+    {
+      "page": "side-b",
+      "brokenLoadedImages": [],
+      "contactLinks": 1,
+      "footerName": "Overcomer Israel",
+      "scrollWidth": 375,
+      "width": 390
+    }
+  ],
+  "contact": {
+    "mailto": "oviks.israel@gmail.com",
+    "portraitDimensions": [
+      2419,
+      3386
+    ],
+    "narrow320Overflow": false,
+    "keyboardFocus": {
+      "focusedText": "Overcomer Israel",
+      "outlineStyle": "solid",
+      "outlineWidth": "2.4px"
+    }
+  }
+}

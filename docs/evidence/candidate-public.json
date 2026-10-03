@@ -1,0 +1,66 @@
+{
+  "checkedAt": "2026-10-03T15:54:31.906Z",
+  "deployId": "6ac1249d53392df0f3341030",
+  "url": "https://oviks-morrow-portfolio.netlify.app/",
+  "pages": [
+    {
+      "page": "index",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    },
+    {
+      "page": "morrow",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    },
+    {
+      "page": "rift",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    },
+    {
+      "page": "sable",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    },
+    {
+      "page": "daybreak",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    },
+    {
+      "page": "arc",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    },
+    {
+      "page": "side-b",
+      "status": 200,
+      "visibleContentMatchesBuild": true,
+      "identityAndContact": true,
+      "storeAccess": true
+    }
+  ],
+  "assets/portfolio.css": {
+    "status": 200,
+    "matchesBuild": true,
+    "bytes": 17148
+  },
+  "assets/overcomer-israel.jpg": {
+    "status": 200,
+    "matchesBuild": true,
+    "bytes": 755378
+  }
+}

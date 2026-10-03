@@ -1,68 +1,63 @@
-# Oviks Media — graphic design & Shopify portfolio
+# Overcomer Israel · Oviks Media
 
-Six fictional, self-initiated brands with published Shopify development demos: Morrow, RIFT, SABLE, DAYBREAK, ARC and SIDE B. They have native product catalogs, product pages and demo bags. AI assistance is disclosed; no client commissions or sales results are claimed.
+**Graphic design & Shopify portfolio**
 
-## Published portfolio and access
+Selected work prepared for FullPond’s **Senior Graphic & Shopify Designer** role. Six self-initiated brand concepts connect visual identity, packaging and campaign direction to working Shopify storefronts.
 
-Application URL: https://oviks-morrow-portfolio.netlify.app/
+**[Explore the portfolio](https://oviks-morrow-portfolio.netlify.app/)** · [Contact Overcomer Israel](mailto:oviks.israel@gmail.com)
 
-| Store | Shopify URL | Visitor password |
-| --- | --- | --- |
-| MORROW | https://oviks-portfolio-demo.myshopify.com/ | suweid |
-| RIFT | https://rift-portfolio-demo.myshopify.com/ | lowcia |
-| SABLE | https://sable-portfolio-demo.myshopify.com/ | chowck |
-| DAYBREAK | https://daybreak-portfolio-demo.myshopify.com/ | nowped |
-| ARC | https://arc-portfolio-demo.myshopify.com/ | reepro |
-| SIDE-B | https://side-b-portfolio-demo.myshopify.com/ | yeitwu |
+<img src="morrow-portfolio/assets/overcomer-israel.jpg" alt="Overcomer Israel" width="120">
 
-These visitor passwords are for fictional demos, not account logins. The portfolio opens without a password and supplies the correct password beside each store link. Hosting is Netlify; no Vercel deployment is configured.
+> The portfolio is the main review link. It opens without a password and provides the visitor password beside every Shopify demo. This repository contains the build files and project documentation.
 
-## Sources and build
+## Selected projects
 
-- `morrow-portfolio/src/`: authored overview and RIFT case study.
-- `morrow-portfolio/projects/{sable,daybreak,arc,side-b}/`: authored case studies, integration specs, imagery, fonts/licenses and retained HTML prototypes.
-- `morrow-portfolio/build-portfolio.mjs`: generates and checks all twelve portfolio pages; inserts published Shopify access details.
-- `morrow-portfolio/assets/portfolio.css`: shared portfolio layout.
-- `morrow-portfolio/dist/`: generated Netlify deployment. Edit the authored files, then rebuild.
-- `shopify-stores/catalogs.json`: authored five-brand catalog inputs.
-- `shopify-stores/build-themes.mjs` and `source/`: complete Liquid theme generation and shared native shopping components.
-- `shopify-stores/{slug}/theme/`: generated complete themes. Do not edit generated copies alone.
-- `shopify-stores/stores.json`: store domains, visitor passwords and published theme IDs.
-- `shopify-skincare/theme/`: existing independent Morrow theme.
-- `docs/shopify-migration.md` and `shopify-stores/evidence/`: migration and verification handover.
+[![Morrow — skincare identity and Shopify storefront](morrow-portfolio/assets/morrow-campaign.webp)](https://oviks-morrow-portfolio.netlify.app/morrow)
 
-The original browser demos and older module Liquid proposals remain as historical sources. Primary portfolio links now use Shopify; current Shopify work should use the complete themes under `shopify-stores/`.
+| Project | Design focus | Case study | Shopify demo | Visitor password |
+| --- | --- | --- | --- | --- |
+| **MORROW** | Skincare · Identity & packaging | [View](https://oviks-morrow-portfolio.netlify.app/morrow) | [Open](https://oviks-portfolio-demo.myshopify.com/) | suweid |
+| **RIFT** | Cycling · Identity & campaign | [View](https://oviks-morrow-portfolio.netlify.app/rift) | [Open](https://rift-portfolio-demo.myshopify.com/) | lowcia |
+| **SABLE** | Leather accessories · Art direction | [View](https://oviks-morrow-portfolio.netlify.app/sable) | [Open](https://sable-portfolio-demo.myshopify.com/) | chowck |
+| **DAYBREAK** | Coffee · Label system & packaging | [View](https://oviks-morrow-portfolio.netlify.app/daybreak) | [Open](https://daybreak-portfolio-demo.myshopify.com/) | nowped |
+| **ARC** | Lighting · Product presentation | [View](https://oviks-morrow-portfolio.netlify.app/arc) | [Open](https://arc-portfolio-demo.myshopify.com/) | reepro |
+| **SIDE B** | Records · Cover design & collection | [View](https://oviks-morrow-portfolio.netlify.app/side-b) | [Open](https://side-b-portfolio-demo.myshopify.com/) | yeitwu |
 
-Node.js is sufficient for building and previewing; no package installation is required.
+## What to explore
+
+- **Visual systems:** typography, colour, layout, label masters and cover artwork.
+- **Storefront design:** responsive product presentation, explicit choices and consistent brand direction.
+- **Shopify implementation:** Liquid themes, catalog products and variants, native product forms and cart interactions.
+- **Case studies:** the brief, design decisions, platform translation and project scope.
+
+All six brands are fictional portfolio concepts. The Shopify development stores demonstrate shopping interactions with illustrative products and prices; checkout, payments and fulfillment are inactive. Visitor passwords are demo access codes, never account credentials.
+
+## Working with the files
+
+The portfolio is a lightweight static build. Node.js is sufficient for building and previewing; no package installation is required.
 
 ```sh
-node shopify-stores/build-themes.mjs
 node morrow-portfolio/build-portfolio.mjs
 node morrow-portfolio/preview.mjs
 ```
 
-Open http://127.0.0.1:4391/. Keep the project folders beside one another; the portfolio builder reads Morrow’s case source and the store access manifest.
+Open http://127.0.0.1:4391/. Edit the authored source files, then rebuild the deployment folder.
 
-## Shopify edits and verification
+| Location | Purpose |
+| --- | --- |
+| `morrow-portfolio/src/` | Portfolio overview, Morrow and RIFT case studies |
+| `morrow-portfolio/projects/` | Other case studies, graphic assets and project records |
+| `morrow-portfolio/assets/` | Shared styling, portrait and overview assets |
+| `shopify-stores/source/` | Shared native Shopify components |
+| `shopify-stores/{slug}/theme/` | Complete themes for the five newer stores |
+| `shopify-skincare/theme/` | Existing Morrow Shopify theme |
 
-Use your own authorized Shopify CLI session. Account access is separate from cloning GitHub. Do not commit authentication tokens or session files.
+**[Maintainer guide](docs/maintainer-guide.md)** · [Shopify migration & verification](docs/shopify-migration.md)
 
-```sh
-shopify theme check --path shopify-stores/rift/theme
-shopify theme push --store rift-portfolio-demo.myshopify.com --path shopify-stores/rift/theme --unpublished
-node shopify-stores/verify-storefronts.mjs --published
-```
+The latest Shopify migration was checked with Shopify Theme Check, fresh visitor access and native add/update/remove cart flows. Verification records are under `shopify-stores/evidence/`. Historical prototypes and media provenance are retained with their project sources.
 
-The final command uses fresh visitor sessions, renders all ten product pages and twenty-eight variant IDs, and exercises one fictional add/update/remove bag flow per store without JavaScript. It does not access admin or place an order. Review drafts before publishing them. Theme uploads do not import products.
+## Contact
 
-`shopify-stores/import-catalogs.mjs` validates each exact store domain and currency before catalog writes. Stable handles support retries. Product/publication access must be authorized separately for each store.
+**Overcomer Israel** · Oviks Media
 
-Homepage heading, hero image and product choices are also editable through the theme editor. Capture merchant setting changes before regeneration/upload if you want to preserve them.
-
-## Deployment and handover
-
-GitHub: https://github.com/Oviksmedia/oviksmediashopifystore
-
-Netlify site ID: `649edcb7-78dc-4c1b-aa24-970925a92379`. Deploy only the rebuilt `morrow-portfolio/dist` from this repository. Sibling standalone folders outside this repository are older copies. GitHub pushes do not automatically update Shopify.
-
-All stores remain password-protected development demonstrations with fictional products. Checkout, payments, real fulfillment, manufacturing, physical-device and screen-reader validation are outside this release. See the migration handover for precisely what was tested.
+[oviks.israel@gmail.com](mailto:oviks.israel@gmail.com)

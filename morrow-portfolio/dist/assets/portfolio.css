@@ -9,3 +9,22 @@
 
 /* Published Shopify demo access */
 .store-access-note{font:500 13px/1.6 Arial,sans-serif;margin:16px 0 0!important;color:inherit}.store-access-note strong{letter-spacing:.04em}.shopify-access{display:flex;align-items:center;justify-content:space-between;gap:32px;margin:40px 0;padding:32px;background:#f1eee7;color:#263628;border:1px solid #d8d8cc}.shopify-access>div{max-width:650px}.shopify-access h2{font-size:32px;line-height:1.2;margin:10px 0}.shopify-access p{font-size:15px;line-height:1.8}.shopify-access>.portfolio-link{white-space:nowrap;color:#263628}@media(max-width:700px){.shopify-access{flex-direction:column;align-items:start;padding:24px;gap:16px}.shopify-access>.portfolio-link{white-space:normal}}
+
+/* Candidate identity and application contact */
+.intro-owner{display:flex;align-items:center;gap:16px;margin:0 0 28px}
+.intro-owner img{display:block;width:64px;height:76px;object-fit:cover;object-position:50% 30%}
+.intro-owner p{margin:0;font-size:13px;color:var(--portfolio-muted)}
+.intro-owner .intro-owner-name{font-size:21px;line-height:1.3;font-weight:600;color:var(--portfolio-ink);margin-bottom:5px}
+.intro-index{text-align:right;max-width:38ch}
+.portfolio-contact{max-width:1600px;margin:auto;padding:64px 6%;display:grid;grid-template-columns:minmax(180px,260px) minmax(0,1fr);gap:clamp(30px,6vw,90px);align-items:center}
+.contact-portrait{margin:0}
+.contact-portrait img{display:block;width:100%;height:auto}
+.contact-identity{max-width:740px}
+.contact-identity h2{font-size:clamp(32px,4.3vw,58px);line-height:1.1;letter-spacing:-.045em;margin:17px 0 12px}
+.contact-discipline{font-size:17px;color:var(--portfolio-muted);margin-bottom:23px}
+.contact-identity>p:not(.eyebrow):not(.contact-purpose):not(.contact-discipline){max-width:59ch;margin-bottom:22px}
+.contact-email{display:inline-flex;flex-wrap:wrap;align-items:center;gap:18px;min-height:44px;font-size:clamp(18px,2.6vw,30px);line-height:1.4;text-decoration-thickness:1px;overflow-wrap:anywhere;max-width:100%}
+.contact-purpose{font-size:13px;color:var(--portfolio-muted);margin:14px 0 0}
+.footer-email{display:inline-flex;align-items:center;min-height:44px;font-size:14px;margin-top:4px}
+@media(max-width:700px){.portfolio-contact{padding-block:44px;grid-template-columns:140px minmax(0,1fr);gap:25px;align-items:start}.contact-identity .eyebrow{font-size:10px;line-height:1.7}.contact-identity h2{font-size:32px}.contact-discipline{font-size:15px}}
+@media(max-width:520px){.portfolio-contact{grid-template-columns:1fr;gap:28px}.contact-portrait{width:160px}.contact-identity h2{font-size:36px}.contact-email{font-size:22px;gap:10px}.intro-owner{margin-bottom:25px}.intro-topline{align-items:start}.intro-index{max-width:24ch;line-height:1.65}.portfolio-header nav{gap:18px}.portfolio-header nav a{font-size:12px}.contact-identity>p{font-size:15px}}
